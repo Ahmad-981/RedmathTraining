@@ -1,0 +1,4 @@
+com\practice\project02\Project02Application.class
+com\practice\project02\student\Student.class
+com\practice\project02\student\StudentRepository.class
+com\practice\project02\student\StudentController.class
