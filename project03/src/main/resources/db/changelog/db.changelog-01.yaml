@@ -1,0 +1,75 @@
+databaseChangeLog:
+  - changeSet:
+      id: schema-0.0.4
+      author: Ahmad
+      changes:
+        - createTable:
+            tableName: Student
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: roll_num
+                  type: varchar(1000)
+              - column:
+                  name: university
+                  type: varchar(255)
+              - column:
+                  name: cgpa
+                  type: varchar(255)
+
+        - addPrimaryKey:
+            tableName: Student
+            columnNames: id
+            constraintName: student_pk
+  - changeSet:
+      id: data-0.0.1
+      author: Ali
+      changes:
+        - insert:
+            tableName: Student
+            columns:
+              - column:
+                  name: id
+                  value: '20'
+              - column:
+                  name: name
+                  value: Ahmad
+              - column:
+                  name: roll_num
+                  value: bsef20
+              - column:
+                  name: university
+                  value: PUCIT
+              - column:
+                  name: cgpa
+                  value: NA
+  - changeSet:
+      id: data-0.0.3
+      author: Arham
+      changes:
+        - insert:
+            tableName: Student
+            columns:
+              - column:
+                  name: id
+                  value: '40'
+              - column:
+                  name: name
+                  value: Arham
+              - column:
+                  name: roll_num
+                  value: bsef19
+              - column:
+                  name: university
+                  value: LUMS
+              - column:
+                  name: cgpa
+                  value: NA
+
