@@ -1,4 +1,3 @@
-
 Clean Code book suggested to reduce the number of arguments (max 2). Suppose we have more than 2 arguments than how we can handle this?
 
 (a) Passing arguments as single array
