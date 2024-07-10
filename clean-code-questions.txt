@@ -1,0 +1,16 @@
+
+Clean Code book suggested to reduce the number of arguments (max 2). Suppose we have more than 2 arguments than how we can handle this?
+
+(a) Passing arguments as single array
+(b) Use global variables.
+(C) Create an object to encapsulate arguments
+(d) Use default values for extra argument.
+
+
+
+Why the use of boolean arguments in functions are not allowed according to book?
+
+(a) Execution of function will be slow 
+(b) This will lead the function to perform more than 1 task
+(c) This will lead to unexpected results
+(d) Hard to unit test the function.
