@@ -1,0 +1,90 @@
+databaseChangeLog:
+    - changeSet:
+          id: schema-lecture-be-04
+          author: Ahmad
+          changes:
+              - createTable:
+                    tableName: transactions
+                    columns:
+                        - column:
+                              name: transactionId
+                              type: bigint
+                              autoIncrement: true
+                              constraints:
+                                  nullable: false
+                        - column:
+                            name: description
+                            type: varchar(100)
+                        - column:
+                              name: amount
+                              type: varchar(50)
+
+                        - column:
+                              name: timestamp
+                              type: DATETIME
+
+                        - column:
+                              name: to_account
+                              type: bigint
+                        - column:
+                            name: card_type
+                            type: varchar(50)
+              - addPrimaryKey:
+                    tableName: transactions
+                    columnNames: transactionId
+                    constraintName: transaction_pk
+    #    - addForeignKeyConstraint:
+    #        baseTableName: news
+    #        baseColumnNames: reported_by
+    #        constraintName: news_fk
+    #        referencedTableName: users
+    #        referencedColumnNames: username
+
+    - changeSet:
+        id: data-lecture-be-02
+        author: Ahmad
+        changes:
+            - insert:
+                  tableName: transactions
+                  columns:
+                      - column:
+                            name: transactionId
+                            value: '1'
+                      - column:
+                            name: amount
+                            value: 20
+                      - column:
+                          name: description
+                          value: Transfer details
+                      - column:
+                            name: timestamp
+                            value: '2000-01-01T12:00:00'
+                      - column:
+                            name: to_account
+                            value: '3000'
+                      - column:
+                          name: card_type
+                          value: DB
+
+            - insert:
+                  tableName: transactions
+                  columns:
+                      - column:
+                            name: transactionId
+                            value: '2'
+                      - column:
+                          name: description
+                          value: Transfer details
+                      - column:
+                            name: amount
+                            value: 2
+
+                      - column:
+                            name: timestamp
+                            value: '2000-01-01T12:00:00'
+                      - column:
+                            name: to_account
+                            value: '3000'
+                      - column:
+                          name: card_type
+                          value: CR

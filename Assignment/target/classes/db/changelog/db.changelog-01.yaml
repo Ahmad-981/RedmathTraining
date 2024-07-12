@@ -1,0 +1,326 @@
+#databaseChangeLog:
+#  - changeSet:
+#      id: schema-001
+#      author: Ahmad
+#      changes:
+#        - createTable:
+#            tableName: users
+#            columns:
+#              - column:
+#                  name: id
+#                  type: BIGINT
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: username
+#                  type: VARCHAR(50)
+#                  constraints:
+#                    nullable: false
+#                    unique: true
+#              - column:
+#                  name: password
+#                  type: VARCHAR(255)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: name
+#                  type: VARCHAR(100)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: email
+#                  type: VARCHAR(100)
+#                  constraints:
+#                    nullable: false
+#                    unique: true
+#              - column:
+#                  name: address
+#                  type: VARCHAR(255)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: role
+#                  type: VARCHAR(50)
+#                  constraints:
+#                    nullable: false
+#
+#        - createTable:
+#            tableName: accounts
+#            columns:
+#              - column:
+#                  name: id
+#                  type: BIGINT
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: password
+#                  type: VARCHAR(255)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: user_id
+#                  type: BIGINT
+#                  constraints:
+#                    nullable: false
+#
+#        - addForeignKeyConstraint:
+#            baseTableName: accounts
+#            baseColumnNames: user_id
+#            referencedTableName: users
+#            referencedColumnNames: id
+#            constraintName: fk_accounts_user
+#
+#        - createTable:
+#            tableName: balances
+#            columns:
+#              - column:
+#                  name: id
+#                  type: BIGINT
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: date
+#                  type: TIMESTAMP
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: amount
+#                  type: DECIMAL(15, 2)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: dbCrIndicator
+#                  type: VARCHAR(2)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: account_id
+#                  type: BIGINT
+#                  constraints:
+#                    nullable: false
+#
+#        - addForeignKeyConstraint:
+#            baseTableName: balances
+#            baseColumnNames: account_id
+#            referencedTableName: accounts
+#            referencedColumnNames: id
+#            constraintName: fk_balances_account
+#
+#        - createTable:
+#            tableName: transactions
+#            columns:
+#              - column:
+#                  name: id
+#                  type: BIGINT
+#                  autoIncrement: true
+#                  constraints:
+#                    primaryKey: true
+#                    nullable: false
+#              - column:
+#                  name: date
+#                  type: TIMESTAMP
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: description
+#                  type: VARCHAR(255)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: amount
+#                  type: DECIMAL(15, 2)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: dbCrIndicator
+#                  type: VARCHAR(2)
+#                  constraints:
+#                    nullable: false
+#              - column:
+#                  name: account_id
+#                  type: BIGINT
+#                  constraints:
+#                    nullable: false
+#
+#        - addForeignKeyConstraint:
+#            baseTableName: transactions
+#            baseColumnNames: account_id
+#            referencedTableName: accounts
+#            referencedColumnNames: id
+#            constraintName: fk_transactions_account
+#
+#  - changeSet:
+#      id: data-001
+#      author: Ahmad
+#      changes:
+#        - insert:
+#            tableName: users
+#            columns:
+#              - column:
+#                  name: username
+#                  value: admin
+#              - column:
+#                  name: password
+#                  value: admin_password
+#              - column:
+#                  name: name
+#                  value: Admin User
+#              - column:
+#                  name: email
+#                  value: admin@example.com
+#              - column:
+#                  name: address
+#                  value: Admin Address
+#              - column:
+#                  name: role
+#                  value: ADMIN
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: AHmad
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: userID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(100)
+              - column:
+                  name: address
+                  type: varchar(255)
+  - changeSet:
+      id: 3
+      author: your_name
+      changes:
+        - createTable:
+            tableName: balances
+            columns:
+              - column:
+                  name: balanceID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: date
+                  type: timestamp
+              - column:
+                  name: amount
+                  type: decimal(19, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: indicator
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: your_name
+      changes:
+        - createTable:
+            tableName: accounts
+            columns:
+              - column:
+                  name: accountID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: userID
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: balanceID
+                  type: bigint
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: accounts
+            baseColumnNames: userID
+            constraintName: fk_account_user
+            referencedTableName: users
+            referencedColumnNames: userID
+        - addForeignKeyConstraint:
+            baseTableName: accounts
+            baseColumnNames: balanceID
+            constraintName: fk_account_balance
+            referencedTableName: balances
+            referencedColumnNames: balanceID
+  - changeSet:
+      id: 4
+      author: your_name
+      changes:
+        - createTable:
+            tableName: transactions
+            columns:
+              - column:
+                  name: transactionID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: accountID
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: date
+                  type: timestamp
+              - column:
+                  name: description
+                  type: varchar(255)
+              - column:
+                  name: amount
+                  type: decimal(19, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: indicator
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: transactions
+            baseColumnNames: accountID
+            constraintName: fk_transaction_account
+            referencedTableName: accounts
+            referencedColumnNames: accountID

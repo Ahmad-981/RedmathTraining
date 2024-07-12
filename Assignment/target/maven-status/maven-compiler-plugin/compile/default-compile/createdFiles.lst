@@ -1,0 +1,15 @@
+com\practice\project02\student\StudentRepository.class
+com\practice\project02\user\UserService.class
+com\practice\project02\Project03Application.class
+com\practice\project02\user\UserRepository.class
+com\practice\project02\publicNewsAPI\NewsApiClient.class
+com\practice\project02\publicNewsAPI\NewsResponse.class
+com\practice\project02\student\Student.class
+com\practice\project02\publicNewsAPI\News.class
+com\practice\project02\config\ApiProperties.class
+com\practice\project02\config\ApiSecurityConfiguration.class
+com\practice\project02\publicNewsAPI\NewsController.class
+com\practice\project02\student\StudentController.class
+com\practice\project02\user\UserController.class
+com\practice\project02\user\User.class
+com\practice\project02\student\StudentServices.class
