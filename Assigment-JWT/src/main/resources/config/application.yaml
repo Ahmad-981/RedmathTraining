@@ -1,0 +1,51 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:bank
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+
+#    database-platform: org.hibernate.dialect.H2Dialect
+
+#  security:
+#    user:
+#      name: test
+#      password: test
+    #enabled: false
+
+api:
+  security:
+    ignored:  /api/users/**, /api/users, /api/balance, /api/transaction, /h2-console, /api/user/create
+#/api/v1/accounts/**,
+#logging:
+#  file:
+#    name: target/student.log
+#  level:
+#    '[org.springframework.security]': Trace
+
+#logging:
+  #config: classpath:logback-spring.xml
+#  file:
+#    name: target/temp.log
+#  level:
+#    '[org.springframework.security]': Trace
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+jwt:
+  secret: UGEzLf3ug6HdJy7nEaVZjIxraYsbNIbt4AIBpgTAgTQ=
+  expiration: 5000000
