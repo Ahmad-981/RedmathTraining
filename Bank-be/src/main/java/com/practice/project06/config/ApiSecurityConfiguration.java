@@ -47,33 +47,6 @@ public class ApiSecurityConfiguration {
     @Autowired
     private JwtFilter jwtFilter;
 
-
-//    @Bean
-//    public WebSecurityCustomizer webSecurityCustomizer() {
-//        return web -> {
-//            for (String location : props.getIgnored()) {
-//                web.ignoring().requestMatchers(AntPathRequestMatcher.antMatcher(HttpMethod.GET, location));
-//            }
-//        };
-//    }
-//@Bean
-//public Docket api() {
-//    return new Docket(DocumentationType.OAS_30)
-//            .select()
-//            .apis(RequestHandlerSelectors.any())
-//            .paths(PathSelectors.any())
-//            .build();
-//}
-
-//    @Bean
-//    public Docket api() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.practice.project06"))
-//                .paths(PathSelectors.any())
-//                .build();
-//    }
-
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider provider =
@@ -125,8 +98,7 @@ public class ApiSecurityConfiguration {
                     handling.authenticationEntryPoint(new JwtAuthenticationEntryPoint());
                 })
                 .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .logout(logout -> logout
-                        .logoutSuccessHandler(((request, response, authentication) -> response.setStatus(HttpServletResponse.SC_OK))));
+                .logout(logout -> logout.logoutSuccessHandler((request, response, authentication) -> response.setStatus(HttpServletResponse.SC_OK)));
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

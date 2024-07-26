@@ -8,9 +8,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class BalanceDTO {
-
     private Long accountID;
     private BigDecimal amount;
     private String indicator;
-
 }

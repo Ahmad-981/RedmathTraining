@@ -9,8 +9,6 @@ import java.util.Optional;
 public interface AccountRepository extends JpaRepository<Account, Long> {
     Optional<Account> findByAccountNumber(String accountNumber);
     Optional<Account> findByUser_UserID(Long userId);
-
-    // or if User has a unique field for identification
     Optional<Account> findByUser_Username(String username);
 
 }

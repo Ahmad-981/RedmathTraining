@@ -13,6 +13,4 @@ public class TransactionDTO {
     private String toAccountNumber;
     private BigDecimal amount;
     private String indicator;
-
-    // Getters and Setters
 }

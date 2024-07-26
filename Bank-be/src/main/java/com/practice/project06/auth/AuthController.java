@@ -35,19 +35,4 @@ public class AuthController {
         return userRepository.save(user);
     }
 
-
-
-//    @PostMapping("/register")
-//    public String register(@RequestBody User user) {
-//        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
-//            return "Username already exists";
-//        }
-//        userRepository.save(user);
-//        return "User registered successfully";
-//    }
-
-
-
-
-
 }

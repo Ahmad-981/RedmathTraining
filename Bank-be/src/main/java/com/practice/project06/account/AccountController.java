@@ -28,10 +28,6 @@ public class AccountController {
         return accountRepository.findById(id).get();
     }
 
-//    @PostMapping
-//    public Account createAccount(@RequestBody Account account) {
-//        return accountService.createAccount(account);
-//    }
     @PostMapping
     public Long createAccount(@RequestBody AccountDTO accountDTO) {
         System.out.println("Received AccountDTO: " + accountDTO);
@@ -52,5 +48,4 @@ public class AccountController {
         boolean deleted = accountService.deleteAccount(id);
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
     }
-
 }

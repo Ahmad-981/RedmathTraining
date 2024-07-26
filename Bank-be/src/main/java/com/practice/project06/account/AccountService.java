@@ -5,7 +5,6 @@ import com.practice.project06.transaction.TransactionRepository;
 import com.practice.project06.user.User;
 import com.practice.project06.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -25,44 +24,24 @@ public class AccountService {
     @Autowired
     private UserRepository userRepository;
 
+    public Long createAccount(AccountDTO accountDTO) {
+        User user = accountDTO.getUser();
 
-//    public Account createAccount(AccountDTO accountDTO) {
-//        User user = accountDTO.getUser();
-//
-//        if (user == null || user.getUserID() == null) {
-//            throw new IllegalArgumentException("User ID must not be null");
-//        }
-//
-//        User existingUser = userRepository.findById(user.getUserID())
-//                .orElseThrow(() -> new RuntimeException("User not found"));
-//
-//        Account account = new Account();
-//        account.setAccountNumber(accountDTO.getAccountNumber());
-//        account.setAccountType(accountDTO.getAccountType());
-//        account.setUser(existingUser);
-//
-//        return accountRepository.save(account);
-//    }
-public Long createAccount(AccountDTO accountDTO) {
-    User user = accountDTO.getUser();
+        if (user == null || user.getUserID() == null) {
+            throw new IllegalArgumentException("User ID must not be null");
+        }
 
-    if (user == null || user.getUserID() == null) {
-        throw new IllegalArgumentException("User ID must not be null");
+        User existingUser = userRepository.findById(user.getUserID())
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Account account = new Account();
+        account.setAccountNumber(accountDTO.getAccountNumber());
+        account.setAccountType(accountDTO.getAccountType());
+        account.setUser(existingUser);
+
+        Account savedAccount = accountRepository.save(account);
+        return savedAccount.getAccountID();
     }
-
-    User existingUser = userRepository.findById(user.getUserID())
-            .orElseThrow(() -> new RuntimeException("User not found"));
-
-    Account account = new Account();
-    account.setAccountNumber(accountDTO.getAccountNumber());
-    account.setAccountType(accountDTO.getAccountType());
-    account.setUser(existingUser);
-
-    Account savedAccount = accountRepository.save(account);
-    return savedAccount.getAccountID(); // Return the ID of the created account
-}
-
-
 
     public Optional<Account> updateAccount(Long id, Account updatedAccount) {
         Optional<Account> existingAccountOpt = accountRepository.findById(id);
@@ -90,17 +69,6 @@ public Long createAccount(AccountDTO accountDTO) {
         }
     }
 
-
-//    public Optional<Account> updateAccount(Long id, Account updatedAccount) {
-//        Optional<Account> existingAccount = accountRepository.findById(id);
-//        if (existingAccount.isPresent()) {
-//            updatedAccount.setAccountID(id);
-//            return Optional.of(accountRepository.save(updatedAccount));
-//        } else {
-//            return Optional.empty();
-//        }
-//    }
-    
     public boolean deleteAccount(Long id) {
         Optional<Account> accountToDelete = accountRepository.findById(id);
         if (accountToDelete.isPresent()) {
@@ -113,10 +81,7 @@ public Long createAccount(AccountDTO accountDTO) {
                 accountRepository.deleteById(id);
 
                 return true;
-
             }
-
-
         }
         return false;
     }

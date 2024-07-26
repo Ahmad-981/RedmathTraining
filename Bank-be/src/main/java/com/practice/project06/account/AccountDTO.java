@@ -12,5 +12,4 @@ public class AccountDTO {
     private String accountNumber;
     private String accountType;
 
-    // Getters and Setters
 }

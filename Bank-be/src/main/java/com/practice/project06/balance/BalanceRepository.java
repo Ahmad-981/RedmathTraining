@@ -12,6 +12,5 @@ import java.util.Optional;
 public interface BalanceRepository extends JpaRepository<Balance, Long> {
     @Query("SELECT b FROM balances b WHERE b.account.accountID = :accountID")
     Balance findBalanceByAccountId(@Param("accountID") Long accountID);
-
     Optional<Balance> findByAccount(Account account);
 }
