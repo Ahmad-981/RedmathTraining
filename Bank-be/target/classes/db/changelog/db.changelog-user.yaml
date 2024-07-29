@@ -1,0 +1,81 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Ahmad
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: userID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(100)
+              - column:
+                  name: address
+                  type: varchar(255)
+  - changeSet:
+      id: 2
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'abc'
+              - column:
+                  name: password
+                  value: '$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: role
+                  value: 'USER'
+              - column:
+                  name: email
+                  value: 'john.doe@example.com'
+              - column:
+                  name: address
+                  value: '123 Main St'
+  - changeSet:
+      id: 3
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'admin'
+              - column:
+                  name: password
+                  value: $2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW
+              - column:
+                  name: role
+                  value: 'ADMIN'
+              - column:
+                  name: email
+                  value: 'jane.smith@example.com'
+              - column:
+                  name: address
+                  value: '456 Elm St'
