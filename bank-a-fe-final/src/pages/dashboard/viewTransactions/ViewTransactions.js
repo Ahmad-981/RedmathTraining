@@ -9,6 +9,7 @@ import axios from 'axios';
 import './customTableStyles.css'; // Ensure this file contains the custom table styles
 import Cookies from 'js-cookie';
 
+
 function ViewTransactions() {
   const [transactions, setTransactions] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -63,7 +64,7 @@ function ViewTransactions() {
 
   return (
     <div className='p-4'>
-      <div className="container mx-auto">
+      <div className="container mx-auto" >
         <div className="bg-white shadow-md rounded-lg p-4">
           <div className="mb-4">
             <Link to="/dashboard">
@@ -85,7 +86,7 @@ function ViewTransactions() {
                   <h5 className="text-xl font-semibold"><i className="fa-solid fa-money-bill-1"></i> No Transactions Yet</h5>
                 </div>
                 : <div className="overflow-x-auto">
-                  <Table className="customTable">
+                  <Table className="customTable" >
                     <Thead>
                       <Tr>
                         <Th>Transaction ID</Th>

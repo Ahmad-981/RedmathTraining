@@ -52,7 +52,6 @@ databaseChangeLog:
               - column:
                   name: account_type
                   value: 'SAVINGS'
-
   - changeSet:
       id: 11
       author: Ahmad

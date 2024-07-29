@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: com.practice.project06.TransactionApiControllerTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.907 s -- in com.practice.project06.TransactionApiControllerTest
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.766 s <<< FAILURE! -- in com.practice.project06.TransactionApiControllerTest
+com.practice.project06.TransactionApiControllerTest.testCreateTransaction_InvalidFromAccount -- Time elapsed: 0.313 s <<< ERROR!
+org.mockito.exceptions.misusing.UnfinishedStubbingException: 
+
+Unfinished stubbing detected here:
+-> at com.practice.project06.BalanceApiControllerTest.testGetBalanceByAccountId_Success(BalanceApiControllerTest.java:117)
+
+E.g. thenReturn() may be missing.
+Examples of correct stubbing:
+    when(mock.isOk()).thenReturn(true);
+    when(mock.isOk()).thenThrow(exception);
+    doThrow(exception).when(mock).someVoidMethod();
+Hints:
+ 1. missing thenReturn()
+ 2. you are trying to stub a final method, which is not supported
+ 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
+
+	at com.practice.project06.TransactionApiControllerTest.testCreateTransaction_InvalidFromAccount(TransactionApiControllerTest.java:131)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

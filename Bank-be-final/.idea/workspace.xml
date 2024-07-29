@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="" />
+    <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-account.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-account.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/account/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/account/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-account.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-account.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/pmd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AccountApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AccountApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AuthApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AuthApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.BalanceApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.BalanceApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.TransactionApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.TransactionApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.UserApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.UserApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AccountApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AccountApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AuthApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AuthApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.BalanceApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.BalanceApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.TransactionApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.TransactionApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.UserApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.UserApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AccountApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AccountApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/ViewTransactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/ViewTransactions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/customTableStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/customTableStyles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +52,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ahmad-981&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ahmad-981/Training.git&quot;,
+    &quot;accountId&quot;: &quot;63a0c8df-10b4-4edc-a7a4-51e371a639f5&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -101,10 +151,14 @@
     "Maven.project03 [test].executor": "Run",
     "Maven.project03 [verify].executor": "Run",
     "Maven.project06 [clean].executor": "Run",
+    "Maven.project06 [jacoco:check].executor": "Run",
+    "Maven.project06 [jacoco:report].executor": "Run",
+    "Maven.project06 [spotbugs:check].executor": "Run",
     "Maven.project06 [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ahmad.irtza/Downloads/Bank-be",
+    "last_opened_file_path": "C:/Users/ahmad.irtza/Downloads/lecture-be-04",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
@@ -131,10 +185,26 @@
     <option name="myCommands">
       <command value="mvn test" />
       <command value="mvn clean" />
+      <command value="mvn jacoco:check" />
+      <command value="mvn jacoco:report" />
       <command value="mvn verify" />
+      <command value="mvn spotbugs:check" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AccountApiControllerTest.testGetAccountById_Success">
+  <component name="RunManager" selected="Application.Project05Application">
+    <configuration name="Project05Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.Project05Application" />
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
@@ -150,7 +220,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest.testCreateAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BalanceApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -159,14 +229,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="METHOD_NAME" value="testCreateAccount" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest.testDeleteAccount_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -175,14 +244,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="METHOD_NAME" value="testDeleteAccount_Success" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.TransactionApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest.testGetAccountById_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionApiControllerTest.testGetTransactionsByAccountId_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -191,24 +259,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="METHOD_NAME" value="testGetAccountById_Success" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserApiControllerTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.project06.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.UserApiControllerTest" />
-      <option name="METHOD_NAME" value="testGetAllUsers" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.TransactionApiControllerTest" />
+      <option name="METHOD_NAME" value="testGetTransactionsByAccountId_Success" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountApiControllerTest.testGetAccountById_Success" />
+        <item itemvalue="Application.Project05Application" />
+        <item itemvalue="JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId_Success" />
+        <item itemvalue="JUnit.BalanceApiControllerTest" />
+        <item itemvalue="JUnit.TransactionApiControllerTest" />
         <item itemvalue="JUnit.AccountApiControllerTest" />
-        <item itemvalue="JUnit.AccountApiControllerTest.testCreateAccount" />
-        <item itemvalue="JUnit.AccountApiControllerTest.testDeleteAccount_Success" />
-        <item itemvalue="JUnit.UserApiControllerTest.testGetAllUsers" />
       </list>
     </recent_temporary>
   </component>

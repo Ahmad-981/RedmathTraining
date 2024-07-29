@@ -39,7 +39,6 @@ public class TransactionController {
                     transactionDTO.getAmount());
             return ResponseEntity.ok(transaction);
         } catch (IllegalArgumentException e) {
-            // Return error response with message
             return ResponseEntity.badRequest().body(Collections.singletonMap("message", e.getMessage()));
         }
     }

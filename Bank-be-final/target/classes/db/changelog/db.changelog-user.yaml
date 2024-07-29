@@ -101,3 +101,25 @@ databaseChangeLog:
               - column:
                   name: address
                   value: 'Lahore'
+  - changeSet:
+      id: 6
+      author: Ahmad
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'Ayaan'
+              - column:
+                  name: password
+                  value: '$2a$12$diheMtyeAeA8iBeVx.prq.jeVWuRWrtmlnAwcS7bbLbEJp/EtulPW'
+              - column:
+                  name: role
+                  value: 'USER'
+              - column:
+                  name: email
+                  value: 'ayaan@gmail.com'
+              - column:
+                  name: address
+                  value: 'Lahore'

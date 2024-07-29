@@ -22,7 +22,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
@@ -49,6 +48,9 @@ public class AccountApiControllerTest {
 
     @Mock
     private UserRepository userRepository;
+
+    @Mock
+    private UserService userService;
 
     @Mock
     private BalanceRepository balanceRepository;
@@ -120,13 +122,12 @@ public class AccountApiControllerTest {
     }
 
 
+    @Order(1)
     @Test
     public void testGetAccountById_Success() throws Exception {
 
         Account account = new Account();
         account.setAccountID(1L);
-        account.setAccountNumber("12345");
-        account.setAccountType("Savings");
 
         when(accountRepository.findById(1L)).thenReturn(Optional.of(account));
 
@@ -139,43 +140,23 @@ public class AccountApiControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.accountNumber").value("12345"));
     }
 
-//    @Test
-//    public void testCreateAccount() throws Exception {
-//        // Create and save a User object
-//        User user = new User();
-//        user.setUsername("ahmad");
-//        user.setPassword("ahmad123");
-//        user.setRole("USER");
-//        user.setUserID(4L);
-//
-//        when(userRepository.findById(4L)).thenReturn(Optional.of(user));
-//
-//        AccountDTO accountDTO = new AccountDTO();
-//        accountDTO.setAccountNumber("12345678");
-//        accountDTO.setAccountType("Savings");
-//        accountDTO.setUser(user);
-//
-//        Account mockAccount = new Account();
-//        mockAccount.setAccountID(4L);
-//        mockAccount.setAccountNumber("12345678");
-//        mockAccount.setAccountType("Savings");
-//        mockAccount.setUser(user);
-//
-//        // Mock the AccountRepository to return the mock Account
-//        when(accountRepository.save(any(Account.class))).thenReturn(mockAccount);
-//
-//        // Mock the AccountService to return the account ID of the mock Account
-//        when(accountService.createAccount(accountDTO)).thenReturn(4L);
-//
-//        // Perform the POST request to create an account
-//        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts")
-//                        .header("Authorization", "Bearer " + jwtToken)
-//                        .contentType(MediaType.APPLICATION_JSON_VALUE)
-//                        .content(objectMapper.writeValueAsString(accountDTO)))
-//                .andDo(MockMvcResultHandlers.print())
-//                .andExpect(MockMvcResultMatchers.status().isOk())
-//                .andExpect(MockMvcResultMatchers.content().string("4"));
-//    }
+    @Test
+    public void testCreateAccount() throws Exception {
+        User user = new User();
+        user.setUserID(4L);
+
+        AccountDTO accountDTO = new AccountDTO();
+        accountDTO.setAccountNumber("12345678");
+        accountDTO.setAccountType("Savings");
+        accountDTO.setUser(user);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts")
+                        .header("Authorization", "Bearer " + jwtToken)
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+                        .content(objectMapper.writeValueAsString(accountDTO)))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
 
     @Test
     public void testUpdateAccount() throws Exception {
@@ -208,8 +189,6 @@ public class AccountApiControllerTest {
         account.setUser(user);
 
         when(accountRepository.findById(3L)).thenReturn(Optional.of(account));
-//        doNothing().when(balanceRepository).deleteById(5L);
-//        doNothing().when(transactionRepository).deleteById(5L);
         doNothing().when(accountRepository).deleteById(3L);
 
         mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/accounts/3")

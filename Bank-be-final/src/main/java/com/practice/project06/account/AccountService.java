@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Random;
+import java.util.Random;
 
 @Service
 public class AccountService {
@@ -25,20 +26,15 @@ public class AccountService {
     @Autowired
     private UserRepository userRepository;
 
-    private String generateRandomString(int length) {
-        int leftLimit = 60;
-        int rightLimit = 110;
-        Random random = new Random();
-        StringBuilder buffer = new StringBuilder(length);
 
-        while (buffer.length() < length) {
-            int randomLimitedInt = leftLimit + (int)
-                    (random.nextFloat() * (rightLimit - leftLimit + 1));
-            if (Character.isLetterOrDigit(randomLimitedInt)) {
-                buffer.append((char) randomLimitedInt);
-            }
-        }
-        return buffer.toString();
+
+    private String generateRandomString(int length) {
+        Random random = new Random();
+        int min = (int) Math.pow(10, length - 1); // Smallest number with the given length
+        int max = (int) Math.pow(10, length) - 1; // Largest number with the given length
+
+        int randomInteger = random.nextInt((max - min) + 1) + min;
+        return String.valueOf(randomInteger);
     }
 
     public Long createAccount(AccountDTO accountDTO) {
@@ -90,16 +86,12 @@ public class AccountService {
     public boolean deleteAccount(Long id) {
         Optional<Account> accountToDelete = accountRepository.findById(id);
         if (accountToDelete.isPresent()) {
-            if(accountToDelete.get().getUser().getUsername().equals("admin") ){
-                return false;
-            }
-            else {
-//                balanceRepository.deleteById(id);
-//                transactionRepository.deleteById(id);
-                accountRepository.deleteById(id);
-
-                return true;
-            }
+            balanceRepository.deleteById(id);
+            transactionRepository.deleteById(id);
+            accountRepository.deleteById(id);
+            return true;
+//            if(accountToDelete.get().getUser().getUsername().equals("admin") ){
+//                return false;
         }
         return false;
     }

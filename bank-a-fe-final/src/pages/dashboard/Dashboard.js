@@ -145,7 +145,7 @@ function Dashboard() {
         },
       });
 
-      console.log("Response:", response);
+      console.log("Response in making transaction:", response);
 
       Swal.fire({
         title: 'Transaction successful',
@@ -178,17 +178,18 @@ function Dashboard() {
     Cookies.remove('username');
     Cookies.remove('role');
     console.log("Logged out, cookies removed");
-    navigate('/home'); 
+    navigate('/home');
   };
 
   return (
     <Flex minH="100vh">
+
       <Box
         w={{ base: 'full', md: '20%' }}
         p={4}
-        bg="gray.100"
+        bg="gray.300"
         borderRightWidth="1px"
-        height="100vh"
+        height="900vh"
         position={{ base: 'relative', md: 'fixed' }}
         top="0"
         left="0"
@@ -213,8 +214,8 @@ function Dashboard() {
         <Container maxW="container.xl" py={5}>
           <Flex wrap="wrap" gap={4}>
             <Box w="full" lg="48%" p={4} borderWidth={1} borderRadius="md" boxShadow="md">
-              <Heading size="md" mb={4} textAlign="center">
-                <i className="fa-solid fa-money-bill-1"></i> Welcome to Bank App "{username}"
+              <Heading size="lg" mb={4} textAlign="center">
+                <i className="fa-solid fa-money-bill-1"></i> Welcome to Easy Banking "{username}"
               </Heading>
               <Divider />
             </Box>
@@ -228,15 +229,15 @@ function Dashboard() {
                 <i className="fa-solid fa-money-bill-1"></i> Transactions
               </Heading>
               <Button
-  colorScheme="blue"
-  mb={4}
-  leftIcon={<i className="fa-solid fa-eye"></i>}
-  display="block"
-  mx="auto"
-  onClick={onOpenTransactions}
->
-  View All Transactions
-</Button>
+                colorScheme="blue"
+                mb={4}
+                leftIcon={<i className="fa-solid fa-eye"></i>}
+                display="block"
+                mx="auto"
+                onClick={onOpenTransactions}
+              >
+                View All Transactions
+              </Button>
 
               <Divider />
               {isLoading ? (
@@ -257,43 +258,44 @@ function Dashboard() {
                 </Box>
               )}
             </Box>
+            <Image
+              src="https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Bank Image"
+              boxSize="100%"
+              objectFit="cover"
+              borderRadius="md"
+              mt={4}
+              filter="blur(5px)"  // 5px blur is approximately 50% blur effect
+            />
 
           </Flex>
 
           <Outlet />
-          <Image
-  src="https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  alt="Bank Image"
-  boxSize="100%"
-  objectFit="cover"
-  borderRadius="md"
-  mt={4}
-  filter="blur(5px)"  // 5px blur is approximately 50% blur effect
-/>
+
 
         </Container>
         <Box
-        as="footer"
-        mt="auto"
-        textAlign="center"
-        // position="relative"
-        bottom="0"
-        w="full"
-        bg="gray"
-        color="white"
-        py={4}
-        px={8}
-      >
-        <Text>&copy; {new Date().getFullYear()} My Bank App. All rights reserved.</Text>
-      </Box>
+          as="footer"
+          mt="auto"
+          textAlign="center"
+          // position="relative"
+          bottom="0"
+          w="full"
+          bg="gray"
+          color="white"
+          py={4}
+          px={8}
+        >
+          <Text>&copy; {new Date().getFullYear()} My Bank App. All rights reserved.</Text>
+        </Box>
       </Box>
 
 
 
       {/* Modals */}
-      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions} size="lg">
+      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions}  >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent >
           <ModalHeader>View Transactions</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
