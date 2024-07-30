@@ -6,7 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/pmd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/pmd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/pmd.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +76,7 @@
     "JUnit.AccountApiControllerTest.testGetAllAccounts.executor": "Run",
     "JUnit.AccountApiControllerTest.testUpdateAccount.executor": "Run",
     "JUnit.AccountApiControllerTest.testUpdateAccountNotFound.executor": "Run",
+    "JUnit.AuthApiControllerTest.executor": "Run",
     "JUnit.AuthApiControllerTest.testAuthenticate_Success.executor": "Run",
     "JUnit.AuthApiControllerTest.testLogin_InvalidCredentials.executor": "Run",
     "JUnit.AuthApiControllerTest.testLogin_Success.executor": "Run",
@@ -109,6 +117,7 @@
     "JUnit.TransactionApiControllerTest.testCreateTransaction_Success.executor": "Run",
     "JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId.executor": "Run",
     "JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId_Success.executor": "Run",
+    "JUnit.UserApiControllerTest.executor": "Run",
     "JUnit.UserApiControllerTest.testGetAllUsers.executor": "Run",
     "JUnit.UserApiControllerTest.testGetUserById_NotFound.executor": "Run",
     "JUnit.UserApiControllerTest.testGetUserById_Success.executor": "Run",
@@ -155,8 +164,8 @@
       <command value="mvn clean" />
       <command value="mvn jacoco:check" />
       <command value="mvn jacoco:report" />
-      <command value="mvn verify" />
       <command value="mvn spotbugs:check" />
+      <command value="mvn verify" />
     </option>
   </component>
   <component name="RunManager" selected="Application.Project05Application">
@@ -173,7 +182,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -182,7 +191,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -218,7 +227,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionApiControllerTest.testGetTransactionsByAccountId_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -227,9 +236,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.TransactionApiControllerTest" />
-      <option name="METHOD_NAME" value="testGetTransactionsByAccountId_Success" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.UserApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,10 +245,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Project05Application" />
-        <item itemvalue="JUnit.TransactionApiControllerTest.testGetTransactionsByAccountId_Success" />
-        <item itemvalue="JUnit.BalanceApiControllerTest" />
+        <item itemvalue="JUnit.AuthApiControllerTest" />
+        <item itemvalue="JUnit.UserApiControllerTest" />
         <item itemvalue="JUnit.TransactionApiControllerTest" />
-        <item itemvalue="JUnit.AccountApiControllerTest" />
+        <item itemvalue="JUnit.BalanceApiControllerTest" />
       </list>
     </recent_temporary>
   </component>

@@ -36,7 +36,7 @@ public class Transaction {
     private String indicator;
 
     public Transaction() {
-        this.date = new Date(); // Set current timestamp by default
+        this.date = new Date();
     }
 
     public Transaction(Account fromAccount, Account toAccount, BigDecimal amount) {

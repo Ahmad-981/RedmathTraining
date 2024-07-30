@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="7.0.0" timestamp="2024-07-29T16:13:45.774">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="7.0.0" timestamp="2024-07-30T09:43:53.320">
+<file name="C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final\src\main\java\com\practice\project06\account\AccountService.java">
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="com.practice.project06.account" class="AccountService" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Duplicate import 'java.util.Random'
+</violation>
+<violation beginline="36" endline="36" begincolumn="44" endcolumn="55" rule="UselessParentheses" ruleset="Code Style" package="com.practice.project06.account" class="AccountService" method="generateRandomString" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.0.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
 </pmd>

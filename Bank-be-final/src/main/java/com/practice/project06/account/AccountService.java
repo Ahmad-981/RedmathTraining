@@ -4,11 +4,12 @@ import com.practice.project06.balance.BalanceRepository;
 import com.practice.project06.transaction.TransactionRepository;
 import com.practice.project06.user.User;
 import com.practice.project06.user.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-import java.util.Random;
 import java.util.Random;
 
 @Service
@@ -30,8 +31,8 @@ public class AccountService {
 
     private String generateRandomString(int length) {
         Random random = new Random();
-        int min = (int) Math.pow(10, length - 1); // Smallest number with the given length
-        int max = (int) Math.pow(10, length) - 1; // Largest number with the given length
+        int min = (int) Math.pow(10, length - 1);
+        int max = (int) Math.pow(10, length) - 1;
 
         int randomInteger = random.nextInt((max - min) + 1) + min;
         return String.valueOf(randomInteger);
@@ -83,17 +84,15 @@ public class AccountService {
         }
     }
 
+    @Transactional
     public boolean deleteAccount(Long id) {
-        Optional<Account> accountToDelete = accountRepository.findById(id);
-        if (accountToDelete.isPresent()) {
-            balanceRepository.deleteById(id);
-            transactionRepository.deleteById(id);
-            accountRepository.deleteById(id);
-            return true;
-//            if(accountToDelete.get().getUser().getUsername().equals("admin") ){
-//                return false;
-        }
-        return false;
+        Account account = accountRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Account not found"));
+        balanceRepository.deleteByAccountId(id);
+        transactionRepository.deleteByFromAccountId(id);
+        accountRepository.delete(account);
+        return true;
+
     }
 
 }
