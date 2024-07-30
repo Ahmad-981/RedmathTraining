@@ -134,7 +134,7 @@ function Dashboard() {
         toAccountNumber: transactionData.toAccountNumber,
         amount: transactionData.amount,
       });
-
+    
       const response = await axios.post('http://localhost:8080/api/transaction', {
         fromAccountID,
         toAccountNumber: transactionData.toAccountNumber,
@@ -144,26 +144,71 @@ function Dashboard() {
           Authorization: `Bearer ${token}`,
         },
       });
-
+    
       console.log("Response in making transaction:", response);
-
+    
       Swal.fire({
         title: 'Transaction successful',
         icon: 'success',
         confirmButtonText: 'OK'
       });
-
+    
       fetchBalance();
       onCloseTransaction();
     } catch (error) {
       console.error("Transaction Error:", error);
+    
+      let errorMessage = 'There was an issue processing the transaction.';
+      if (error.response && error.response.data && error.response.data.message) {
+        errorMessage = error.response.data.message;
+      }
+    
       Swal.fire({
         title: 'Transaction failed',
-        text: 'There was an issue processing the transaction.',
+        text: errorMessage,
         icon: 'error',
         confirmButtonText: 'OK'
       });
     }
+    
+
+    // try {
+    //   const token = Cookies.get('token');
+    //   console.log("Sending request with:", {
+    //     fromAccountID,
+    //     toAccountNumber: transactionData.toAccountNumber,
+    //     amount: transactionData.amount,
+    //   });
+
+    //   const response = await axios.post('http://localhost:8080/api/transaction', {
+    //     fromAccountID,
+    //     toAccountNumber: transactionData.toAccountNumber,
+    //     amount: transactionData.amount,
+    //   }, {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   });
+
+    //   console.log("Response in making transaction:", response);
+
+    //   Swal.fire({
+    //     title: 'Transaction successful',
+    //     icon: 'success',
+    //     confirmButtonText: 'OK'
+    //   });
+
+    //   fetchBalance();
+    //   onCloseTransaction();
+    // } catch (error) {
+    //   console.error("Transaction Error:", error);
+    //   Swal.fire({
+    //     title: 'Transaction failed',
+    //     text: 'There was an issue processing the transaction.',
+    //     icon: 'error',
+    //     confirmButtonText: 'OK'
+    //   });
+    // }
   };
 
   const handleShowBalance = () => {
@@ -187,7 +232,7 @@ function Dashboard() {
       <Box
         w={{ base: 'full', md: '20%' }}
         p={4}
-        bg="gray.300"
+        bg="gray.200"
         borderRightWidth="1px"
         height="900vh"
         position={{ base: 'relative', md: 'fixed' }}
@@ -259,13 +304,13 @@ function Dashboard() {
               )}
             </Box>
             <Image
-              src="https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://www.shutterstock.com/image-photo/businessman-touching-icon-online-banking-260nw-1388903636.jpg"
               alt="Bank Image"
               boxSize="100%"
               objectFit="cover"
               borderRadius="md"
               mt={4}
-              filter="blur(5px)"  // 5px blur is approximately 50% blur effect
+              filter="blur(5px)" 
             />
 
           </Flex>
@@ -290,12 +335,10 @@ function Dashboard() {
         </Box>
       </Box>
 
-
-
       {/* Modals */}
-      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions}  >
+      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions} size="xl">
         <ModalOverlay />
-        <ModalContent >
+        <ModalContent>
           <ModalHeader>View Transactions</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -303,6 +346,20 @@ function Dashboard() {
           </ModalBody>
         </ModalContent>
       </Modal>
+
+
+
+      {/* Modals
+      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions} >
+        <ModalOverlay  />
+        <ModalContent >
+          <ModalHeader>View Transactions</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <ViewTransactions />
+          </ModalBody>
+        </ModalContent>
+      </Modal> */}
 
       <Modal isOpen={isCreateAccountOpen} onClose={onCloseCreateAccount} size="lg">
         <ModalOverlay />

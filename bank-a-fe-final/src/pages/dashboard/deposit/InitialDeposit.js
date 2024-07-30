@@ -96,19 +96,38 @@ const InitialDeposit = ({ onClose, onDepositSuccess }) => {
       });
     } catch (error) {
       console.error('Error during deposit:', error);
+  
+      let errorMessage = 'There was an error occurred';
+  
+      // Check if error.response is available and handle different status codes
+      if (error.response) {
+        const { status } = error.response;
+  
+        if (status === 404) {
+          errorMessage = 'Account not found. Please create an account first.';
+        } else if (status === 409) {
+          errorMessage = 'Balance already exists for this account.';
+        } 
+        else if (status === 401) {
+          errorMessage = 'Account not found. Please create an account first.';
+        }else {
+          errorMessage = 'An unexpected error occurred.';
+        }
+      }
+  
       Swal.fire({
         title: 'Error',
-        text: 'There was some error occurred',
+        text: errorMessage,
         icon: 'error',
         confirmButtonText: 'OK',
         backdrop: true,
         allowOutsideClick: false
       });
+  
     } finally {
       setIsLoading(false);
     }
-  };
-
+  }
   return (
     <Box p={4}>
       <form onSubmit={handleSubmit}>

@@ -3,6 +3,7 @@ package com.practice.project06.balance;
 import com.practice.project06.account.Account;
 import com.practice.project06.account.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,13 +24,18 @@ public class BalanceController {
     private AccountRepository accountRepository;
 
     @PostMapping
-    public ResponseEntity<Balance> createBalance(@RequestBody BalanceDTO balanceDTO) {
+    public ResponseEntity<?> createBalance(@RequestBody BalanceDTO balanceDTO) {
         Long accountId = balanceDTO.getAccountID();
-        Account account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new RuntimeException("Account not found"));
+        // Check if the account exists
+        Account account = accountRepository.findById(accountId).orElse(null);
+        if (account == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Account not found for ID: " + accountId);
+        }
         Optional<Balance> existingBalance = balanceRepository.findByAccount(account);
         if (existingBalance.isPresent()) {
-            throw new RuntimeException("Balance already exists for this account");
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body("Balance already exists for this account");
         }
 
         Balance balance = new Balance();
