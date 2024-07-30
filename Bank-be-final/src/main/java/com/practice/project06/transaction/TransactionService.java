@@ -45,8 +45,8 @@ public class TransactionService {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid from account ID"));
 
         Optional<Account> toAccount = accountRepository.findByAccountNumber(toAccountNumber);
-        if (toAccount == null) {
-            throw new IllegalArgumentException("Invalid to account number");
+        if (toAccount.isEmpty()) {
+            throw new IllegalArgumentException("Invalid receiver account number");
         }
 
         Balance fromBalance = balanceRepository.findBalanceByAccountId(fromAccount.getAccountID());

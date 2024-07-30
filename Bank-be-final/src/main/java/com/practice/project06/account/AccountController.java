@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -29,9 +30,10 @@ public class AccountController {
     }
 
     @PostMapping
-    public Long createAccount(@RequestBody AccountDTO accountDTO) {
+    public ResponseEntity<?> createAccount(@RequestBody AccountDTO accountDTO) {
         System.out.println("Received AccountDTO: " + accountDTO);
-        return accountService.createAccount(accountDTO);
+        Map<String,Object> account = accountService.createAccount(accountDTO);
+        return ResponseEntity.ok(account);
     }
 
     @PutMapping("/{id}")

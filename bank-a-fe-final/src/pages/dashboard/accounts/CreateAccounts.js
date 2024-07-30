@@ -81,14 +81,15 @@ function CreateAccounts({ onClose }) {
         }
       });
       console.log("response of account creted i.e id ", response.data)
+      const { accountId,accountNum } = response.data;
 
-      const accountId = response.data;
+      //const accountId = response.data;
       console.log(" In create module, accountID : ", accountId)
       if (accountId) {
         //localStorage.setItem('accountID', accountID);
         Cookies.set('accountId', accountId, { expires: 1 });
         console.log("Account ID after creation:", accountId);
-        Swal.fire('Success', `Dear ${state.fullName}, your account has been created successfully.`, 'success');
+        Swal.fire('Success', `Dear ${state.fullName}, your account has been created successfully and your account number: ${accountNum}`, 'success');
         navigate("/dashboard");
       } else {
         Swal.fire('Error', 'Account creation failed. Please try again.', 'error');

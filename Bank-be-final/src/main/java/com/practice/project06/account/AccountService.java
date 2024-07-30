@@ -9,6 +9,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 
@@ -34,11 +36,11 @@ public class AccountService {
         int min = (int) Math.pow(10, length - 1);
         int max = (int) Math.pow(10, length) - 1;
 
-        int randomInteger = random.nextInt((max - min) + 1) + min;
+        int randomInteger = random.nextInt(max - min + 1) + min;
         return String.valueOf(randomInteger);
     }
 
-    public Long createAccount(AccountDTO accountDTO) {
+    public Map<String, Object> createAccount(AccountDTO accountDTO) {
         User user = accountDTO.getUser();
 
         if (user == null || user.getUserID() == null) {
@@ -55,7 +57,11 @@ public class AccountService {
         account.setAccountNumber(generateRandomString(8));
 
         Account savedAccount = accountRepository.save(account);
-        return savedAccount.getAccountID();
+        Map<String, Object> response = new HashMap<>();
+        response.put("accountId", savedAccount.getAccountID());
+        response.put("accountNum", savedAccount.getAccountNumber());
+
+        return response;
     }
 
     public Optional<Account> updateAccount(Long id, Account updatedAccount) {
