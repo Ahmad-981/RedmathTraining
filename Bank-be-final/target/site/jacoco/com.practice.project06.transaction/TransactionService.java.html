@@ -45,8 +45,8 @@ public class TransactionService {
 <span class="fc" id="L45">                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Invalid from account ID&quot;));</span>
 
 <span class="fc" id="L47">        Optional&lt;Account&gt; toAccount = accountRepository.findByAccountNumber(toAccountNumber);</span>
-<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (toAccount == null) {</span>
-<span class="nc" id="L49">            throw new IllegalArgumentException(&quot;Invalid to account number&quot;);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (toAccount.isEmpty()) {</span>
+<span class="fc" id="L49">            throw new IllegalArgumentException(&quot;Invalid receiver account number&quot;);</span>
         }
 
 <span class="fc" id="L52">        Balance fromBalance = balanceRepository.findBalanceByAccountId(fromAccount.getAccountID());</span>

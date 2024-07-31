@@ -20,7 +20,7 @@ function Home() {
         borderWidth="1px"
         boxShadow="lg"
       >
-        <Text fontSize="4xl" fontFamily="work sans" color="grey.500">Banking App</Text>
+        <Text fontSize="4xl" fontFamily="work sans" color="grey.500">Digital Banking</Text>
       </Box>
       <Box
         bg="white"

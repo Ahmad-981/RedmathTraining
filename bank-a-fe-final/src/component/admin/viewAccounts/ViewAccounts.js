@@ -154,11 +154,10 @@ function ViewAccounts() {
 
   return (
     <Container maxW="container.xl" py={8} p={4} borderWidth="1px" borderRadius="md" boxShadow="md">
-      <Link to="/dashboard">
+
         <Button colorScheme="red" leftIcon={<i className="fa-solid fa-arrow-left"></i>}>
           Dashboard
         </Button>
-      </Link>
       <VStack spacing={4} mt={4} align="start">
         <Text fontSize="2xl" fontWeight="bold">
           <i className="fa-solid fa-user me-1"></i> Accounts
@@ -171,9 +170,9 @@ function ViewAccounts() {
         ) : accounts.length < 1 ? (
           <VStack spacing={4} align="center">
             <Text>No accounts available!</Text>
-            <Link to="/dashboard/createAccounts">
+            {/* <Link to="/dashboard/createAccounts">
               <Button colorScheme="teal">Create Account</Button>
-            </Link>
+            </Link> */}
           </VStack>
         ) : (
           <>

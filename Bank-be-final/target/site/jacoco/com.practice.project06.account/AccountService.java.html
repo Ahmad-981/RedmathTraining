@@ -4,14 +4,18 @@ import com.practice.project06.balance.BalanceRepository;
 import com.practice.project06.transaction.TransactionRepository;
 import com.practice.project06.user.User;
 import com.practice.project06.user.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 
 @Service
-<span class="fc" id="L14">public class AccountService {</span>
+<span class="fc" id="L18">public class AccountService {</span>
 
     @Autowired
     private AccountRepository accountRepository;
@@ -25,83 +29,76 @@ import java.util.Random;
     @Autowired
     private UserRepository userRepository;
 
-    private String generateRandomString(int length) {
-<span class="fc" id="L29">        int leftLimit = 60;</span>
-<span class="fc" id="L30">        int rightLimit = 110;</span>
-<span class="fc" id="L31">        Random random = new Random();</span>
-<span class="fc" id="L32">        StringBuilder buffer = new StringBuilder(length);</span>
 
-<span class="fc bfc" id="L34" title="All 2 branches covered.">        while (buffer.length() &lt; length) {</span>
-<span class="fc" id="L35">            int randomLimitedInt = leftLimit + (int)</span>
-<span class="fc" id="L36">                    (random.nextFloat() * (rightLimit - leftLimit + 1));</span>
-<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (Character.isLetterOrDigit(randomLimitedInt)) {</span>
-<span class="fc" id="L38">                buffer.append((char) randomLimitedInt);</span>
-            }
-<span class="fc" id="L40">        }</span>
-<span class="fc" id="L41">        return buffer.toString();</span>
+
+    private String generateRandomString(int length) {
+<span class="fc" id="L35">        Random random = new Random();</span>
+<span class="fc" id="L36">        int min = (int) Math.pow(10, length - 1);</span>
+<span class="fc" id="L37">        int max = (int) Math.pow(10, length) - 1;</span>
+
+<span class="fc" id="L39">        int randomInteger = random.nextInt(max - min + 1) + min;</span>
+<span class="fc" id="L40">        return String.valueOf(randomInteger);</span>
     }
 
-    public Long createAccount(AccountDTO accountDTO) {
-<span class="fc" id="L45">        User user = accountDTO.getUser();</span>
+    public Map&lt;String, Object&gt; createAccount(AccountDTO accountDTO) {
+<span class="fc" id="L44">        User user = accountDTO.getUser();</span>
 
-<span class="pc bpc" id="L47" title="2 of 4 branches missed.">        if (user == null || user.getUserID() == null) {</span>
-<span class="nc" id="L48">            throw new IllegalArgumentException(&quot;User ID must not be null&quot;);</span>
+<span class="pc bpc" id="L46" title="2 of 4 branches missed.">        if (user == null || user.getUserID() == null) {</span>
+<span class="nc" id="L47">            throw new IllegalArgumentException(&quot;User ID must not be null&quot;);</span>
         }
 
-<span class="fc" id="L51">        User existingUser = userRepository.findById(user.getUserID())</span>
-<span class="pc" id="L52">                .orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
+<span class="fc" id="L50">        User existingUser = userRepository.findById(user.getUserID())</span>
+<span class="pc" id="L51">                .orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
 
-<span class="fc" id="L54">        Account account = new Account();</span>
-<span class="fc" id="L55">        account.setAccountNumber(accountDTO.getAccountNumber());</span>
-<span class="fc" id="L56">        account.setAccountType(accountDTO.getAccountType());</span>
-<span class="fc" id="L57">        account.setUser(existingUser);</span>
-<span class="fc" id="L58">        account.setAccountNumber(generateRandomString(8));</span>
+<span class="fc" id="L53">        Account account = new Account();</span>
+<span class="fc" id="L54">        account.setAccountNumber(accountDTO.getAccountNumber());</span>
+<span class="fc" id="L55">        account.setAccountType(accountDTO.getAccountType());</span>
+<span class="fc" id="L56">        account.setUser(existingUser);</span>
+<span class="fc" id="L57">        account.setAccountNumber(generateRandomString(8));</span>
 
-<span class="fc" id="L60">        Account savedAccount = accountRepository.save(account);</span>
-<span class="fc" id="L61">        return savedAccount.getAccountID();</span>
+<span class="fc" id="L59">        Account savedAccount = accountRepository.save(account);</span>
+<span class="fc" id="L60">        Map&lt;String, Object&gt; response = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L61">        response.put(&quot;accountId&quot;, savedAccount.getAccountID());</span>
+<span class="fc" id="L62">        response.put(&quot;accountNum&quot;, savedAccount.getAccountNumber());</span>
+
+<span class="fc" id="L64">        return response;</span>
     }
 
     public Optional&lt;Account&gt; updateAccount(Long id, Account updatedAccount) {
-<span class="fc" id="L65">        Optional&lt;Account&gt; existingAccountOpt = accountRepository.findById(id);</span>
+<span class="fc" id="L68">        Optional&lt;Account&gt; existingAccountOpt = accountRepository.findById(id);</span>
 
-<span class="fc bfc" id="L67" title="All 2 branches covered.">        if (existingAccountOpt.isPresent()) {</span>
-<span class="fc" id="L68">            Account existingAccount = existingAccountOpt.get();</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (existingAccountOpt.isPresent()) {</span>
+<span class="fc" id="L71">            Account existingAccount = existingAccountOpt.get();</span>
 
-<span class="fc" id="L70">            existingAccount.setAccountNumber(updatedAccount.getAccountNumber());</span>
-<span class="fc" id="L71">            existingAccount.setAccountType(updatedAccount.getAccountType());</span>
+<span class="fc" id="L73">            existingAccount.setAccountNumber(updatedAccount.getAccountNumber());</span>
+<span class="fc" id="L74">            existingAccount.setAccountType(updatedAccount.getAccountType());</span>
 
-<span class="fc" id="L73">            User updatedUser = updatedAccount.getUser();</span>
-<span class="pc bpc" id="L74" title="1 of 2 branches missed.">            if (updatedUser != null) {</span>
-<span class="nc" id="L75">                User existingUser = existingAccount.getUser();</span>
-<span class="nc bnc" id="L76" title="All 2 branches missed.">                if (existingUser != null) {</span>
-<span class="nc" id="L77">                    existingUser.setUsername(updatedUser.getUsername());</span>
-<span class="nc" id="L78">                    existingUser.setRole(updatedUser.getRole());</span>
-<span class="nc" id="L79">                    existingUser.setEmail(updatedUser.getEmail());</span>
-<span class="nc" id="L80">                    existingUser.setAddress(updatedUser.getAddress());</span>
-<span class="nc" id="L81">                    userRepository.save(existingUser);</span>
+<span class="fc" id="L76">            User updatedUser = updatedAccount.getUser();</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">            if (updatedUser != null) {</span>
+<span class="nc" id="L78">                User existingUser = existingAccount.getUser();</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">                if (existingUser != null) {</span>
+<span class="nc" id="L80">                    existingUser.setUsername(updatedUser.getUsername());</span>
+<span class="nc" id="L81">                    existingUser.setRole(updatedUser.getRole());</span>
+<span class="nc" id="L82">                    existingUser.setEmail(updatedUser.getEmail());</span>
+<span class="nc" id="L83">                    existingUser.setAddress(updatedUser.getAddress());</span>
+<span class="nc" id="L84">                    userRepository.save(existingUser);</span>
                 }
             }
-<span class="fc" id="L84">            return Optional.of(accountRepository.save(existingAccount));</span>
+<span class="fc" id="L87">            return Optional.of(accountRepository.save(existingAccount));</span>
         } else {
-<span class="fc" id="L86">            return Optional.empty();</span>
+<span class="fc" id="L89">            return Optional.empty();</span>
         }
     }
 
+    @Transactional
     public boolean deleteAccount(Long id) {
-<span class="fc" id="L91">        Optional&lt;Account&gt; accountToDelete = accountRepository.findById(id);</span>
-<span class="pc bpc" id="L92" title="1 of 2 branches missed.">        if (accountToDelete.isPresent()) {</span>
-<span class="pc bpc" id="L93" title="1 of 2 branches missed.">            if(accountToDelete.get().getUser().getUsername().equals(&quot;admin&quot;) ){</span>
-<span class="nc" id="L94">                return false;</span>
-            }
-            else {
-//                balanceRepository.deleteById(id);
-//                transactionRepository.deleteById(id);
-<span class="fc" id="L99">                accountRepository.deleteById(id);</span>
+<span class="fc" id="L95">        Account account = accountRepository.findById(id)</span>
+<span class="pc" id="L96">                .orElseThrow(() -&gt; new EntityNotFoundException(&quot;Account not found&quot;));</span>
+<span class="fc" id="L97">        balanceRepository.deleteByAccountId(id);</span>
+<span class="fc" id="L98">        transactionRepository.deleteByFromAccountId(id);</span>
+<span class="fc" id="L99">        accountRepository.delete(account);</span>
+<span class="fc" id="L100">        return true;</span>
 
-<span class="fc" id="L101">                return true;</span>
-            }
-        }
-<span class="nc" id="L104">        return false;</span>
     }
 
 }

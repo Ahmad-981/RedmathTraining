@@ -30,7 +30,6 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-//@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BalanceApiControllerTest {
 
     @Autowired
@@ -70,6 +69,7 @@ public class BalanceApiControllerTest {
         jwtToken = jsonResponse.get("token").asText();
     }
 
+    @Order(1)
     @Test
     public void testCreateBalance_Success() throws Exception {
         Account account = new Account();
@@ -78,14 +78,6 @@ public class BalanceApiControllerTest {
         balanceDTO.setAccountID(3L);
         balanceDTO.setAmount(BigDecimal.valueOf(1000.00));
         balanceDTO.setIndicator("credit");
-
-        Balance balance = new Balance();
-        balance.setAccount(account);
-        balance.setAmount(BigDecimal.valueOf(1000.00));
-        balance.setIndicator("credit");
-        balance.setDate(new Date());
-
-        when(accountRepository.findById(1L)).thenReturn(Optional.of(account));
 
         mockMvc.perform(MockMvcRequestBuilders.post("/api/balance")
                         .header("Authorization", "Bearer " + jwtToken)
@@ -98,23 +90,12 @@ public class BalanceApiControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.indicator").value("credit"));
     }
 
-//    @Test
-//    public void testCreateBalance_BalanceAlreadyExists() throws Exception {
-//
-//        mockMvc.perform(MockMvcRequestBuilders.post("/api/balance/1")
-//                        .header("Authorization", "Bearer " + jwtToken)
-//                        .contentType(MediaType.APPLICATION_JSON_VALUE))
-//                .andDo(MockMvcResultHandlers.print())
-//                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Balance already exists for this account"));
-//    }
-
     @Test
     public void testGetBalanceByAccountId_Success() throws Exception {
         Long accountId = 1L;
         Balance balance = new Balance();
         balance.setBalanceID(1L);
         balance.setAccount(accountRepository.getById(accountId));
-        when(accountRepository.findById(accountId));
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/balance/" + accountId)
                         .header("Authorization", "Bearer " + jwtToken)

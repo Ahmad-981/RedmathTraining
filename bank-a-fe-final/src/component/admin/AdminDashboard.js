@@ -164,7 +164,7 @@ function Dashboard() {
       <Modal isOpen={isCreateAccountOpen} onClose={onCloseCreateAccount} size="xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{isRegisteringUser ? 'Register New User' : 'Create New Account'}</ModalHeader>
+          <ModalHeader>{isRegisteringUser ? 'Register New User first' : 'Create New Account'}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             {isRegisteringUser ? (

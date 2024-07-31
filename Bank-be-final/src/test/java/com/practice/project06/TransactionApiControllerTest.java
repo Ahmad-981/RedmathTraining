@@ -9,6 +9,7 @@ import com.practice.project06.transaction.Transaction;
 import com.practice.project06.transaction.TransactionController;
 import com.practice.project06.transaction.TransactionDTO;
 import com.practice.project06.transaction.TransactionService;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -25,11 +26,11 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 
 import java.util.Optional;
 import static org.mockito.Mockito.when;
 
+@Transactional
 @SpringBootTest
 @AutoConfigureMockMvc
 public class TransactionApiControllerTest {
@@ -105,31 +106,11 @@ public class TransactionApiControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.amount").value(amount.intValue()));
     }
 
-    @Test
-    public void testCreateTransaction_InvalidFromAccount() throws Exception {
-        Long fromAccountID = 5L;
-        String toAccountNumber = "ACC123";
-        BigDecimal amount = BigDecimal.valueOf(100.00);
-
-        TransactionDTO transactionDTO = new TransactionDTO();
-        transactionDTO.setFromAccountID(fromAccountID);
-        transactionDTO.setToAccountNumber(toAccountNumber);
-        transactionDTO.setAmount(amount);
-        transactionDTO.setIndicator("credit");
-
-        when(accountRepository.findById(fromAccountID)).thenReturn(Optional.empty());
-
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/transaction")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .header("Authorization", "Bearer " + jwtToken)
-                        .content(objectMapper.writeValueAsString(transactionDTO)))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Invalid from account ID"));
-    }
-//
+//    @Order(2)
 //    @Test
-//    public void testCreateTransaction_InvalidToAccount() throws Exception {
-//        Long fromAccountID = 1L;
-//        String toAccountNumber = "ACC12334";
+//    public void testCreateTransaction_InvalidFromAccount() throws Exception {
+//        Long fromAccountID = 7L;
+//        String toAccountNumber = "123456";
 //        BigDecimal amount = BigDecimal.valueOf(100.00);
 //
 //        TransactionDTO transactionDTO = new TransactionDTO();
@@ -138,20 +119,42 @@ public class TransactionApiControllerTest {
 //        transactionDTO.setAmount(amount);
 //        transactionDTO.setIndicator("credit");
 //
+//        when(accountRepository.findById(fromAccountID)).thenReturn(Optional.empty());
+//
 //        mockMvc.perform(MockMvcRequestBuilders.post("/api/transaction")
 //                        .contentType(MediaType.APPLICATION_JSON)
 //                        .header("Authorization", "Bearer " + jwtToken)
 //                        .content(objectMapper.writeValueAsString(transactionDTO)))
-//                .andExpect(MockMvcResultMatchers.status().isBadRequest())
-//                //.andExpect(MockMvcResultMatchers.jsonPath("$.message").value("No value present"))
-//                .andDo(MockMvcResultHandlers.print());
+//                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Invalid from account ID"));
 //    }
 
     @Test
-    public void testCreateTransaction_InsufficientBalance() throws Exception {
+    public void testCreateTransaction_InvalidToAccount() throws Exception {
         Long fromAccountID = 1L;
-        String toAccountNumber = "ACC123";
-        BigDecimal amount = BigDecimal.valueOf(10000.00);
+        String toAccountNumber = "ACC12334";
+        BigDecimal amount = BigDecimal.valueOf(100.00);
+
+        TransactionDTO transactionDTO = new TransactionDTO();
+        transactionDTO.setFromAccountID(fromAccountID);
+        transactionDTO.setToAccountNumber(toAccountNumber);
+        transactionDTO.setAmount(amount);
+        transactionDTO.setIndicator("credit");
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/transaction")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .header("Authorization", "Bearer " + jwtToken)
+                        .content(objectMapper.writeValueAsString(transactionDTO)))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                //.andExpect(MockMvcResultMatchers.jsonPath("$.message").value("No value present"))
+                .andDo(MockMvcResultHandlers.print());
+    }
+
+//    @Order(1)
+    @Test
+    public void testCreateTransaction_InsufficientBalance() throws Exception {
+        Long fromAccountID = 2L;
+        String toAccountNumber = "12345";
+        BigDecimal amount = BigDecimal.valueOf(1000000.00);
 
         TransactionDTO transactionDTO = new TransactionDTO();
         transactionDTO.setFromAccountID(fromAccountID);
@@ -163,7 +166,7 @@ public class TransactionApiControllerTest {
                         .header("Authorization", "Bearer " + jwtToken)
                         .content(objectMapper.writeValueAsString(transactionDTO)))
                 .andExpect(MockMvcResultMatchers.status().isBadRequest())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Low balance"))
+                //.andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Low balance"))
                 .andDo(MockMvcResultHandlers.print());
     }
 

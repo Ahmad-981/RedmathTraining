@@ -76,28 +76,12 @@ public class UserApiControllerTest {
     @Order(1)
     @Test
     public void testGetAllUsers() throws Exception {
-        User user1 = new User();
-        user1.setUserID(3L);
-        user1.setUsername("ahmad");
-        user1.setPassword("password");
-        user1.setRole("USER");
-
-        User user2 = new User();
-        user2.setUserID(4L);
-        user2.setUsername("ali");
-        user2.setPassword("password");
-        user2.setRole("USER");
-
-        when(userRepository.findAll()).thenReturn(Arrays.asList(user1, user2));
-
         mockMvc.perform(MockMvcRequestBuilders.get("/api/user/all")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE));
-//                .andExpect(MockMvcResultMatchers.jsonPath("$[0].userID").value(3))
-//                .andExpect(MockMvcResultMatchers.jsonPath("$[1].userID").value(4));
     }
 
     @Order(2)

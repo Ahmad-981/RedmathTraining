@@ -3,6 +3,7 @@
 import com.practice.project06.account.Account;
 import com.practice.project06.account.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(&quot;/api/balance&quot;)
-<span class="fc" id="L14">public class BalanceController {</span>
+<span class="fc" id="L15">public class BalanceController {</span>
 
     @Autowired
     private BalanceRepository balanceRepository;
@@ -23,28 +24,33 @@ import java.util.Optional;
     private AccountRepository accountRepository;
 
     @PostMapping
-    public ResponseEntity&lt;Balance&gt; createBalance(@RequestBody BalanceDTO balanceDTO) {
-<span class="fc" id="L27">        Long accountId = balanceDTO.getAccountID();</span>
-<span class="fc" id="L28">        Account account = accountRepository.findById(accountId)</span>
-<span class="pc" id="L29">                .orElseThrow(() -&gt; new RuntimeException(&quot;Account not found&quot;));</span>
-<span class="nc" id="L30">        Optional&lt;Balance&gt; existingBalance = balanceRepository.findByAccount(account);</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (existingBalance.isPresent()) {</span>
-<span class="nc" id="L32">            throw new RuntimeException(&quot;Balance already exists for this account&quot;);</span>
+    public ResponseEntity&lt;?&gt; createBalance(@RequestBody BalanceDTO balanceDTO) {
+<span class="fc" id="L28">        Long accountId = balanceDTO.getAccountID();</span>
+        // Check if the account exists
+<span class="fc" id="L30">        Account account = accountRepository.findById(accountId).orElse(null);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (account == null) {</span>
+<span class="fc" id="L32">            return ResponseEntity.status(HttpStatus.NOT_FOUND)</span>
+<span class="fc" id="L33">                    .body(&quot;Account not found for ID: &quot; + accountId);</span>
+        }
+<span class="fc" id="L35">        Optional&lt;Balance&gt; existingBalance = balanceRepository.findByAccount(account);</span>
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">        if (existingBalance.isPresent()) {</span>
+<span class="nc" id="L37">            return ResponseEntity.status(HttpStatus.CONFLICT)</span>
+<span class="nc" id="L38">                    .body(&quot;Balance already exists for this account&quot;);</span>
         }
 
-<span class="nc" id="L35">        Balance balance = new Balance();</span>
-<span class="nc" id="L36">        balance.setAmount(balanceDTO.getAmount());</span>
-<span class="nc" id="L37">        balance.setIndicator(balanceDTO.getIndicator());</span>
-<span class="nc" id="L38">        balance.setAccount(account);</span>
-<span class="nc" id="L39">        balance.setDate(new Date());</span>
+<span class="fc" id="L41">        Balance balance = new Balance();</span>
+<span class="fc" id="L42">        balance.setAmount(balanceDTO.getAmount());</span>
+<span class="fc" id="L43">        balance.setIndicator(balanceDTO.getIndicator());</span>
+<span class="fc" id="L44">        balance.setAccount(account);</span>
+<span class="fc" id="L45">        balance.setDate(new Date());</span>
 
-<span class="nc" id="L41">        Balance savedBalance = balanceService.createBalance(balance);</span>
-<span class="nc" id="L42">        return ResponseEntity.ok(savedBalance);</span>
+<span class="fc" id="L47">        Balance savedBalance = balanceService.createBalance(balance);</span>
+<span class="fc" id="L48">        return ResponseEntity.ok(savedBalance);</span>
     }
 
     @GetMapping(&quot;/{id}&quot;)
     public Balance getBalanceById(@PathVariable Long id) {
-<span class="fc" id="L47">        return balanceRepository.findBalanceByAccountId(id);</span>
+<span class="fc" id="L53">        return balanceRepository.findBalanceByAccountId(id);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

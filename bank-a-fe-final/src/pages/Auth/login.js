@@ -75,7 +75,6 @@ function Login() {
         confirmButtonText: 'OK'
       });
     } finally {
-      // Clear the data fields regardless of the result
       setCredentials({ username: "", password: "" });
       setLoading(false);
     }

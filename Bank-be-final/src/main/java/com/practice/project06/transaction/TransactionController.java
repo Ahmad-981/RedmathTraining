@@ -20,16 +20,6 @@ public class TransactionController {
         return ResponseEntity.ok(transactions);
     }
 
-//    @PostMapping
-//    public ResponseEntity<Transaction> createTransaction(@RequestBody TransactionDTO transactionDTO) {
-//        Transaction transaction = transactionService.createTransaction(
-//                transactionDTO.getFromAccountID(),
-//                transactionDTO.getToAccountNumber(),
-//                transactionDTO.getAmount()
-//        );
-//        return ResponseEntity.ok(transaction);
-//    }
-
     @PostMapping
     public ResponseEntity<?> createTransaction(@RequestBody TransactionDTO transactionDTO) {
         try {

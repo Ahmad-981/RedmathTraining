@@ -39,8 +39,7 @@ import java.util.List;
 <span class="fc" id="L39">                    transactionDTO.getAmount());</span>
 <span class="fc" id="L40">            return ResponseEntity.ok(transaction);</span>
 <span class="fc" id="L41">        } catch (IllegalArgumentException e) {</span>
-            // Return error response with message
-<span class="fc" id="L43">            return ResponseEntity.badRequest().body(Collections.singletonMap(&quot;message&quot;, e.getMessage()));</span>
+<span class="fc" id="L42">            return ResponseEntity.badRequest().body(Collections.singletonMap(&quot;message&quot;, e.getMessage()));</span>
         }
     }
 

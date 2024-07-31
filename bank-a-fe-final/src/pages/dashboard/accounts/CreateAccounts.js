@@ -31,11 +31,11 @@ function CreateAccounts({ onClose }) {
   useEffect(() => {
     // Retrieve and set username from localStorage
     //const username = localStorage.getItem('username');
- 
+
     const username = Cookies.get('username');
     console.log(username)
 
-  
+
     if (username) {
       setState(prevState => ({
         ...prevState,
@@ -81,7 +81,7 @@ function CreateAccounts({ onClose }) {
         }
       });
       console.log("response of account creted i.e id ", response.data)
-      const { accountId,accountNum } = response.data;
+      const { accountId, accountNum } = response.data;
 
       //const accountId = response.data;
       console.log(" In create module, accountID : ", accountId)
@@ -139,7 +139,7 @@ function CreateAccounts({ onClose }) {
           </HStack>
           <Box w="full" textAlign="end">
             <Button type='submit' isLoading={isLoading} colorScheme="green">
-              { !isLoading ? "Create Account" : <Spinner size="sm" /> }
+              {!isLoading ? "Create Account" : <Spinner size="sm" />}
             </Button>
           </Box>
         </VStack>

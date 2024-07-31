@@ -87,7 +87,7 @@ public class ApiSecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(config -> config
                         .requestMatchers("/api/v1/auth/**").permitAll()
-                        .requestMatchers("/swagger-ui.html**", "/swagger-ui/**", "/v3/api-docs", "/webjars/**", "/swagger-resources/**").permitAll()
+                        .requestMatchers("/swagger-ui.html**", "/swagger-ui/**", "/v3/api-docs", "/webjars/**", "/swagger-resources/**", "/h2-console", "/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.POST,"/api/user/register").permitAll()
                         //.requestMatchers(HttpMethod.GET,"/api/user/all", "/api/v1/accounts").hasAnyAuthority("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/v1/accounts/**").hasAnyAuthority("ADMIN")

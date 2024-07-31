@@ -6,56 +6,62 @@
   <component name="ChangeListManager">
     <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/Project05Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/config/ApiSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/config/ApiSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/Project05Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/config/ApiSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/config/ApiSecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/pmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/pmd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountService.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountService.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/AccountService.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.account/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceService.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceService.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/BalanceService.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.balance/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/Transaction.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/Transaction.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/TransactionController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/TransactionController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/TransactionService.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/TransactionService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/TransactionService.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/TransactionService.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.practice.project06.transaction/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/pmd.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/pmd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/Context/AuthContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/LOADER/loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/AdminDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/accounts/CreateAccountForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/accounts/CreateAccounts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/accounts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/viewAccounts/ViewAccounts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/viewAccounts/customTableStyles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/admin/viewAccounts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/component/landingpage/LandingPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/Auth/Home/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/Auth/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/Auth/signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/Dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/accounts/CreateAccounts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/accounts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/deposit/InitialDeposit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/sideBar/SideBar2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/sideBar/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/viewAccounts/ViewAccounts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/viewAccounts/customTableStyles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/viewAccounts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/viewTransactions/ViewTransactions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/viewTransactions/customTableStyles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/pages/dashboard/viewTransactions/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bank-assigment-fe2/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AccountApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AccountApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AuthApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.AuthApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.BalanceApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.BalanceApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.TransactionApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.TransactionApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.UserApiControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.practice.project06.UserApiControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AccountApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AccountApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AuthApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.AuthApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.BalanceApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.BalanceApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.TransactionApiControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.practice.project06.TransactionApiControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AccountApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AccountApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/UserApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/UserApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/Auth/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/Auth/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +107,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Assignment.executor": "Run",
     "Application.Project03Application.executor": "Run",
     "Application.Project05Application.executor": "Run",
     "JUnit.AccountApiControllerTest.executor": "Run",
@@ -177,7 +184,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ahmad.irtza/Desktop/RedmathTraining/Bank-be-final",
+    "last_opened_file_path": "C:/Users/ahmad.irtza/Downloads/project06",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
@@ -210,9 +217,9 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Project05Application">
-    <configuration name="Project05Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.Project05Application" />
+  <component name="RunManager" selected="Application.Assignment">
+    <configuration name="Assignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.Assignment" />
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -224,7 +231,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountApiControllerTest.testDeleteAccount_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -234,28 +241,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
       <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountApiControllerTest.testFindByAccountNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.project06.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="METHOD_NAME" value="testFindByAccountNumber" />
+      <option name="METHOD_NAME" value="testDeleteAccount_Success" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BalanceApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -264,13 +256,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.TransactionApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApiControllerTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -280,18 +287,19 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
       <option name="MAIN_CLASS_NAME" value="com.practice.project06.UserApiControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testGetAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Project05Application" />
-        <item itemvalue="JUnit.AccountApiControllerTest.testFindByAccountNumber" />
-        <item itemvalue="JUnit.AccountApiControllerTest" />
-        <item itemvalue="JUnit.AuthApiControllerTest" />
-        <item itemvalue="JUnit.UserApiControllerTest" />
+        <item itemvalue="Application.Assignment" />
+        <item itemvalue="JUnit.UserApiControllerTest.testGetAllUsers" />
+        <item itemvalue="JUnit.AccountApiControllerTest.testDeleteAccount_Success" />
+        <item itemvalue="JUnit.TransactionApiControllerTest" />
+        <item itemvalue="JUnit.BalanceApiControllerTest" />
       </list>
     </recent_temporary>
   </component>

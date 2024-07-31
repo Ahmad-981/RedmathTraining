@@ -134,7 +134,7 @@ function Dashboard() {
         toAccountNumber: transactionData.toAccountNumber,
         amount: transactionData.amount,
       });
-    
+
       const response = await axios.post('http://localhost:8080/api/transaction', {
         fromAccountID,
         toAccountNumber: transactionData.toAccountNumber,
@@ -144,25 +144,25 @@ function Dashboard() {
           Authorization: `Bearer ${token}`,
         },
       });
-    
+
       console.log("Response in making transaction:", response);
-    
+
       Swal.fire({
         title: 'Transaction successful',
         icon: 'success',
         confirmButtonText: 'OK'
       });
-    
+
       fetchBalance();
       onCloseTransaction();
     } catch (error) {
       console.error("Transaction Error:", error);
-    
+
       let errorMessage = 'There was an issue processing the transaction.';
       if (error.response && error.response.data && error.response.data.message) {
         errorMessage = error.response.data.message;
       }
-    
+
       Swal.fire({
         title: 'Transaction failed',
         text: errorMessage,
@@ -170,45 +170,6 @@ function Dashboard() {
         confirmButtonText: 'OK'
       });
     }
-    
-
-    // try {
-    //   const token = Cookies.get('token');
-    //   console.log("Sending request with:", {
-    //     fromAccountID,
-    //     toAccountNumber: transactionData.toAccountNumber,
-    //     amount: transactionData.amount,
-    //   });
-
-    //   const response = await axios.post('http://localhost:8080/api/transaction', {
-    //     fromAccountID,
-    //     toAccountNumber: transactionData.toAccountNumber,
-    //     amount: transactionData.amount,
-    //   }, {
-    //     headers: {
-    //       Authorization: `Bearer ${token}`,
-    //     },
-    //   });
-
-    //   console.log("Response in making transaction:", response);
-
-    //   Swal.fire({
-    //     title: 'Transaction successful',
-    //     icon: 'success',
-    //     confirmButtonText: 'OK'
-    //   });
-
-    //   fetchBalance();
-    //   onCloseTransaction();
-    // } catch (error) {
-    //   console.error("Transaction Error:", error);
-    //   Swal.fire({
-    //     title: 'Transaction failed',
-    //     text: 'There was an issue processing the transaction.',
-    //     icon: 'error',
-    //     confirmButtonText: 'OK'
-    //   });
-    // }
   };
 
   const handleShowBalance = () => {
@@ -240,7 +201,11 @@ function Dashboard() {
         left="0"
         zIndex="1"
       >
-        <Heading size="lg" mb={8} textAlign="center">Dashboard</Heading>
+        <Heading size="lg" mb={8} textAlign="center"></Heading>
+        <Heading as="h1" size="lg" mb={4} textAlign="center">
+          Dashboard
+        </Heading>
+        <Heading size="lg" mb={8} textAlign="center"></Heading>
         <VStack spacing={4} align="start">
           {/* <Button w="full" onClick={onOpenTransactions}>View Transactions</Button> */}
           <Button w="full" onClick={onOpenCreateAccount}>Create Account</Button>
@@ -260,7 +225,10 @@ function Dashboard() {
           <Flex wrap="wrap" gap={4}>
             <Box w="full" lg="48%" p={4} borderWidth={1} borderRadius="md" boxShadow="md">
               <Heading size="lg" mb={4} textAlign="center">
-                <i className="fa-solid fa-money-bill-1"></i> Welcome to Easy Banking "{username}"
+                <i className="fa-solid fa-money-bill-1"></i> Welcome to Digital Banking
+              </Heading>
+              <Heading as="h1" size="lg" mb={4} textAlign="center">
+                "{username}"
               </Heading>
               <Divider />
             </Box>
@@ -273,6 +241,10 @@ function Dashboard() {
               <Heading size="md" mb={4} textAlign="center">
                 <i className="fa-solid fa-money-bill-1"></i> Transactions
               </Heading>
+              <Text fontSize="xl" textAlign="center">To view all the transaction of your account, click the following button</Text>
+              <Heading size="lg" mb={4} textAlign="center">
+                <i className="fa-solid fa-money-bill-1"></i>
+              </Heading>
               <Button
                 colorScheme="blue"
                 mb={4}
@@ -283,8 +255,21 @@ function Dashboard() {
               >
                 View All Transactions
               </Button>
+              <Heading size="lg" mb={4} textAlign="center">
+                <i className="fa-solid fa-money-bill-1"></i>
+              </Heading>
 
               <Divider />
+              <Heading size="lg" mb={4} textAlign="center">
+                <i className="fa-solid fa-money-bill-1"></i>
+              </Heading>
+              <Heading size="md" mb={4} textAlign="center">
+                <i className="fa-solid fa-money-bill-1"></i> Balance
+              </Heading>
+              {/* <Text fontSize="xl" textAlign="center">To view your balance, click the following button</Text> */}
+              <Heading size="lg" mb={4} textAlign="center">
+                <i className="fa-solid fa-money-bill-1"></i>
+              </Heading>
               {isLoading ? (
                 <Flex justify="center" align="center" h="full" p={4}>
                   <Spinner size="xl" />
@@ -304,13 +289,13 @@ function Dashboard() {
               )}
             </Box>
             <Image
-              src="https://www.shutterstock.com/image-photo/businessman-touching-icon-online-banking-260nw-1388903636.jpg"
+              src="https://img.freepik.com/premium-vector/online-banking-platform-metaphor-remote-bank-service-online-transaction-system-mobile-investment-payment-banking-operations-currency-exchange-check-account-manage-deposit-ecommerce_273625-4866.jpg"
               alt="Bank Image"
               boxSize="100%"
-              objectFit="cover"
-              borderRadius="md"
+              objectFit="fill"
+              borderRadius="lg"
               mt={4}
-              filter="blur(5px)" 
+            // filter="blur(5px)"
             />
 
           </Flex>
@@ -393,10 +378,12 @@ function Dashboard() {
               <FormControl id="toAccountNumber" mb={4}>
                 <FormLabel>Receiver Account Number</FormLabel>
                 <Input
-                  type="text"
+                  type="number"
                   name="toAccountNumber"
                   value={transactionData.toAccountNumber}
                   onChange={handleTransactionChange}
+                  min="0"
+                  step="0.01"
                 />
               </FormControl>
               <FormControl id="amount" mb={4}>
@@ -406,6 +393,8 @@ function Dashboard() {
                   name="amount"
                   value={transactionData.amount}
                   onChange={handleTransactionChange}
+                  min="0"
+                  step="0.01"
                 />
               </FormControl>
               <Stack spacing={4} align="center">

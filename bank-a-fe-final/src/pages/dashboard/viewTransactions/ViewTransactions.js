@@ -42,12 +42,6 @@ function ViewTransactions() {
       setTransactions(response.data);
     } catch (error) {
       console.error('Error fetching transactions:', error);
-      // Swal.fire({
-      //   title: 'Error',
-      //   text: 'Failed to fetch transactions.',
-      //   icon: 'error',
-      //   confirmButtonText: 'Close',
-      // });
     } finally {
       setIsLoading(false);
     }
