@@ -84,8 +84,10 @@ function ViewTransactions() {
                     <Thead>
                       <Tr>
                         <Th>Transaction ID</Th>
+
                         <Th>Receiver ID</Th>
                         <Th>Receiver</Th>
+                        <Th>Sender</Th>
                         <Th>Date</Th>
                         <Th>Amount</Th>
                         <Th>Indicator</Th>
@@ -107,6 +109,7 @@ function ViewTransactions() {
                               </Td>
                               <Td>{transaction.toAccount.accountID}</Td>
                               <Td>{transaction.toAccount.user.username}</Td>
+                              <Td>{transaction.fromAccount.user.username}</Td>
                               <Td>{new Date(transaction.date).toLocaleDateString('en-US')}</Td>
                               <Td>{transaction.amount}</Td>
                               <Td>{indicator}</Td>

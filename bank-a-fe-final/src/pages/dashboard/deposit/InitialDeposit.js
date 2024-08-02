@@ -83,14 +83,12 @@ const InitialDeposit = ({ onClose, onDepositSuccess }) => {
         title: 'Deposit Successful',
         text: 'The initial deposit has been successfully made.',
         icon: 'success',
-        timer: 2000,
-        timerProgressBar: true,
         backdrop: true,
         allowOutsideClick: false
       }).then(() => {
-        setAmount(''); // Reset the form fields
+        setAmount('');
         if (onDepositSuccess) {
-          onDepositSuccess(); // Call the callback to update the balance
+          onDepositSuccess();
         }
         if (onClose) onClose();
       });
@@ -98,8 +96,6 @@ const InitialDeposit = ({ onClose, onDepositSuccess }) => {
       console.error('Error during deposit:', error);
   
       let errorMessage = 'There was an error occurred';
-  
-      // Check if error.response is available and handle different status codes
       if (error.response) {
         const { status } = error.response;
   
@@ -142,7 +138,7 @@ const InitialDeposit = ({ onClose, onDepositSuccess }) => {
               step="0.01"
             />
           </FormControl>
-          <FormControl isRequired>
+          <FormControl>
             <FormLabel>Indicator</FormLabel>
             <Select value="credit" isReadOnly>
               <option value="credit">Credit</option>

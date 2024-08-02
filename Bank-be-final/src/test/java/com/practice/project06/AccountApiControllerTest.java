@@ -46,18 +46,18 @@ public class AccountApiControllerTest {
 
     @Mock
     private AccountRepository accountRepository;
-
-    @Mock
-    private UserRepository userRepository;
-
-    @Mock
-    private UserService userService;
-
-    @Mock
-    private BalanceRepository balanceRepository;
-
-    @Mock
-    private TransactionRepository transactionRepository;
+//
+//    @Mock
+//    private UserRepository userRepository;
+//
+//    @Mock
+//    private UserService userService;
+//
+//    @Mock
+//    private BalanceRepository balanceRepository;
+//
+//    @Mock
+//    private TransactionRepository transactionRepository;
 
     @InjectMocks
     private AccountService accountService;

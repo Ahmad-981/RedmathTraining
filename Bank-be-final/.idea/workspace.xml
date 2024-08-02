@@ -7,20 +7,21 @@
     <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application-test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application-test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/config/ApiSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/config/ApiSecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/AccountApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/AuthApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/AuthApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bank.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/bank.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/Assignment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/config/ApiSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/config/ApiSecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/findsecbugs-plugin-1.13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spotbugsXml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AccountApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/AccountApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/component/admin/AdminDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/component/admin/AdminDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/Auth/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/Auth/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/deposit/InitialDeposit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/deposit/InitialDeposit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/ViewTransactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/ViewTransactions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +156,7 @@
       <recent name="C:\Users\ahmad.irtza\Downloads\project04\src\main\java\com\practice\project02" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final" />
       <recent name="C:\Users\ahmad.irtza\Downloads\project06\src\main\resources\db\changelog" />
       <recent name="C:\Users\ahmad.irtza\Downloads\project04\src\main\resources\config" />
     </key>
@@ -176,7 +178,20 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserApiControllerTest">
+  <component name="RunManager" selected="Application.Assignment">
+    <configuration name="Assignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.Assignment" />
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AccountApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
@@ -187,21 +202,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
       <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.project06.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -254,11 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Assignment" />
+        <item itemvalue="JUnit.AccountApiControllerTest" />
         <item itemvalue="JUnit.UserApiControllerTest" />
         <item itemvalue="JUnit.TransactionApiControllerTest" />
         <item itemvalue="JUnit.BalanceApiControllerTest" />
-        <item itemvalue="JUnit.AccountApiControllerTest" />
-        <item itemvalue="JUnit.AuthApiControllerTest" />
       </list>
     </recent_temporary>
   </component>

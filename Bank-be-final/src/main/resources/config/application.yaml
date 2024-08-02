@@ -1,11 +1,11 @@
 spring:
   application:
-    name: project02
+    name: Assignment
 
   datasource:
     url: jdbc:mysql://localhost:3306/bank
-    username: root
-    password: admin123
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -36,5 +36,5 @@ management:
         include: '*'
 
 jwt:
-  secret: UGEzLf3ug6HdJy7nEaVZjIxraYsbNIbt4AIBpgTAgTQ=
-  expiration: 5000000
+  secret: ${JWT_KEY}
+  expiration: ${JWT_EXPIRY}

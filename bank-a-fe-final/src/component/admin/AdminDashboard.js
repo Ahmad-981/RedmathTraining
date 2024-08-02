@@ -21,6 +21,7 @@ import {
   FormLabel,
   Input,
   Select,
+  FormErrorMessage
 } from '@chakra-ui/react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
@@ -40,13 +41,50 @@ function Dashboard() {
   const [userID, setUserID] = useState(null);
   const [isRegisteringUser, setIsRegisteringUser] = useState(true);
 
+  // Error state for validation messages
+  const [errors, setErrors] = useState({
+    username: '',
+    email: '',
+    address: '',
+    password: '',
+  });
+
   const { isOpen: isAccountsOpen, onOpen: onOpenAccounts, onClose: onCloseAccounts } = useDisclosure();
   const { isOpen: isCreateAccountOpen, onOpen: onOpenCreateAccount, onClose: onCloseCreateAccount } = useDisclosure();
   const { isOpen: isDepositOpen, onOpen: onOpenDeposit, onClose: onCloseDeposit } = useDisclosure();
   const navigate = useNavigate(); // Hook to programmatically navigate
 
+  // Handle user input changes and validate inline
   const handleUserChange = (e) => {
-    setNewUser({ ...newUser, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setNewUser({ ...newUser, [name]: value });
+
+    // Inline validation
+    if (name === 'username') {
+      if (value.length > 8) {
+        setErrors(prev => ({ ...prev, username: 'Username must be less that 8 characters long.' }));
+      } else {
+        setErrors(prev => ({ ...prev, username: '' }));
+      }
+    } else if (name === 'email') {
+      if (!/\S+@\S+\.\S+/.test(value)) {
+        setErrors(prev => ({ ...prev, email: 'Email must be a valid email address.' }));
+      } else {
+        setErrors(prev => ({ ...prev, email: '' }));
+      }
+    } else if (name === 'address') {
+      if (value.length > 30) {
+        setErrors(prev => ({ ...prev, address: 'Address must be less than 30 characters.' }));
+      } else {
+        setErrors(prev => ({ ...prev, address: '' }));
+      }
+    } else if (name === 'password') {
+      if (!/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(value)) {
+        setErrors(prev => ({ ...prev, password: 'Password must be at least 8 characters long and include both letters and numbers.' }));
+      } else {
+        setErrors(prev => ({ ...prev, password: '' }));
+      }
+    }
   };
 
   const handleAccountChange = (e) => {
@@ -54,12 +92,23 @@ function Dashboard() {
   };
 
   const handleRegisterUser = async () => {
+    // Final validation check before registration
+    if (Object.values(errors).some(error => error !== '')) {
+      Swal.fire({
+        title: 'Validation Error',
+        text: 'Please correct the errors in the form.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+      return;
+    }
+    
     try {
       const response = await axios.post('http://localhost:8080/api/v1/auth/register', newUser);
       const userID = response.data.userID;
       console.log("user created with userID: ", userID)
       setUserID(userID);
-      setNewAccount((prev) => ({ ...prev, fullname: newUser.username })); // Set fullname as username
+      setNewAccount(prev => ({ ...prev, fullname: newUser.username })); // Set fullname as username
       setIsRegisteringUser(false); // Switch to account creation form
     } catch (error) {
       console.error('Error registering user:', error);
@@ -169,21 +218,25 @@ function Dashboard() {
           <ModalBody>
             {isRegisteringUser ? (
               <>
-                <FormControl mb={4}>
+                <FormControl mb={4} isInvalid={errors.username !== ''}>
                   <FormLabel>Username</FormLabel>
                   <Input type="text" name="username" value={newUser.username} onChange={handleUserChange} />
+                  <FormErrorMessage>{errors.username}</FormErrorMessage>
                 </FormControl>
-                <FormControl mb={4}>
+                <FormControl mb={4} isInvalid={errors.email !== ''}>
                   <FormLabel>Email</FormLabel>
                   <Input type="email" name="email" value={newUser.email} onChange={handleUserChange} />
+                  <FormErrorMessage>{errors.email}</FormErrorMessage>
                 </FormControl>
-                <FormControl mb={4}>
+                <FormControl mb={4} isInvalid={errors.address !== ''}>
                   <FormLabel>Address</FormLabel>
                   <Input type="text" name="address" value={newUser.address} onChange={handleUserChange} />
+                  <FormErrorMessage>{errors.address}</FormErrorMessage>
                 </FormControl>
-                <FormControl mb={4}>
+                <FormControl mb={4} isInvalid={errors.password !== ''}>
                   <FormLabel>Password</FormLabel>
                   <Input type="password" name="password" value={newUser.password} onChange={handleUserChange} />
+                  <FormErrorMessage>{errors.password}</FormErrorMessage>
                 </FormControl>
                 <Button colorScheme="teal" onClick={handleRegisterUser}>Register User</Button>
               </>

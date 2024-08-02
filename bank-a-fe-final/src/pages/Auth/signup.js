@@ -1,15 +1,31 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Box, Button, FormControl, FormLabel, Input, Stack, Text, Heading } from "@chakra-ui/react";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import {
+  Box,
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
+  Stack,
+  Text,
+  Heading,
+  FormErrorMessage
+} from '@chakra-ui/react';
+import axios from 'axios';
 import Swal from "sweetalert2";
-import axios from "axios";
 
 function SignUp() {
   const [userDetails, setUserDetails] = useState({
-    username: "",
-    email: "",
-    address: "",
-    password: "",
+    username: '',
+    email: '',
+    address: '',
+    password: '',
+  });
+  const [errors, setErrors] = useState({
+    username: '',
+    email: '',
+    address: '',
+    password: '',
   });
   const navigate = useNavigate();
 
@@ -19,18 +35,39 @@ function SignUp() {
       ...userDetails,
       [name]: value
     });
+
+    // Validate input fields
+    if (name === 'username') {
+      setErrors(prev => ({
+        ...prev,
+        username: value.length > 8 ? 'Username must be less than 8 characters.' : ''
+      }));
+    } else if (name === 'email') {
+      setErrors(prev => ({
+        ...prev,
+        email: !/\S+@\S+\.\S+/.test(value) ? 'Email must be a valid email address.' : ''
+      }));
+    } else if (name === 'address') {
+      setErrors(prev => ({
+        ...prev,
+        address: value.length > 30 ? 'Address must be less than 30 characters.' : ''
+      }));
+    } else if (name === 'password') {
+      setErrors(prev => ({
+        ...prev,
+        password: !/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(value)
+          ? 'Password must be at least 8 characters long and include both letters and numbers.'
+          : ''
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!userDetails.username || !userDetails.email || !userDetails.password) {
-      Swal.fire({
-        title: 'Error',
-        text: 'Please fill in all required fields.',
-        icon: 'error',
-        confirmButtonText: 'OK'
-      });
+    // Final validation check before submission
+    if (Object.values(errors).some(error => error !== '') || 
+        Object.values(userDetails).some(value => value.trim() === '')) {
       return;
     }
 
@@ -72,7 +109,7 @@ function SignUp() {
         </Heading>
         <form onSubmit={handleSubmit}>
           <Stack spacing={4}>
-            <FormControl id="username" isRequired>
+            <FormControl id="username" isRequired isInvalid={errors.username !== ''}>
               <FormLabel>Username</FormLabel>
               <Input
                 type="text"
@@ -81,8 +118,9 @@ function SignUp() {
                 onChange={handleInputChange}
                 placeholder="Enter username"
               />
+              <FormErrorMessage>{errors.username}</FormErrorMessage>
             </FormControl>
-            <FormControl id="email" isRequired>
+            <FormControl id="email" isRequired isInvalid={errors.email !== ''}>
               <FormLabel>Email Address</FormLabel>
               <Input
                 type="email"
@@ -91,8 +129,9 @@ function SignUp() {
                 onChange={handleInputChange}
                 placeholder="abc@gmail.com"
               />
+              <FormErrorMessage>{errors.email}</FormErrorMessage>
             </FormControl>
-            <FormControl id="address">
+            <FormControl id="address" isInvalid={errors.address !== ''}>
               <FormLabel>Address</FormLabel>
               <Input
                 type="text"
@@ -101,8 +140,9 @@ function SignUp() {
                 onChange={handleInputChange}
                 placeholder="Address"
               />
+              <FormErrorMessage>{errors.address}</FormErrorMessage>
             </FormControl>
-            <FormControl id="password" isRequired>
+            <FormControl id="password" isRequired isInvalid={errors.password !== ''}>
               <FormLabel>Password</FormLabel>
               <Input
                 type="password"
@@ -111,6 +151,7 @@ function SignUp() {
                 onChange={handleInputChange}
                 placeholder="••••••••"
               />
+              <FormErrorMessage>{errors.password}</FormErrorMessage>
             </FormControl>
             <Stack spacing={3}>
               <Button colorScheme="blue" type="submit">

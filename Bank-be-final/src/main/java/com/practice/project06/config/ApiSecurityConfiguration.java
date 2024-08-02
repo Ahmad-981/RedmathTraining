@@ -77,6 +77,15 @@ public class ApiSecurityConfiguration {
         return source;
     }
 
+//    @PostConstruct
+//    public void init() {
+//        Dotenv dotenv = Dotenv.load();
+//        System.setProperty("MYSQL_USERNAME", dotenv.get("MYSQL_USERNAME"));
+//        System.setProperty("MYSQL_PASSWORD", dotenv.get("MYSQL_PASSWORD"));
+//        System.setProperty("JWT_KEY", dotenv.get("JWT_KEY"));
+//        System.setProperty("JWT_EXPIRY", dotenv.get("JWT_EXPIRY"));
+//    }
+
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 

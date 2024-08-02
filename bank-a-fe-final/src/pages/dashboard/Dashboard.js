@@ -297,12 +297,8 @@ function Dashboard() {
               mt={4}
             // filter="blur(5px)"
             />
-
           </Flex>
-
           <Outlet />
-
-
         </Container>
         <Box
           as="footer"
@@ -321,9 +317,9 @@ function Dashboard() {
       </Box>
 
       {/* Modals */}
-      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions} size="xl">
+      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions} size="full">
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxWidth="80vw" maxHeight="80vh" borderRadius="xl" boxShadow="md">
           <ModalHeader>View Transactions</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -346,7 +342,7 @@ function Dashboard() {
         </ModalContent>
       </Modal> */}
 
-      <Modal isOpen={isCreateAccountOpen} onClose={onCloseCreateAccount} size="lg">
+      <Modal isOpen={isCreateAccountOpen} onClose={onCloseCreateAccount} size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Create Account</ModalHeader>
@@ -357,7 +353,7 @@ function Dashboard() {
         </ModalContent>
       </Modal>
 
-      <Modal isOpen={isDepositOpen} onClose={onCloseDeposit} size="lg">
+      <Modal isOpen={isDepositOpen} onClose={onCloseDeposit} size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Initial Deposit</ModalHeader>
