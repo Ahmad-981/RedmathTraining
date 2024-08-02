@@ -4,10 +4,8 @@ import {
   Box,
   Button,
   Heading,
-  Text,
   Container,
   Flex,
-  Spinner,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -131,9 +129,9 @@ function Dashboard() {
         },
       });
       onCloseCreateAccount();
-      setIsRegisteringUser(true); // Reset to registration form after success
+      setIsRegisteringUser(true); 
 
-      // Display success message
+      
       Swal.fire({
         title: 'Account Created Successfully',
         text: `Account for ${newAccount.fullname} has been created.`,
@@ -142,7 +140,6 @@ function Dashboard() {
       });
     } catch (error) {
       console.error('Error creating account:', error);
-      // Display error message
       Swal.fire({
         title: 'Error',
         text: 'There was an issue creating the account. Please try again.',

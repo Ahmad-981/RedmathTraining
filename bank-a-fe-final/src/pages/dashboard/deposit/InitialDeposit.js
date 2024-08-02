@@ -38,7 +38,7 @@ const InitialDeposit = ({ onClose, onDepositSuccess }) => {
 
     const accountID = Cookies.get('accountId');
     const token = Cookies.get('token');
-    const username = Cookies.get('username');
+
     console.log("AccountID in InitialDeposit Cookies: ", accountID);
     console.log("Token in InitialDeposit Cookies: ", token);
 

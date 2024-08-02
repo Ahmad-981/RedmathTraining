@@ -9,13 +9,14 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 
 @Service
-<span class="fc" id="L18">public class AccountService {</span>
+<span class="fc" id="L19">public class AccountService {</span>
 
     @Autowired
     private AccountRepository accountRepository;
@@ -29,75 +30,69 @@ import java.util.Random;
     @Autowired
     private UserRepository userRepository;
 
-
-
     private String generateRandomString(int length) {
-<span class="fc" id="L35">        Random random = new Random();</span>
-<span class="fc" id="L36">        int min = (int) Math.pow(10, length - 1);</span>
-<span class="fc" id="L37">        int max = (int) Math.pow(10, length) - 1;</span>
-
-<span class="fc" id="L39">        int randomInteger = random.nextInt(max - min + 1) + min;</span>
-<span class="fc" id="L40">        return String.valueOf(randomInteger);</span>
+<span class="fc" id="L34">        SecureRandom secureRandom = new SecureRandom();</span>
+<span class="fc" id="L35">        return new BigInteger(length * 5, secureRandom).toString(32);</span>
     }
 
     public Map&lt;String, Object&gt; createAccount(AccountDTO accountDTO) {
-<span class="fc" id="L44">        User user = accountDTO.getUser();</span>
+<span class="fc" id="L39">        User user = accountDTO.getUser();</span>
 
-<span class="pc bpc" id="L46" title="2 of 4 branches missed.">        if (user == null || user.getUserID() == null) {</span>
-<span class="nc" id="L47">            throw new IllegalArgumentException(&quot;User ID must not be null&quot;);</span>
+<span class="pc bpc" id="L41" title="2 of 4 branches missed.">        if (user == null || user.getUserID() == null) {</span>
+<span class="nc" id="L42">            throw new IllegalArgumentException(&quot;User ID must not be null&quot;);</span>
         }
 
-<span class="fc" id="L50">        User existingUser = userRepository.findById(user.getUserID())</span>
-<span class="pc" id="L51">                .orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
+<span class="fc" id="L45">        User existingUser = userRepository.findById(user.getUserID())</span>
+<span class="pc" id="L46">                .orElseThrow(() -&gt; new RuntimeException(&quot;User not found&quot;));</span>
 
-<span class="fc" id="L53">        Account account = new Account();</span>
-<span class="fc" id="L54">        account.setAccountNumber(accountDTO.getAccountNumber());</span>
-<span class="fc" id="L55">        account.setAccountType(accountDTO.getAccountType());</span>
-<span class="fc" id="L56">        account.setUser(existingUser);</span>
-<span class="fc" id="L57">        account.setAccountNumber(generateRandomString(8));</span>
+<span class="fc" id="L48">        Account account = new Account();</span>
+<span class="fc" id="L49">        account.setAccountNumber(accountDTO.getAccountNumber());</span>
+<span class="fc" id="L50">        account.setAccountType(accountDTO.getAccountType());</span>
+<span class="fc" id="L51">        account.setUser(existingUser);</span>
+<span class="fc" id="L52">        account.setAccountNumber(generateRandomString(8));</span>
 
-<span class="fc" id="L59">        Account savedAccount = accountRepository.save(account);</span>
-<span class="fc" id="L60">        Map&lt;String, Object&gt; response = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L61">        response.put(&quot;accountId&quot;, savedAccount.getAccountID());</span>
-<span class="fc" id="L62">        response.put(&quot;accountNum&quot;, savedAccount.getAccountNumber());</span>
+<span class="fc" id="L54">        Account savedAccount = accountRepository.save(account);</span>
+<span class="fc" id="L55">        Map&lt;String, Object&gt; response = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L56">        response.put(&quot;accountId&quot;, savedAccount.getAccountID());</span>
+<span class="fc" id="L57">        response.put(&quot;accountNum&quot;, savedAccount.getAccountNumber());</span>
 
-<span class="fc" id="L64">        return response;</span>
+<span class="fc" id="L59">        return response;</span>
     }
 
     public Optional&lt;Account&gt; updateAccount(Long id, Account updatedAccount) {
-<span class="fc" id="L68">        Optional&lt;Account&gt; existingAccountOpt = accountRepository.findById(id);</span>
+<span class="fc" id="L63">        Optional&lt;Account&gt; existingAccountOpt = accountRepository.findById(id);</span>
 
-<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (existingAccountOpt.isPresent()) {</span>
-<span class="fc" id="L71">            Account existingAccount = existingAccountOpt.get();</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        if (existingAccountOpt.isPresent()) {</span>
+<span class="fc" id="L66">            Account existingAccount = existingAccountOpt.get();</span>
 
-<span class="fc" id="L73">            existingAccount.setAccountNumber(updatedAccount.getAccountNumber());</span>
-<span class="fc" id="L74">            existingAccount.setAccountType(updatedAccount.getAccountType());</span>
+<span class="fc" id="L68">            existingAccount.setAccountNumber(updatedAccount.getAccountNumber());</span>
+<span class="fc" id="L69">            existingAccount.setAccountType(updatedAccount.getAccountType());</span>
 
-<span class="fc" id="L76">            User updatedUser = updatedAccount.getUser();</span>
-<span class="pc bpc" id="L77" title="1 of 2 branches missed.">            if (updatedUser != null) {</span>
-<span class="nc" id="L78">                User existingUser = existingAccount.getUser();</span>
-<span class="nc bnc" id="L79" title="All 2 branches missed.">                if (existingUser != null) {</span>
-<span class="nc" id="L80">                    existingUser.setUsername(updatedUser.getUsername());</span>
-<span class="nc" id="L81">                    existingUser.setRole(updatedUser.getRole());</span>
-<span class="nc" id="L82">                    existingUser.setEmail(updatedUser.getEmail());</span>
-<span class="nc" id="L83">                    existingUser.setAddress(updatedUser.getAddress());</span>
-<span class="nc" id="L84">                    userRepository.save(existingUser);</span>
+<span class="fc" id="L71">            User updatedUser = updatedAccount.getUser();</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">            if (updatedUser != null) {</span>
+<span class="nc" id="L73">                User existingUser = existingAccount.getUser();</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">                if (existingUser != null) {</span>
+<span class="nc" id="L75">                    existingUser.setUsername(updatedUser.getUsername());</span>
+<span class="nc" id="L76">                    existingUser.setRole(updatedUser.getRole());</span>
+<span class="nc" id="L77">                    existingUser.setEmail(updatedUser.getEmail());</span>
+<span class="nc" id="L78">                    existingUser.setAddress(updatedUser.getAddress());</span>
+<span class="nc" id="L79">                    userRepository.save(existingUser);</span>
                 }
             }
-<span class="fc" id="L87">            return Optional.of(accountRepository.save(existingAccount));</span>
+<span class="fc" id="L82">            return Optional.of(accountRepository.save(existingAccount));</span>
         } else {
-<span class="fc" id="L89">            return Optional.empty();</span>
+<span class="fc" id="L84">            return Optional.empty();</span>
         }
     }
 
     @Transactional
     public boolean deleteAccount(Long id) {
-<span class="fc" id="L95">        Account account = accountRepository.findById(id)</span>
-<span class="pc" id="L96">                .orElseThrow(() -&gt; new EntityNotFoundException(&quot;Account not found&quot;));</span>
-<span class="fc" id="L97">        balanceRepository.deleteByAccountId(id);</span>
-<span class="fc" id="L98">        transactionRepository.deleteByFromAccountId(id);</span>
-<span class="fc" id="L99">        accountRepository.delete(account);</span>
-<span class="fc" id="L100">        return true;</span>
+<span class="nc" id="L90">        Account account = accountRepository.findById(id)</span>
+<span class="nc" id="L91">                .orElseThrow(() -&gt; new EntityNotFoundException(&quot;Account not found&quot;));</span>
+<span class="nc" id="L92">        balanceRepository.deleteByAccountId(id);</span>
+<span class="nc" id="L93">        transactionRepository.deleteByFromAccountId(id);</span>
+<span class="nc" id="L94">        accountRepository.delete(account);</span>
+<span class="nc" id="L95">        return true;</span>
 
     }
 

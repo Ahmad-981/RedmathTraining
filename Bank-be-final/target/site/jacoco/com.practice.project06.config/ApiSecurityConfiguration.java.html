@@ -77,30 +77,39 @@ import java.util.Arrays;
 <span class="fc" id="L77">        return source;</span>
     }
 
+//    @PostConstruct
+//    public void init() {
+//        Dotenv dotenv = Dotenv.load();
+//        System.setProperty(&quot;MYSQL_USERNAME&quot;, dotenv.get(&quot;MYSQL_USERNAME&quot;));
+//        System.setProperty(&quot;MYSQL_PASSWORD&quot;, dotenv.get(&quot;MYSQL_PASSWORD&quot;));
+//        System.setProperty(&quot;JWT_KEY&quot;, dotenv.get(&quot;JWT_KEY&quot;));
+//        System.setProperty(&quot;JWT_EXPIRY&quot;, dotenv.get(&quot;JWT_EXPIRY&quot;));
+//    }
+
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-<span class="fc" id="L83">        AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);</span>
-<span class="fc" id="L84">        authenticationManagerBuilder.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());</span>
+<span class="fc" id="L92">        AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);</span>
+<span class="fc" id="L93">        authenticationManagerBuilder.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());</span>
 
-<span class="fc" id="L86">        http.cors(cors -&gt; cors.configurationSource(corsConfigurationSource()))</span>
-<span class="fc" id="L87">                .csrf(AbstractHttpConfigurer::disable)</span>
-<span class="fc" id="L88">                .authorizeHttpRequests(config -&gt; config</span>
-<span class="fc" id="L89">                        .requestMatchers(&quot;/api/v1/auth/**&quot;).permitAll()</span>
-<span class="fc" id="L90">                        .requestMatchers(&quot;/swagger-ui.html**&quot;, &quot;/swagger-ui/**&quot;, &quot;/v3/api-docs&quot;, &quot;/webjars/**&quot;, &quot;/swagger-resources/**&quot;).permitAll()</span>
-<span class="fc" id="L91">                        .requestMatchers(HttpMethod.POST,&quot;/api/user/register&quot;).permitAll()</span>
+<span class="fc" id="L95">        http.cors(cors -&gt; cors.configurationSource(corsConfigurationSource()))</span>
+<span class="fc" id="L96">                .csrf(AbstractHttpConfigurer::disable)</span>
+<span class="fc" id="L97">                .authorizeHttpRequests(config -&gt; config</span>
+<span class="fc" id="L98">                        .requestMatchers(&quot;/api/v1/auth/**&quot;).permitAll()</span>
+<span class="fc" id="L99">                        .requestMatchers(&quot;/swagger-ui.html**&quot;, &quot;/swagger-ui/**&quot;, &quot;/v3/api-docs&quot;, &quot;/webjars/**&quot;, &quot;/swagger-resources/**&quot;, &quot;/h2-console&quot;, &quot;/h2-console/**&quot;).permitAll()</span>
+<span class="fc" id="L100">                        .requestMatchers(HttpMethod.POST,&quot;/api/user/register&quot;).permitAll()</span>
                         //.requestMatchers(HttpMethod.GET,&quot;/api/user/all&quot;, &quot;/api/v1/accounts&quot;).hasAnyAuthority(&quot;ADMIN&quot;)
-<span class="fc" id="L93">                        .requestMatchers(HttpMethod.PUT, &quot;/api/v1/accounts/**&quot;).hasAnyAuthority(&quot;ADMIN&quot;)</span>
-<span class="fc" id="L94">                        .requestMatchers(HttpMethod.DELETE, &quot;/api/v1/accounts/**&quot;).hasAnyAuthority(&quot;ADMIN&quot;)</span>
-<span class="fc" id="L95">                        .anyRequest().authenticated()</span>
+<span class="fc" id="L102">                        .requestMatchers(HttpMethod.PUT, &quot;/api/v1/accounts/**&quot;).hasAnyAuthority(&quot;ADMIN&quot;)</span>
+<span class="fc" id="L103">                        .requestMatchers(HttpMethod.DELETE, &quot;/api/v1/accounts/**&quot;).hasAnyAuthority(&quot;ADMIN&quot;)</span>
+<span class="fc" id="L104">                        .anyRequest().authenticated()</span>
                 )
-<span class="fc" id="L97">                .exceptionHandling(handling -&gt; {</span>
-<span class="fc" id="L98">                    handling.authenticationEntryPoint(new JwtAuthenticationEntryPoint());</span>
-<span class="fc" id="L99">                })</span>
-<span class="fc" id="L100">                .sessionManagement(management -&gt; management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))</span>
-<span class="pc" id="L101">                .logout(logout -&gt; logout.logoutSuccessHandler((request, response, authentication) -&gt; response.setStatus(HttpServletResponse.SC_OK)));</span>
-<span class="fc" id="L102">        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);</span>
-<span class="fc" id="L103">        return http.build();</span>
+<span class="fc" id="L106">                .exceptionHandling(handling -&gt; {</span>
+<span class="fc" id="L107">                    handling.authenticationEntryPoint(new JwtAuthenticationEntryPoint());</span>
+<span class="fc" id="L108">                })</span>
+<span class="fc" id="L109">                .sessionManagement(management -&gt; management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))</span>
+<span class="pc" id="L110">                .logout(logout -&gt; logout.logoutSuccessHandler((request, response, authentication) -&gt; response.setStatus(HttpServletResponse.SC_OK)));</span>
+<span class="fc" id="L111">        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);</span>
+<span class="fc" id="L112">        return http.build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

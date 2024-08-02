@@ -116,7 +116,7 @@ function SignUp() {
                 name="username"
                 value={userDetails.username}
                 onChange={handleInputChange}
-                placeholder="Enter username"
+                placeholder="username"
               />
               <FormErrorMessage>{errors.username}</FormErrorMessage>
             </FormControl>
@@ -127,7 +127,7 @@ function SignUp() {
                 name="email"
                 value={userDetails.email}
                 onChange={handleInputChange}
-                placeholder="abc@gmail.com"
+                placeholder="abcd@gmail.com"
               />
               <FormErrorMessage>{errors.email}</FormErrorMessage>
             </FormControl>
@@ -158,7 +158,7 @@ function SignUp() {
                 Sign Up
               </Button>
               <Text textAlign="center">
-                Already have an account? <Link to="/login">Login</Link>
+                Already have an account? <Link to="/home">Login</Link>
               </Text>
             </Stack>
           </Stack>

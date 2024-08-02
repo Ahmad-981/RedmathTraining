@@ -9,10 +9,11 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 
 @Service
 public class AccountService {
@@ -29,15 +30,9 @@ public class AccountService {
     @Autowired
     private UserRepository userRepository;
 
-
-
     private String generateRandomString(int length) {
-        Random random = new Random();
-        int min = (int) Math.pow(10, length - 1);
-        int max = (int) Math.pow(10, length) - 1;
-
-        int randomInteger = random.nextInt(max - min + 1) + min;
-        return String.valueOf(randomInteger);
+        SecureRandom secureRandom = new SecureRandom();
+        return new BigInteger(length * 5, secureRandom).toString(32);
     }
 
     public Map<String, Object> createAccount(AccountDTO accountDTO) {

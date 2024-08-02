@@ -20,7 +20,6 @@ function ViewTransactions() {
 
   const currentAccountId = Cookies.get('accountId');
   const token = Cookies.get('token');
-  const username = Cookies.get('username');
 
   const fetchTransactions = async () => {
 

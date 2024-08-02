@@ -41,13 +41,7 @@ public class BalanceApiControllerTest {
     private BalanceRepository balanceRepository;
 
     @Mock
-    private BalanceService balanceService;
-
-    @Mock
     private AccountRepository accountRepository;
-
-    @InjectMocks
-    private BalanceController balanceController;
 
     private String jwtToken;
     private final ObjectMapper objectMapper = new ObjectMapper();

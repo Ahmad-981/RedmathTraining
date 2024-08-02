@@ -31,7 +31,6 @@ public class AccountController {
 
     @PostMapping
     public ResponseEntity<?> createAccount(@RequestBody AccountDTO accountDTO) {
-        System.out.println("Received AccountDTO: " + accountDTO);
         Map<String,Object> account = accountService.createAccount(accountDTO);
         return ResponseEntity.ok(account);
     }

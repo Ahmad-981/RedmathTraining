@@ -117,20 +117,19 @@ function ViewAccounts() {
 
   
   const handleDeleteClick = async (accountID) => {
-    const result = await Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-    });
-
-    if (result.isConfirmed) {
-      //const token = localStorage.getItem('token');
-      const token = Cookies.get('token');
-      try {
+    try {
+      const result = await Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+      });
+  
+      if (result.isConfirmed) {
+        const token = Cookies.get('token');
         const response = await fetch(`http://localhost:8080/api/v1/accounts/${accountID}`, {
           method: 'DELETE',
           headers: {
@@ -138,17 +137,17 @@ function ViewAccounts() {
             'Authorization': `Bearer ${token}`
           }
         });
-
+  
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-
+  
         Swal.fire('Deleted!', 'The account has been deleted.', 'success');
         fetchAccounts(); // Refresh the list
-      } catch (error) {
-        console.error('Error deleting account:', error);
-        Swal.fire('Error!', 'There was a problem deleting the account.', 'error');
       }
+    } catch (error) {
+      console.error('Error deleting account:', error);
+      Swal.fire('Error!', 'There was a problem deleting the account.', 'error');
     }
   };
 

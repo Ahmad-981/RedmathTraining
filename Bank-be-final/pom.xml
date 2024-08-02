@@ -219,9 +219,9 @@
 <!--					</execution>-->
 <!--				</executions>-->
 <!--				<configuration>-->
-<!--					<effort>Max</effort>-->
+<!--					<effort>Low</effort>-->
 <!--					<threshold>Normal</threshold>-->
-<!--					<failOnError>true</failOnError>-->
+<!--&lt;!&ndash;					<failOnError>true</failOnError>&ndash;&gt;-->
 <!--					<plugins>-->
 <!--						<plugin>-->
 <!--							<groupId>com.h3xstream.findsecbugs</groupId>-->

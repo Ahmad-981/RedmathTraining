@@ -20,26 +20,16 @@ import java.util.List;
 <span class="fc" id="L20">        return ResponseEntity.ok(transactions);</span>
     }
 
-//    @PostMapping
-//    public ResponseEntity&lt;Transaction&gt; createTransaction(@RequestBody TransactionDTO transactionDTO) {
-//        Transaction transaction = transactionService.createTransaction(
-//                transactionDTO.getFromAccountID(),
-//                transactionDTO.getToAccountNumber(),
-//                transactionDTO.getAmount()
-//        );
-//        return ResponseEntity.ok(transaction);
-//    }
-
     @PostMapping
     public ResponseEntity&lt;?&gt; createTransaction(@RequestBody TransactionDTO transactionDTO) {
         try {
-<span class="fc" id="L36">            Transaction transaction = transactionService.createTransaction(</span>
-<span class="fc" id="L37">                    transactionDTO.getFromAccountID(),</span>
-<span class="fc" id="L38">                    transactionDTO.getToAccountNumber(),</span>
-<span class="fc" id="L39">                    transactionDTO.getAmount());</span>
-<span class="fc" id="L40">            return ResponseEntity.ok(transaction);</span>
-<span class="fc" id="L41">        } catch (IllegalArgumentException e) {</span>
-<span class="fc" id="L42">            return ResponseEntity.badRequest().body(Collections.singletonMap(&quot;message&quot;, e.getMessage()));</span>
+<span class="fc" id="L26">            Transaction transaction = transactionService.createTransaction(</span>
+<span class="fc" id="L27">                    transactionDTO.getFromAccountID(),</span>
+<span class="fc" id="L28">                    transactionDTO.getToAccountNumber(),</span>
+<span class="fc" id="L29">                    transactionDTO.getAmount());</span>
+<span class="fc" id="L30">            return ResponseEntity.ok(transaction);</span>
+<span class="fc" id="L31">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L32">            return ResponseEntity.badRequest().body(Collections.singletonMap(&quot;message&quot;, e.getMessage()));</span>
         }
     }
 

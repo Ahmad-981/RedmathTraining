@@ -31,10 +31,6 @@ import CreateAccounts from './accounts/CreateAccounts';
 import InitialDeposit from './deposit/InitialDeposit';
 
 function Dashboard() {
-  const [totalAccounts, setTotalAccounts] = useState(0);
-  const [totalTransactions, setTotalTransactions] = useState(0);
-  const [totalCredit, setTotalCredit] = useState(0);
-  const [totalDebit, setTotalDebit] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [transactionData, setTransactionData] = useState({ toAccountNumber: '', amount: '' });
   const [balance, setBalance] = useState('N/A');
@@ -51,32 +47,32 @@ function Dashboard() {
   const username = Cookies.get('username');
 
   const fetchData = async () => {
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    const mockAccounts = [
-      { id: 1, createdBy: { uid: 'user1' } },
-      { id: 2, createdBy: { uid: 'user1' } }
-    ];
+    // await new Promise(resolve => setTimeout(resolve, 2000));
+    // const mockAccounts = [
+    //   { id: 1, createdBy: { uid: 'user1' } },
+    //   { id: 2, createdBy: { uid: 'user1' } }
+    // ];
 
-    const mockTransactions = [
-      { id: 1, type: 'credit', amount: '100' },
-      { id: 2, type: 'debit', amount: '50' },
-      { id: 3, type: 'credit', amount: '200' }
-    ];
+    // const mockTransactions = [
+    //   { id: 1, type: 'credit', amount: '100' },
+    //   { id: 2, type: 'debit', amount: '50' },
+    //   { id: 3, type: 'credit', amount: '200' }
+    // ];
 
-    let credit = 0;
-    let debit = 0;
-    mockTransactions.forEach(transaction => {
-      if (transaction.type === 'credit') {
-        credit += parseInt(transaction.amount);
-      } else {
-        debit += parseInt(transaction.amount);
-      }
-    });
+    // let credit = 0;
+    // let debit = 0;
+    // mockTransactions.forEach(transaction => {
+    //   if (transaction.type === 'credit') {
+    //     credit += parseInt(transaction.amount);
+    //   } else {
+    //     debit += parseInt(transaction.amount);
+    //   }
+    // });
 
-    setTotalAccounts(mockAccounts.length);
-    setTotalTransactions(mockTransactions.length);
-    setTotalCredit(credit);
-    setTotalDebit(debit);
+    // setTotalAccounts(mockAccounts.length);
+    // setTotalTransactions(mockTransactions.length);
+    // setTotalCredit(credit);
+    // setTotalDebit(debit);
     setIsLoading(false);
   };
 
@@ -289,14 +285,14 @@ function Dashboard() {
               )}
             </Box>
             <Image
-              src="https://img.freepik.com/premium-vector/online-banking-platform-metaphor-remote-bank-service-online-transaction-system-mobile-investment-payment-banking-operations-currency-exchange-check-account-manage-deposit-ecommerce_273625-4866.jpg"
-              alt="Bank Image"
-              boxSize="100%"
-              objectFit="fill"
-              borderRadius="lg"
-              mt={4}
-            // filter="blur(5px)"
-            />
+                src="https://img.freepik.com/premium-vector/online-banking-platform-metaphor-remote-bank-service-online-transaction-system-mobile-investment-payment-banking-operations-currency-exchange-check-account-manage-deposit-ecommerce_273625-4866.jpg"
+                alt="Bank Image"
+                boxSize="80%"
+                objectFit="cover"
+                borderRadius="lg"
+                mt={4}
+              // filter="blur(5px)"
+              />
           </Flex>
           <Outlet />
         </Container>
@@ -327,20 +323,6 @@ function Dashboard() {
           </ModalBody>
         </ModalContent>
       </Modal>
-
-
-
-      {/* Modals
-      <Modal isOpen={isTransactionsOpen} onClose={onCloseTransactions} >
-        <ModalOverlay  />
-        <ModalContent >
-          <ModalHeader>View Transactions</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <ViewTransactions />
-          </ModalBody>
-        </ModalContent>
-      </Modal> */}
 
       <Modal isOpen={isCreateAccountOpen} onClose={onCloseCreateAccount} size="xl">
         <ModalOverlay />

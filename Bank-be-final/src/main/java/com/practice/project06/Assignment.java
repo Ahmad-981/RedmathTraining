@@ -16,11 +16,11 @@ public class Assignment {
 	public static void main(String[] args) {
 		Dotenv dotenv = Dotenv.configure().load();
 
-		// Set system properties
 		System.setProperty("MYSQL_USERNAME", dotenv.get("MYSQL_USERNAME"));
 		System.setProperty("MYSQL_PASSWORD", dotenv.get("MYSQL_PASSWORD"));
 		System.setProperty("JWT_KEY", dotenv.get("JWT_KEY"));
 		System.setProperty("JWT_EXPIRY", dotenv.get("JWT_EXPIRY"));
+
 		SpringApplication.run(Assignment.class, args);
 	}
 }

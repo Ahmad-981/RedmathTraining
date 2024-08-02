@@ -28,9 +28,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.math.BigDecimal;
 
-import java.util.Optional;
-import static org.mockito.Mockito.when;
-
 @Transactional
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -39,18 +36,6 @@ public class TransactionApiControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Mock
-    private TransactionService transactionService;
-
-    @Mock
-    private AccountRepository accountRepository;
-
-    @Mock
-    private BalanceRepository balanceRepository;
-
-    @InjectMocks
-    private TransactionController transactionController;
 
     private String jwtToken;
     private final ObjectMapper objectMapper = new ObjectMapper();

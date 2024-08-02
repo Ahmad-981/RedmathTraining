@@ -39,3 +39,1582 @@
 2024-08-02 10:47:56 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-08-02 10:47:56 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2024-08-02 10:47:56 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-02 11:00:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:00:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:00:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:00:59 INFO  com.practice.project06.Assignment - Starting Assignment using Java 22.0.1 with PID 11184 (C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final\target\classes started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:00:59 INFO  com.practice.project06.Assignment - No active profile set, falling back to 1 default profile: "default"
+2024-08-02 11:01:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:01:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:01:02 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-02 11:01:02 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-02 11:01:02 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-02 11:01:02 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-02 11:01:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-02 11:01:02 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2740 ms
+2024-08-02 11:01:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:01:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a259f6f
+2024-08-02 11:01:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:01:02 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/bank'
+2024-08-02 11:01:04 INFO  liquibase.changelog - Reading from bank.databasechangelog
+2024-08-02 11:01:04 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-02 11:01:04 INFO  liquibase.changelog - Reading from bank.databasechangelog
+2024-08-02 11:01:04 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:01:04 INFO  liquibase.util - Run:                          0
+2024-08-02 11:01:04 INFO  liquibase.util - Previously run:              13
+2024-08-02 11:01:04 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:01:04 INFO  liquibase.util - -------------------------------
+2024-08-02 11:01:04 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:01:04 INFO  liquibase.util - Update summary generated
+2024-08-02 11:01:04 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:01:04 INFO  liquibase.command - Command execution complete
+2024-08-02 11:01:04 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:01:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:01:04 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:01:06 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:01:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:01:06 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:01:07 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:01:07 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:01:08 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:01:09 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-02 11:01:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-02 11:01:09 INFO  com.practice.project06.Assignment - Started Assignment in 10.667 seconds (process running for 15.187)
+2024-08-02 11:06:31 INFO  c.p.project06.AuthApiControllerTest - Starting AuthApiControllerTest using Java 22.0.1 with PID 696 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:06:31 INFO  c.p.project06.AuthApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 11:06:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:06:33 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:06:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:06:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 11:06:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:06:34 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 11:06:35 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 11:06:35 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:06:35 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 11:06:35 INFO  liquibase.command - Using deploymentId: 2578795393
+2024-08-02 11:06:35 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - Table users created
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 17ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - Table accounts created
+2024-08-02 11:06:35 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 9ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - Table balances created
+2024-08-02 11:06:35 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 10ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 9ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - Table transactions created
+2024-08-02 11:06:35 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 6ms
+2024-08-02 11:06:35 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 11:06:35 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 11:06:35 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 11:06:35 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:06:35 INFO  liquibase.util - Run:                         13
+2024-08-02 11:06:35 INFO  liquibase.util - Previously run:               0
+2024-08-02 11:06:35 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:06:35 INFO  liquibase.util - -------------------------------
+2024-08-02 11:06:35 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:06:35 INFO  liquibase.util - Update summary generated
+2024-08-02 11:06:35 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 11:06:35 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 11:06:35 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:06:35 INFO  liquibase.command - Command execution complete
+2024-08-02 11:06:36 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:06:36 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:06:36 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:06:38 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:06:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:06:38 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:06:39 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:06:39 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:06:40 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:06:41 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 11:06:41 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 11:06:41 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 11:06:41 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 11:06:41 INFO  c.p.project06.AuthApiControllerTest - Started AuthApiControllerTest in 10.931 seconds (process running for 12.357)
+2024-08-02 11:06:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:06:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:06:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:07:06 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 4428 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:07:06 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 11:07:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:07:07 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:07:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:07:08 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 11:07:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:07:09 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 11:07:09 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 11:07:09 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:07:09 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 11:07:09 INFO  liquibase.command - Using deploymentId: 2578829780
+2024-08-02 11:07:09 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - Table users created
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 14ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 4ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 1ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - Table accounts created
+2024-08-02 11:07:09 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 10ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 1ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - Table balances created
+2024-08-02 11:07:09 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - Table transactions created
+2024-08-02 11:07:09 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:07:09 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 11:07:09 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 11:07:09 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 11:07:09 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:07:09 INFO  liquibase.util - Run:                         13
+2024-08-02 11:07:09 INFO  liquibase.util - Previously run:               0
+2024-08-02 11:07:09 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:07:09 INFO  liquibase.util - -------------------------------
+2024-08-02 11:07:09 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:07:09 INFO  liquibase.util - Update summary generated
+2024-08-02 11:07:09 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 11:07:09 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 11:07:09 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:07:09 INFO  liquibase.command - Command execution complete
+2024-08-02 11:07:10 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:07:10 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:07:10 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:07:11 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:07:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:07:12 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:07:12 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:07:13 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:07:14 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:07:15 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 11:07:15 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 11:07:15 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 11:07:15 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2024-08-02 11:07:15 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 9.891 seconds (process running for 11.271)
+2024-08-02 11:07:20 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:07:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:07:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:07:50 INFO  c.p.p.BalanceApiControllerTest - Starting BalanceApiControllerTest using Java 22.0.1 with PID 9212 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:07:50 INFO  c.p.p.BalanceApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 11:07:52 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:07:52 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:07:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:07:53 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 11:07:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:07:53 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 11:07:53 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 11:07:54 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:07:54 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 11:07:54 INFO  liquibase.command - Using deploymentId: 2578874147
+2024-08-02 11:07:54 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - Table users created
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 14ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 2ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 1ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - Table accounts created
+2024-08-02 11:07:54 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 10ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 1ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 1ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 1ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - Table balances created
+2024-08-02 11:07:54 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - Table transactions created
+2024-08-02 11:07:54 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:07:54 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 11:07:54 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 11:07:54 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 11:07:54 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:07:54 INFO  liquibase.util - Run:                         13
+2024-08-02 11:07:54 INFO  liquibase.util - Previously run:               0
+2024-08-02 11:07:54 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:07:54 INFO  liquibase.util - -------------------------------
+2024-08-02 11:07:54 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:07:54 INFO  liquibase.util - Update summary generated
+2024-08-02 11:07:54 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 11:07:54 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 11:07:54 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:07:54 INFO  liquibase.command - Command execution complete
+2024-08-02 11:07:54 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:07:54 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:07:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:07:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:07:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:07:56 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:07:57 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:07:57 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:07:58 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:07:59 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 11:07:59 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 11:07:59 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 11:07:59 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 11:07:59 INFO  c.p.p.BalanceApiControllerTest - Started BalanceApiControllerTest in 9.55 seconds (process running for 11.029)
+2024-08-02 11:08:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:08:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:08:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:08:11 INFO  c.p.p.TransactionApiControllerTest - Starting TransactionApiControllerTest using Java 22.0.1 with PID 10744 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:08:11 INFO  c.p.p.TransactionApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 11:08:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:08:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:08:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:08:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 11:08:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:08:14 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 11:08:14 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 11:08:14 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:08:15 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 11:08:15 INFO  liquibase.command - Using deploymentId: 2578895089
+2024-08-02 11:08:15 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - Table users created
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 15ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 2ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 1ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - Table accounts created
+2024-08-02 11:08:15 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 10ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 1ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 1ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 1ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - Table balances created
+2024-08-02 11:08:15 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - Table transactions created
+2024-08-02 11:08:15 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:08:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 11:08:15 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 11:08:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 11:08:15 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:08:15 INFO  liquibase.util - Run:                         13
+2024-08-02 11:08:15 INFO  liquibase.util - Previously run:               0
+2024-08-02 11:08:15 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:08:15 INFO  liquibase.util - -------------------------------
+2024-08-02 11:08:15 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:08:15 INFO  liquibase.util - Update summary generated
+2024-08-02 11:08:15 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 11:08:15 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 11:08:15 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:08:15 INFO  liquibase.command - Command execution complete
+2024-08-02 11:08:15 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:08:15 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:08:15 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:08:16 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:08:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:08:17 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:08:18 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:08:18 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:08:19 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:08:20 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 11:08:20 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 11:08:20 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 11:08:20 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 11:08:20 INFO  c.p.p.TransactionApiControllerTest - Started TransactionApiControllerTest in 9.422 seconds (process running for 10.806)
+2024-08-02 11:08:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:08:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:08:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:08:40 INFO  c.p.project06.UserApiControllerTest - Starting UserApiControllerTest using Java 22.0.1 with PID 3696 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:08:40 INFO  c.p.project06.UserApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 11:08:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:08:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:08:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:08:43 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 11:08:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:08:43 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 11:08:43 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 11:08:43 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:08:43 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 11:08:43 INFO  liquibase.command - Using deploymentId: 2578923768
+2024-08-02 11:08:43 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - Table users created
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 18ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 1ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - Table accounts created
+2024-08-02 11:08:43 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 8ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 1ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 1ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - Table balances created
+2024-08-02 11:08:43 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - Table transactions created
+2024-08-02 11:08:43 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 11:08:43 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 11:08:43 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 11:08:43 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 11:08:43 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:08:43 INFO  liquibase.util - Run:                         13
+2024-08-02 11:08:43 INFO  liquibase.util - Previously run:               0
+2024-08-02 11:08:43 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:08:43 INFO  liquibase.util - -------------------------------
+2024-08-02 11:08:43 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:08:43 INFO  liquibase.util - Update summary generated
+2024-08-02 11:08:43 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 11:08:43 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 11:08:43 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:08:43 INFO  liquibase.command - Command execution complete
+2024-08-02 11:08:44 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:08:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:08:44 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:08:45 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:08:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:08:46 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:08:46 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:08:47 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:08:47 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:08:48 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 11:08:49 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 11:08:49 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 11:08:49 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 11:08:49 INFO  c.p.project06.UserApiControllerTest - Started UserApiControllerTest in 9.661 seconds (process running for 11.252)
+2024-08-02 11:08:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:08:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:08:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:09:53 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 7944 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 11:09:53 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 11:09:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 11:09:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
+2024-08-02 11:09:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 11:09:57 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 11:09:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 11:09:58 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 11:09:58 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 11:09:58 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:09:58 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 11:09:58 INFO  liquibase.command - Using deploymentId: 2578998973
+2024-08-02 11:09:58 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - Table users created
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 15ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - Table accounts created
+2024-08-02 11:09:59 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 13ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - Table balances created
+2024-08-02 11:09:59 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 8ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 4ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - Table transactions created
+2024-08-02 11:09:59 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 7ms
+2024-08-02 11:09:59 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 11:09:59 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 11:09:59 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 11:09:59 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 11:09:59 INFO  liquibase.util - Run:                         13
+2024-08-02 11:09:59 INFO  liquibase.util - Previously run:               0
+2024-08-02 11:09:59 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 11:09:59 INFO  liquibase.util - -------------------------------
+2024-08-02 11:09:59 INFO  liquibase.util - Total change sets:           13
+2024-08-02 11:09:59 INFO  liquibase.util - Update summary generated
+2024-08-02 11:09:59 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 11:09:59 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 11:09:59 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 11:09:59 INFO  liquibase.command - Command execution complete
+2024-08-02 11:09:59 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 11:09:59 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 11:10:00 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 11:10:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 11:10:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:10:02 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 11:10:03 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 11:10:03 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 11:10:04 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 11:10:05 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 11:10:06 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 11:10:06 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 11:10:06 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 11:10:06 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 13.265 seconds (process running for 16.187)
+2024-08-02 11:10:12 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.AuthApiControllerTest]: AuthApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 11:10:12 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.AuthApiControllerTest
+2024-08-02 11:10:13 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.BalanceApiControllerTest]: BalanceApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 11:10:13 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.BalanceApiControllerTest
+2024-08-02 11:10:14 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.TransactionApiControllerTest]: TransactionApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 11:10:14 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.TransactionApiControllerTest
+2024-08-02 11:10:17 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.UserApiControllerTest]: UserApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 11:10:17 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.UserApiControllerTest
+2024-08-02 11:10:18 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 11:10:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 11:10:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 11:26:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-02 11:26:06 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-02 11:26:06 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-02 12:17:46 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 2156 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 12:17:46 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 12:17:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 12:17:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2024-08-02 12:17:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 12:17:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 12:17:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 12:17:49 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 12:17:49 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 12:17:49 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 12:17:49 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 12:17:49 INFO  liquibase.command - Using deploymentId: 2583069658
+2024-08-02 12:17:49 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - Table users created
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 14ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - Table accounts created
+2024-08-02 12:17:49 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 9ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 1ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - Table balances created
+2024-08-02 12:17:49 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - Table transactions created
+2024-08-02 12:17:49 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 12:17:49 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 12:17:49 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 12:17:49 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 12:17:49 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 12:17:49 INFO  liquibase.util - Run:                         13
+2024-08-02 12:17:49 INFO  liquibase.util - Previously run:               0
+2024-08-02 12:17:49 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 12:17:49 INFO  liquibase.util - -------------------------------
+2024-08-02 12:17:49 INFO  liquibase.util - Total change sets:           13
+2024-08-02 12:17:49 INFO  liquibase.util - Update summary generated
+2024-08-02 12:17:49 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 12:17:49 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 12:17:49 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 12:17:49 INFO  liquibase.command - Command execution complete
+2024-08-02 12:17:50 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 12:17:50 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 12:17:50 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 12:17:51 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 12:17:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 12:17:52 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 12:17:52 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 12:17:53 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 12:17:53 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 12:17:55 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 12:17:55 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 12:17:55 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 12:17:55 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 12:17:55 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 10.125 seconds (process running for 11.543)
+2024-08-02 12:18:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 12:18:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 12:18:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 12:18:30 INFO  c.p.p.TransactionApiControllerTest - Starting TransactionApiControllerTest using Java 22.0.1 with PID 2328 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 12:18:30 INFO  c.p.p.TransactionApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 12:18:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 12:18:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2024-08-02 12:18:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 12:18:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 12:18:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 12:18:33 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 12:18:33 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 12:18:33 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 12:18:33 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 12:18:33 INFO  liquibase.command - Using deploymentId: 2583113682
+2024-08-02 12:18:33 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - Table users created
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 1ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - Table accounts created
+2024-08-02 12:18:33 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 9ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 1ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - Table balances created
+2024-08-02 12:18:33 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - Table transactions created
+2024-08-02 12:18:33 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 12:18:33 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 12:18:33 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 12:18:33 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 12:18:33 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 12:18:33 INFO  liquibase.util - Run:                         13
+2024-08-02 12:18:33 INFO  liquibase.util - Previously run:               0
+2024-08-02 12:18:33 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 12:18:33 INFO  liquibase.util - -------------------------------
+2024-08-02 12:18:33 INFO  liquibase.util - Total change sets:           13
+2024-08-02 12:18:33 INFO  liquibase.util - Update summary generated
+2024-08-02 12:18:33 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 12:18:33 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 12:18:33 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 12:18:33 INFO  liquibase.command - Command execution complete
+2024-08-02 12:18:34 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 12:18:34 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 12:18:34 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 12:18:35 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 12:18:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 12:18:36 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 12:18:36 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 12:18:37 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 12:18:37 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 12:18:38 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 12:18:39 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 12:18:39 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 12:18:39 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2024-08-02 12:18:39 INFO  c.p.p.TransactionApiControllerTest - Started TransactionApiControllerTest in 9.607 seconds (process running for 11.008)
+2024-08-02 12:18:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 12:18:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 12:18:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 14:24:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 14:24:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 14:24:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 14:24:58 INFO  com.practice.project06.Assignment - Starting Assignment using Java 22.0.1 with PID 14580 (C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final\target\classes started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 14:24:58 INFO  com.practice.project06.Assignment - No active profile set, falling back to 1 default profile: "default"
+2024-08-02 14:24:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 14:24:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2024-08-02 14:25:00 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-02 14:25:00 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-02 14:25:00 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-02 14:25:00 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-02 14:25:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-02 14:25:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2917 ms
+2024-08-02 14:25:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 14:25:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@416b681c
+2024-08-02 14:25:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 14:25:01 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/bank'
+2024-08-02 14:25:02 INFO  liquibase.changelog - Reading from bank.databasechangelog
+2024-08-02 14:25:02 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-02 14:25:02 INFO  liquibase.changelog - Reading from bank.databasechangelog
+2024-08-02 14:25:02 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 14:25:02 INFO  liquibase.util - Run:                          0
+2024-08-02 14:25:02 INFO  liquibase.util - Previously run:              13
+2024-08-02 14:25:02 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 14:25:02 INFO  liquibase.util - -------------------------------
+2024-08-02 14:25:02 INFO  liquibase.util - Total change sets:           13
+2024-08-02 14:25:02 INFO  liquibase.util - Update summary generated
+2024-08-02 14:25:03 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 14:25:03 INFO  liquibase.command - Command execution complete
+2024-08-02 14:25:03 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 14:25:03 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 14:25:03 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 14:25:04 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 14:25:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 14:25:05 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 14:25:06 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 14:25:06 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 14:25:07 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 14:25:07 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-02 14:25:07 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-02 14:25:07 INFO  com.practice.project06.Assignment - Started Assignment in 10.662 seconds (process running for 11.128)
+2024-08-02 14:25:28 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-02 14:25:28 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-02 14:25:28 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-02 15:55:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 15:55:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 15:55:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 15:56:00 INFO  com.practice.project06.Assignment - Starting Assignment using Java 22.0.1 with PID 4984 (C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final\target\classes started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 15:56:00 INFO  com.practice.project06.Assignment - No active profile set, falling back to 1 default profile: "default"
+2024-08-02 15:56:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 15:56:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2024-08-02 15:56:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-02 15:56:03 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-02 15:56:03 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-02 15:56:03 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-02 15:56:03 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-02 15:56:03 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3028 ms
+2024-08-02 15:56:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 15:56:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51df2a41
+2024-08-02 15:56:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 15:56:03 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/bank'
+2024-08-02 15:56:04 INFO  liquibase.changelog - Reading from bank.databasechangelog
+2024-08-02 15:56:05 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-02 15:56:05 INFO  liquibase.changelog - Reading from bank.databasechangelog
+2024-08-02 15:56:05 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 15:56:05 INFO  liquibase.util - Run:                          0
+2024-08-02 15:56:05 INFO  liquibase.util - Previously run:              13
+2024-08-02 15:56:05 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 15:56:05 INFO  liquibase.util - -------------------------------
+2024-08-02 15:56:05 INFO  liquibase.util - Total change sets:           13
+2024-08-02 15:56:05 INFO  liquibase.util - Update summary generated
+2024-08-02 15:56:05 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 15:56:05 INFO  liquibase.command - Command execution complete
+2024-08-02 15:56:05 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 15:56:05 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 15:56:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 15:56:06 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 15:56:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 15:56:07 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 15:56:07 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 15:56:08 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 15:56:08 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 15:56:09 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-02 15:56:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-02 15:56:09 INFO  com.practice.project06.Assignment - Started Assignment in 10.488 seconds (process running for 11.101)
+2024-08-02 16:01:04 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-02 16:01:04 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-02 16:01:04 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:39:20 INFO  c.p.p.BalanceApiControllerTest - Starting BalanceApiControllerTest using Java 22.0.1 with PID 16588 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:39:20 INFO  c.p.p.BalanceApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:39:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:39:22 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:39:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:39:23 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:39:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:39:23 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:39:23 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:39:23 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:39:24 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:39:24 INFO  liquibase.command - Using deploymentId: 2598764006
+2024-08-02 16:39:24 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - Table users created
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 3ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:39:24 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 10ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:39:24 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 4ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:39:24 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:39:24 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:39:24 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:39:24 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 1ms
+2024-08-02 16:39:24 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:39:24 INFO  liquibase.util - Run:                         13
+2024-08-02 16:39:24 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:39:24 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:39:24 INFO  liquibase.util - -------------------------------
+2024-08-02 16:39:24 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:39:24 INFO  liquibase.util - Update summary generated
+2024-08-02 16:39:24 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:39:24 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:39:24 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:39:24 INFO  liquibase.command - Command execution complete
+2024-08-02 16:39:24 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:39:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:39:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:39:25 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:39:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:39:26 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:39:27 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:39:27 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:39:28 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:39:29 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:39:29 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:39:29 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:39:29 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:39:29 INFO  c.p.p.BalanceApiControllerTest - Started BalanceApiControllerTest in 9.675 seconds (process running for 11.083)
+2024-08-02 16:39:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:39:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:39:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:39:59 INFO  c.p.p.TransactionApiControllerTest - Starting TransactionApiControllerTest using Java 22.0.1 with PID 14492 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:39:59 INFO  c.p.p.TransactionApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:40:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:40:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:40:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:40:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:40:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:40:02 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:40:02 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:40:02 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:40:02 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:40:02 INFO  liquibase.command - Using deploymentId: 2598802610
+2024-08-02 16:40:02 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - Table users created
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 14ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:40:02 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 11ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:40:02 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 6ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:40:02 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 4ms
+2024-08-02 16:40:02 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:40:02 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:40:02 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 16:40:02 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:40:02 INFO  liquibase.util - Run:                         13
+2024-08-02 16:40:02 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:40:02 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:40:02 INFO  liquibase.util - -------------------------------
+2024-08-02 16:40:02 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:40:02 INFO  liquibase.util - Update summary generated
+2024-08-02 16:40:02 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:40:02 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:40:02 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:40:02 INFO  liquibase.command - Command execution complete
+2024-08-02 16:40:02 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:40:03 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:40:03 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:40:04 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:40:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:40:04 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:40:05 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:40:06 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:40:06 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:40:07 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:40:07 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:40:07 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:40:07 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:40:08 INFO  c.p.p.TransactionApiControllerTest - Started TransactionApiControllerTest in 9.532 seconds (process running for 10.914)
+2024-08-02 16:40:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:40:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:40:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:46:00 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 5768 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:46:00 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:46:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:46:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:46:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:46:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:46:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:46:03 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:46:04 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:46:04 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:46:04 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:46:04 INFO  liquibase.command - Using deploymentId: 2599164238
+2024-08-02 16:46:04 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - Table users created
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 14ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:46:04 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 10ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:46:04 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:46:04 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:46:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:46:04 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:46:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 16:46:04 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:46:04 INFO  liquibase.util - Run:                         13
+2024-08-02 16:46:04 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:46:04 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:46:04 INFO  liquibase.util - -------------------------------
+2024-08-02 16:46:04 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:46:04 INFO  liquibase.util - Update summary generated
+2024-08-02 16:46:04 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:46:04 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:46:04 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:46:04 INFO  liquibase.command - Command execution complete
+2024-08-02 16:46:04 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:46:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:46:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:46:06 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:46:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:46:06 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:46:07 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:46:08 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:46:09 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:46:10 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:46:10 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:46:10 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:46:10 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:46:10 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 10.995 seconds (process running for 12.47)
+2024-08-02 16:46:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:46:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:46:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:48:11 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 6344 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:48:11 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:48:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:48:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:48:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:48:14 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:48:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:48:14 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:48:14 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:48:15 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:48:15 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:48:15 INFO  liquibase.command - Using deploymentId: 2599295152
+2024-08-02 16:48:15 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - Table users created
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:48:15 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 8ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:48:15 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 4ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:48:15 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:48:15 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:48:15 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:48:15 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 16:48:15 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:48:15 INFO  liquibase.util - Run:                         13
+2024-08-02 16:48:15 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:48:15 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:48:15 INFO  liquibase.util - -------------------------------
+2024-08-02 16:48:15 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:48:15 INFO  liquibase.util - Update summary generated
+2024-08-02 16:48:15 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:48:15 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:48:15 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:48:15 INFO  liquibase.command - Command execution complete
+2024-08-02 16:48:15 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:48:15 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:48:16 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:48:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:48:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:48:17 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:48:18 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:48:18 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:48:19 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:48:20 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:48:21 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:48:21 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:48:21 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:48:21 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 10.128 seconds (process running for 11.66)
+2024-08-02 16:48:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:48:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:48:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:49:27 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 12088 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:49:27 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:49:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:49:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:49:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:49:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:49:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:49:29 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:49:30 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:49:30 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:49:30 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:49:30 INFO  liquibase.command - Using deploymentId: 2599370546
+2024-08-02 16:49:30 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - Table users created
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:49:30 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 9ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:49:30 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:49:30 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 12ms
+2024-08-02 16:49:30 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:49:30 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:49:30 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 16:49:30 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:49:30 INFO  liquibase.util - Run:                         13
+2024-08-02 16:49:30 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:49:30 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:49:30 INFO  liquibase.util - -------------------------------
+2024-08-02 16:49:30 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:49:30 INFO  liquibase.util - Update summary generated
+2024-08-02 16:49:30 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:49:30 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:49:30 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:49:30 INFO  liquibase.command - Command execution complete
+2024-08-02 16:49:30 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:49:30 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:49:31 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:49:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:49:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:49:32 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:49:33 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:49:33 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:49:34 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:49:35 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:49:35 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:49:35 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:49:35 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-08-02 16:49:36 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 9.578 seconds (process running for 10.953)
+2024-08-02 16:49:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:49:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:49:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:51:38 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 9488 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:51:38 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:51:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:51:40 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:51:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:51:41 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:51:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:51:41 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:51:42 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:51:42 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:51:42 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:51:42 INFO  liquibase.command - Using deploymentId: 2599502459
+2024-08-02 16:51:42 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - Table users created
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 14ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 2ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 4ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 1ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:51:42 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 13ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 1ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:51:42 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 5ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:51:42 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 11ms
+2024-08-02 16:51:42 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:51:42 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:51:42 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 1ms
+2024-08-02 16:51:42 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:51:42 INFO  liquibase.util - Run:                         13
+2024-08-02 16:51:42 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:51:42 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:51:42 INFO  liquibase.util - -------------------------------
+2024-08-02 16:51:42 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:51:42 INFO  liquibase.util - Update summary generated
+2024-08-02 16:51:42 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:51:42 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:51:42 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:51:42 INFO  liquibase.command - Command execution complete
+2024-08-02 16:51:42 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:51:42 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:51:43 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:51:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:51:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:51:45 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:51:46 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:51:46 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:51:47 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:51:49 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:51:49 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:51:49 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:51:49 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:51:49 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 11.444 seconds (process running for 13.013)
+2024-08-02 16:51:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:51:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:51:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:54:34 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 8244 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:54:34 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:54:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:54:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:54:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:54:36 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:54:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:54:36 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:54:37 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:54:37 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:54:37 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:54:37 INFO  liquibase.command - Using deploymentId: 2599677566
+2024-08-02 16:54:37 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - Table users created
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 1ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 1ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:54:37 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 9ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 3ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:54:37 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 6ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:54:37 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:54:37 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:54:37 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:54:37 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 2ms
+2024-08-02 16:54:37 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:54:37 INFO  liquibase.util - Run:                         13
+2024-08-02 16:54:37 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:54:37 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:54:37 INFO  liquibase.util - -------------------------------
+2024-08-02 16:54:37 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:54:37 INFO  liquibase.util - Update summary generated
+2024-08-02 16:54:37 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:54:37 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:54:37 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:54:37 INFO  liquibase.command - Command execution complete
+2024-08-02 16:54:37 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:54:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:54:38 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:54:39 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:54:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:54:40 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:54:40 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:54:41 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:54:41 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:54:43 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:54:43 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:54:43 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:54:43 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:54:43 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 9.875 seconds (process running for 11.287)
+2024-08-02 16:54:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:54:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:54:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:56:01 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 10712 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:56:01 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:56:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:56:02 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:56:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:56:03 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:56:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:56:03 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:56:04 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:56:04 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:56:04 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:56:04 INFO  liquibase.command - Using deploymentId: 2599764569
+2024-08-02 16:56:04 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - Table users created
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 13ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 2ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 2ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:56:04 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 11ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 1ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:56:04 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:56:04 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 5ms
+2024-08-02 16:56:04 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:56:04 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:56:04 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:56:04 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:56:04 INFO  liquibase.util - Run:                         13
+2024-08-02 16:56:04 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:56:04 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:56:04 INFO  liquibase.util - -------------------------------
+2024-08-02 16:56:04 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:56:04 INFO  liquibase.util - Update summary generated
+2024-08-02 16:56:04 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:56:04 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:56:04 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:56:04 INFO  liquibase.command - Command execution complete
+2024-08-02 16:56:04 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:56:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:56:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:56:06 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:56:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:56:07 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:56:07 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:56:08 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:56:08 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:56:09 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:56:10 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:56:10 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:56:10 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:56:10 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 9.672 seconds (process running for 11.247)
+2024-08-02 16:56:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:56:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:56:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 16:56:47 INFO  c.p.p.AccountApiControllerTest - Starting AccountApiControllerTest using Java 22.0.1 with PID 15332 (started by ahmad.irtza in C:\Users\ahmad.irtza\Desktop\RedmathTraining\Bank-be-final)
+2024-08-02 16:56:47 INFO  c.p.p.AccountApiControllerTest - The following 1 profile is active: "test"
+2024-08-02 16:56:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-02 16:56:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+2024-08-02 16:56:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-02 16:56:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:bank user=TEST
+2024-08-02 16:56:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-02 16:56:52 INFO  liquibase.database - Set default schema name to PUBLIC
+2024-08-02 16:56:52 INFO  liquibase.changelog - Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-02 16:56:52 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:56:52 INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-02 16:56:52 INFO  liquibase.command - Using deploymentId: 2599812911
+2024-08-02 16:56:52 INFO  liquibase.changelog - Reading from PUBLIC.DATABASECHANGELOG
+2024-08-02 16:56:52 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::1::Ahmad
+2024-08-02 16:56:52 INFO  liquibase.changelog - Table users created
+2024-08-02 16:56:52 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::1::Ahmad ran successfully in 17ms
+2024-08-02 16:56:52 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::2::Ahmad
+2024-08-02 16:56:52 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:52 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::2::Ahmad ran successfully in 3ms
+2024-08-02 16:56:52 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::3::Ahmad
+2024-08-02 16:56:52 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:52 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::3::Ahmad ran successfully in 3ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::5::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::5::Ahmad ran successfully in 2ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-user.yaml::6::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into users
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-user.yaml::6::Ahmad ran successfully in 2ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::7::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - Table accounts created
+2024-08-02 16:56:53 INFO  liquibase.changelog - Foreign key constraint added to accounts (userID)
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::7::Ahmad ran successfully in 12ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::10::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::10::Ahmad ran successfully in 2ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::11::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::11::Ahmad ran successfully in 2ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-account.yaml::12::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into accounts
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-account.yaml::12::Ahmad ran successfully in 2ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::3::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - Table balances created
+2024-08-02 16:56:53 INFO  liquibase.changelog - Foreign key constraint added to balances (accountID)
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::3::Ahmad ran successfully in 7ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-balance.yaml::4::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into balances
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-balance.yaml::4::Ahmad ran successfully in 5ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::3::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - Table transactions created
+2024-08-02 16:56:53 INFO  liquibase.changelog - Foreign key constraint added to transactions (from_account)
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::3::Ahmad ran successfully in 7ms
+2024-08-02 16:56:53 INFO  liquibase.ui - Running Changeset: db/changelog/db.changelog-transaction.yaml::4::Ahmad
+2024-08-02 16:56:53 INFO  liquibase.changelog - New row inserted into transactions
+2024-08-02 16:56:53 INFO  liquibase.changelog - ChangeSet db/changelog/db.changelog-transaction.yaml::4::Ahmad ran successfully in 3ms
+2024-08-02 16:56:53 INFO  liquibase.util - UPDATE SUMMARY
+2024-08-02 16:56:53 INFO  liquibase.util - Run:                         13
+2024-08-02 16:56:53 INFO  liquibase.util - Previously run:               0
+2024-08-02 16:56:53 INFO  liquibase.util - Filtered out:                 0
+2024-08-02 16:56:53 INFO  liquibase.util - -------------------------------
+2024-08-02 16:56:53 INFO  liquibase.util - Total change sets:           13
+2024-08-02 16:56:53 INFO  liquibase.util - Update summary generated
+2024-08-02 16:56:53 INFO  liquibase.command - Update command completed successfully.
+2024-08-02 16:56:53 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-08-02 16:56:53 INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-02 16:56:53 INFO  liquibase.command - Command execution complete
+2024-08-02 16:56:53 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-02 16:56:53 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-02 16:56:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-02 16:56:55 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-02 16:56:55 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:56:56 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-02 16:56:57 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name daoAuthenticationProvider
+2024-08-02 16:56:57 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2024-08-02 16:56:58 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2024-08-02 16:57:00 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bank'
+2024-08-02 16:57:00 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-08-02 16:57:00 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-08-02 16:57:00 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-08-02 16:57:00 INFO  c.p.p.AccountApiControllerTest - Started AccountApiControllerTest in 13.496 seconds (process running for 16.268)
+2024-08-02 16:57:06 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.AuthApiControllerTest]: AuthApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 16:57:06 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.AuthApiControllerTest
+2024-08-02 16:57:07 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.BalanceApiControllerTest]: BalanceApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 16:57:07 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.BalanceApiControllerTest
+2024-08-02 16:57:09 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.TransactionApiControllerTest]: TransactionApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 16:57:09 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.TransactionApiControllerTest
+2024-08-02 16:57:11 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.practice.project06.UserApiControllerTest]: UserApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-08-02 16:57:11 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.practice.project06.Assignment for test class com.practice.project06.UserApiControllerTest
+2024-08-02 16:57:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 16:57:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 16:57:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-02 17:19:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-02 17:19:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-02 17:19:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

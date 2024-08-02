@@ -46,18 +46,6 @@ public class AccountApiControllerTest {
 
     @Mock
     private AccountRepository accountRepository;
-//
-//    @Mock
-//    private UserRepository userRepository;
-//
-//    @Mock
-//    private UserService userService;
-//
-//    @Mock
-//    private BalanceRepository balanceRepository;
-//
-//    @Mock
-//    private TransactionRepository transactionRepository;
 
     @InjectMocks
     private AccountService accountService;
@@ -72,17 +60,6 @@ public class AccountApiControllerTest {
     public void setUp() throws Exception {
         MockitoAnnotations.openMocks(this);
         authenticate();
-        User user = new User();
-        user.setUsername("user");
-        user.setUserID(1L); // Set a valid user ID
-
-        // Create an Account object with the User included
-        Account account = new Account();
-        account.setAccountID(1L);
-        account.setUser(user);
-
-        // Mock the repository behavior
-        when(accountRepository.findById(1L)).thenReturn(Optional.of(account));
     }
 
     private void authenticate() throws Exception {
@@ -226,7 +203,26 @@ public class AccountApiControllerTest {
         assertTrue(result.isPresent());
         assertEquals(user, result.get().getUser());
     }
+    //User ID must not be null
 
+//    @Test
+//    public void testCreateAccount_UserNotFound() throws Exception{
+////        User user = new User();
+////        user.setUserID(4L);
+//
+//        AccountDTO accountDTO = new AccountDTO();
+//        accountDTO.setAccountNumber("12345678");
+//        accountDTO.setAccountType("Savings");
+////        accountDTO.setUser(user);
+//
+//        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts")
+//                        .header("Authorization", "Bearer " + jwtToken)
+//                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+//                        .content(objectMapper.writeValueAsString(accountDTO)))
+//                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("User ID must not be null"))
+//                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+//
+//    }
 
     @Test
     public void testFindByUser_Username() {

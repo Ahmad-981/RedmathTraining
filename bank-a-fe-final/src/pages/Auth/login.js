@@ -113,7 +113,7 @@ function Login() {
                 Login
               </Button>
               <Text textAlign="center">
-                Not registered? <Link to="/signup">Create an account</Link>
+                Not registered? <Link to="/home">Create an account</Link>
               </Text>
             </Stack>
           </Stack>
