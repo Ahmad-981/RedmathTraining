@@ -7,8 +7,8 @@ import SignUp from './pages/Auth/signup';
 import Dashboard from './pages/dashboard/Dashboard';
 import CreateAccounts from './pages/dashboard/accounts';
 import ViewTransactions from './pages/dashboard/viewTransactions';
-import AdminDashboard from './component/admin/AdminDashboard';
-import ViewAccounts from './component/admin/viewAccounts/ViewAccounts';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import ViewAccounts from './pages/admin/viewAccounts/ViewAccounts';
 
 // Helper function to check if user is authenticated
 const isAuthenticated = () => {

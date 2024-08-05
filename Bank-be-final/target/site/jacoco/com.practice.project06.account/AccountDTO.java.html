@@ -7,10 +7,28 @@ import lombok.Setter;
 
 @Getter
 <span class="fc" id="L9">@Setter</span>
-<span class="fc" id="L10">public class AccountDTO {</span>
-<span class="fc" id="L11">    private User user;</span>
+public class AccountDTO {
+    private User user;
 <span class="fc" id="L12">    private String accountNumber;</span>
 <span class="fc" id="L13">    private String accountType;</span>
 
+<span class="fc" id="L15">    public AccountDTO() {</span>
+<span class="fc" id="L16">    }</span>
+
+<span class="nc" id="L18">    public AccountDTO(AccountDTO accountDTO) {</span>
+<span class="nc bnc" id="L19" title="All 2 branches missed.">        if (accountDTO != null) {</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">            this.user = (accountDTO.user != null) ? new User(accountDTO.user) : null;</span>
+<span class="nc" id="L21">            this.accountNumber = accountDTO.accountNumber;</span>
+<span class="nc" id="L22">            this.accountType = accountDTO.accountType;</span>
+        }
+<span class="nc" id="L24">    }</span>
+
+    public User getUser() {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        return user != null ? new User(user) : null;</span>
+    }
+
+    public void setUser(User user) {
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        this.user = user != null ? new User(user) : null;</span>
+<span class="fc" id="L32">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -19,15 +19,15 @@ public class Transaction {
 
     @ManyToOne
     @JoinColumn(name = &quot;fromAccount&quot;, nullable = false)
-<span class="fc" id="L22">    private Account fromAccount;</span>
+    private Account fromAccount;
 
     @ManyToOne
     @JoinColumn(name = &quot;toAccount&quot;, nullable = false)
-<span class="fc" id="L26">    private Account toAccount;</span>
+    private Account toAccount;
 
     @Column(name = &quot;date&quot;, nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
-<span class="fc" id="L30">    private Date date;</span>
+    private Date date;
 
     @Column(name = &quot;amount&quot;, nullable = false)
 <span class="fc" id="L33">    private BigDecimal amount;</span>
@@ -41,10 +41,34 @@ public class Transaction {
 
     public Transaction(Account fromAccount, Account toAccount, BigDecimal amount) {
 <span class="fc" id="L43">        this();</span>
-<span class="fc" id="L44">        this.fromAccount = fromAccount;</span>
-<span class="fc" id="L45">        this.toAccount = toAccount;</span>
+<span class="fc" id="L44">        this.fromAccount = new Account(fromAccount);</span>
+<span class="fc" id="L45">        this.toAccount = new Account(toAccount);</span>
 <span class="fc" id="L46">        this.amount = amount;</span>
-<span class="fc" id="L47">        this.indicator = &quot;DB&quot;; // Set a default value</span>
+<span class="fc" id="L47">        this.indicator = &quot;DB&quot;;</span>
 <span class="fc" id="L48">    }</span>
+
+    public Date getDate() {
+<span class="fc" id="L51">        return new Date(date.getTime());</span>
+    }
+
+    public void setDate(Date date) {
+<span class="nc" id="L55">        this.date = new Date(date.getTime());</span>
+<span class="nc" id="L56">    }</span>
+
+    public Account getFromAccount() {
+<span class="fc" id="L59">        return new Account(fromAccount);</span>
+    }
+
+    public void setFromAccount(Account fromAccount) {
+<span class="nc" id="L63">        this.fromAccount = new Account(fromAccount);</span>
+<span class="nc" id="L64">    }</span>
+
+    public Account getToAccount() {
+<span class="fc" id="L67">        return new Account(toAccount);</span>
+    }
+
+    public void setToAccount(Account toAccount) {
+<span class="nc" id="L71">        this.toAccount = new Account(toAccount);</span>
+<span class="nc" id="L72">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

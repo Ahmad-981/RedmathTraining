@@ -27,4 +27,17 @@ public class User {
 
     @Column(name = "address")
     private String address;
+
+    public User() {}
+
+    public User(User other) {
+        if (other != null) {
+            this.userID = other.userID;
+            this.username = other.username;
+            this.password = other.password;
+            this.role = other.role;
+            this.email = other.email;
+            this.address = other.address;
+        }
+    }
 }

@@ -133,7 +133,7 @@ function CreateAccounts({ onClose }) {
                 onChange={handleChange}
               >
                 <option value="Saving">Saving</option>
-                <option value="Current">Current</option>
+                <option value="Checking">Checking</option>
               </Select>
             </FormControl>
           </HStack>

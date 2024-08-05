@@ -6,7 +6,7 @@ import { Rings } from 'react-loader-spinner';
 import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from '@chakra-ui/react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import './customTableStyles.css'; // Ensure this file contains the custom table styles
+import './customTableStyles.css'; 
 import Cookies from 'js-cookie';
 
 
@@ -15,8 +15,6 @@ function ViewTransactions() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTransaction, setSelectedTransaction] = useState({});
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const token = localStorage.getItem('token');
-  // const currentAccountId = localStorage.getItem('accountId'); // Get the current account ID once
 
   const currentAccountId = Cookies.get('accountId');
   const token = Cookies.get('token');
@@ -24,7 +22,7 @@ function ViewTransactions() {
   const fetchTransactions = async () => {
 
     try {
-      console.log("Fetching transactions for Account Id: ", currentAccountId);
+      //console.log("Fetching transactions for Account Id: ", currentAccountId);
       if(!currentAccountId){
         Swal.fire({
           title: 'Error',
@@ -35,7 +33,7 @@ function ViewTransactions() {
       }
       const response = await axios.get(`http://localhost:8080/api/transaction/by-account?id=${currentAccountId}`, {
         headers: {
-          Authorization: `Bearer ${token}` // Attach token to headers
+          Authorization: `Bearer ${token}`
         }
       });
       setTransactions(response.data);
@@ -61,14 +59,8 @@ function ViewTransactions() {
         <div className="bg-white shadow-md rounded-lg p-4">
           <div className="mb-4">
             <Link to="/dashboard">
-              {/* <Button colorScheme='red' leftIcon={<i className="fa-solid fa-arrow-left"></i>}>
-                Dashboard
-              </Button> */}
             </Link>
           </div>
-          {/* <div className="mb-4 text-center">
-            <h5 className="text-xl font-semibold"><i className="fa-solid fa-money-bill-1"></i> Transactions</h5>
-          </div> */}
           {isLoading
             ? <div className="flex justify-center items-center h-64">
               <Rings />
@@ -98,7 +90,7 @@ function ViewTransactions() {
                           // Convert accountId to string for comparison
                           const fromAccountId = transaction.fromAccount.accountID.toString();
                           const indicator = fromAccountId === currentAccountId ? "DB" : "CR";
-                          console.log(`Transaction ID: ${transaction.transactionID} - FromAccountID: ${fromAccountId}, CurrentAccountID: ${currentAccountId}, Indicator: ${indicator}`);
+                          //console.log(`Transaction ID: ${transaction.transactionID} - FromAccountID: ${fromAccountId}, CurrentAccountID: ${currentAccountId}, Indicator: ${indicator}`);
                           return (
                             <Tr key={transaction.transactionID}>
                               <Td>

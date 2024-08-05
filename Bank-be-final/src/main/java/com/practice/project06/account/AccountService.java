@@ -9,7 +9,6 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +31,14 @@ public class AccountService {
 
     private String generateRandomString(int length) {
         SecureRandom secureRandom = new SecureRandom();
-        return new BigInteger(length * 5, secureRandom).toString(32);
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            int digit = secureRandom.nextInt(10);
+            sb.append(digit);
+        }
+
+        return sb.toString();
     }
 
     public Map<String, Object> createAccount(AccountDTO accountDTO) {
@@ -91,6 +97,7 @@ public class AccountService {
                 .orElseThrow(() -> new EntityNotFoundException("Account not found"));
         balanceRepository.deleteByAccountId(id);
         transactionRepository.deleteByFromAccountId(id);
+        transactionRepository.deleteByToAccountId(id);
         accountRepository.delete(account);
         return true;
 

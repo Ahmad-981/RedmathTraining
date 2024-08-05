@@ -41,9 +41,33 @@ public class Transaction {
 
     public Transaction(Account fromAccount, Account toAccount, BigDecimal amount) {
         this();
-        this.fromAccount = fromAccount;
-        this.toAccount = toAccount;
+        this.fromAccount = new Account(fromAccount);
+        this.toAccount = new Account(toAccount);
         this.amount = amount;
-        this.indicator = "DB"; // Set a default value
+        this.indicator = "DB";
+    }
+
+    public Date getDate() {
+        return new Date(date.getTime());
+    }
+
+    public void setDate(Date date) {
+        this.date = new Date(date.getTime());
+    }
+
+    public Account getFromAccount() {
+        return new Account(fromAccount);
+    }
+
+    public void setFromAccount(Account fromAccount) {
+        this.fromAccount = new Account(fromAccount);
+    }
+
+    public Account getToAccount() {
+        return new Account(toAccount);
+    }
+
+    public void setToAccount(Account toAccount) {
+        this.toAccount = new Account(toAccount);
     }
 }

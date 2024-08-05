@@ -15,17 +15,15 @@ import java.util.Optional;
 
 @Service
 public class TransactionService {
-
-    private final TransactionRepository transactionRepository;
-    private final AccountRepository accountRepository;
-    private final BalanceRepository balanceRepository;
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Autowired
-    public TransactionService(TransactionRepository transactionRepository, AccountRepository accountRepository, BalanceRepository balanceRepository) {
-        this.transactionRepository = transactionRepository;
-        this.accountRepository = accountRepository;
-        this.balanceRepository = balanceRepository;
-    }
+    private BalanceRepository balanceRepository;
+
+    @Autowired
+    private TransactionRepository transactionRepository;
+
 
     public List<Transaction> findTransactionsByAccountId(Long accountId) {
         List<Transaction> sentTransactions = transactionRepository.findByFromAccount_AccountID(accountId);

@@ -20,7 +20,6 @@ com\practice\project06\account\AccountDTO.class
 com\practice\project06\transaction\Transaction.class
 com\practice\project06\filter\JwtFilter.class
 com\practice\project06\auth\JwtResponse.class
-com\practice\project06\config\ApiProperties.class
 com\practice\project06\account\AccountService.class
 com\practice\project06\user\User.class
 com\practice\project06\account\Account.class

@@ -22,9 +22,9 @@ spring:
     console:
       enabled: true
 
-api:
-  security:
-    ignored:  /api/users/**, /api/users, /api/balance, /api/transaction, /h2-console, /api/user/create
+#api:
+#  security:
+#    ignored:  /api/users/**, /api/users, /api/balance, /api/transaction, /h2-console, /api/user/create
 
 management:
   endpoint:

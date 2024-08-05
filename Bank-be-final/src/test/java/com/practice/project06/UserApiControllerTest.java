@@ -118,7 +118,7 @@ public class UserApiControllerTest {
 
         assertNotNull(userDetails);
         assertEquals("admin", userDetails.get().getUsername());
-        assertEquals(encodedPassword, userDetails.get().getPassword()); // Check against encoded password
+        assertEquals(encodedPassword, userDetails.get().getPassword());
     }
 
     @Order(5)

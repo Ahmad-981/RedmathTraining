@@ -22,6 +22,7 @@ import {
   Input,
   Image,
   Stack,
+  Spacer,
 } from '@chakra-ui/react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -47,32 +48,6 @@ function Dashboard() {
   const username = Cookies.get('username');
 
   const fetchData = async () => {
-    // await new Promise(resolve => setTimeout(resolve, 2000));
-    // const mockAccounts = [
-    //   { id: 1, createdBy: { uid: 'user1' } },
-    //   { id: 2, createdBy: { uid: 'user1' } }
-    // ];
-
-    // const mockTransactions = [
-    //   { id: 1, type: 'credit', amount: '100' },
-    //   { id: 2, type: 'debit', amount: '50' },
-    //   { id: 3, type: 'credit', amount: '200' }
-    // ];
-
-    // let credit = 0;
-    // let debit = 0;
-    // mockTransactions.forEach(transaction => {
-    //   if (transaction.type === 'credit') {
-    //     credit += parseInt(transaction.amount);
-    //   } else {
-    //     debit += parseInt(transaction.amount);
-    //   }
-    // });
-
-    // setTotalAccounts(mockAccounts.length);
-    // setTotalTransactions(mockTransactions.length);
-    // setTotalCredit(credit);
-    // setTotalDebit(debit);
     setIsLoading(false);
   };
 
@@ -202,11 +177,13 @@ function Dashboard() {
           Dashboard
         </Heading>
         <Heading size="lg" mb={8} textAlign="center"></Heading>
+        <Spacer></Spacer>
         <VStack spacing={4} align="start">
           {/* <Button w="full" onClick={onOpenTransactions}>View Transactions</Button> */}
-          <Button w="full" onClick={onOpenCreateAccount}>Create Account</Button>
+          <Button w="full" colorScheme="green" onClick={onOpenCreateAccount}>Create Account</Button>
           <Button w="full" colorScheme="teal" onClick={onOpenDeposit}>Initial Deposit</Button>
-          <Button w="full" colorScheme="blue" onClick={onOpenTransaction}>Make Transaction</Button>
+          <Button w="full" colorScheme="blue" onClick={onOpenTransaction}>Send Money</Button>
+          
           <Button w="full" colorScheme="red" onClick={handleLogout}>Logout</Button>
         </VStack>
       </Box>
@@ -223,7 +200,7 @@ function Dashboard() {
               <Heading size="lg" mb={4} textAlign="center">
                 <i className="fa-solid fa-money-bill-1"></i> Welcome to Digital Banking
               </Heading>
-              <Heading as="h1" size="lg" mb={4} textAlign="center">
+              <Heading as="h1" size="lg" mb={4} textAlign="center" color="teal">
                 "{username}"
               </Heading>
               <Divider />
@@ -234,7 +211,7 @@ function Dashboard() {
         <Container maxW="container.xl" py={5}>
           <Flex wrap="wrap" gap={4}>
             <Box w="full" lg="48%" p={4} borderWidth={1} borderRadius="md" boxShadow="md">
-              <Heading size="md" mb={4} textAlign="center">
+              <Heading size="lg" mb={4} textAlign="center">
                 <i className="fa-solid fa-money-bill-1"></i> Transactions
               </Heading>
               <Text fontSize="xl" textAlign="center">To view all the transaction of your account, click the following button</Text>
@@ -259,10 +236,9 @@ function Dashboard() {
               <Heading size="lg" mb={4} textAlign="center">
                 <i className="fa-solid fa-money-bill-1"></i>
               </Heading>
-              <Heading size="md" mb={4} textAlign="center">
+              <Heading size="lg" mb={4} textAlign="center">
                 <i className="fa-solid fa-money-bill-1"></i> Balance
               </Heading>
-              {/* <Text fontSize="xl" textAlign="center">To view your balance, click the following button</Text> */}
               <Heading size="lg" mb={4} textAlign="center">
                 <i className="fa-solid fa-money-bill-1"></i>
               </Heading>

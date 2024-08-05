@@ -201,28 +201,31 @@ public class AccountApiControllerTest {
 
         Optional<Account> result = accountRepository.findByUser_UserID(1L);
         assertTrue(result.isPresent());
-        assertEquals(user, result.get().getUser());
-    }
-    //User ID must not be null
+        User expectedUser = result.get().getUser();
 
-//    @Test
-//    public void testCreateAccount_UserNotFound() throws Exception{
-////        User user = new User();
-////        user.setUserID(4L);
-//
-//        AccountDTO accountDTO = new AccountDTO();
-//        accountDTO.setAccountNumber("12345678");
-//        accountDTO.setAccountType("Savings");
-////        accountDTO.setUser(user);
-//
-//        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts")
-//                        .header("Authorization", "Bearer " + jwtToken)
-//                        .contentType(MediaType.APPLICATION_JSON_VALUE)
-//                        .content(objectMapper.writeValueAsString(accountDTO)))
-//                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("User ID must not be null"))
-//                .andExpect(MockMvcResultMatchers.status().isBadRequest());
-//
-//    }
+        assertEquals(user.getUserID(), expectedUser.getUserID());
+        assertEquals(user.getUsername(), expectedUser.getUsername());
+        assertEquals(user.getPassword(), expectedUser.getPassword());
+        assertEquals(user.getRole(), expectedUser.getRole());
+        assertEquals(user.getEmail(), expectedUser.getEmail());
+        assertEquals(user.getAddress(), expectedUser.getAddress());
+    }
+
+    @Test
+    public void testCreateAccount_UserNotFound() throws Exception{
+
+        AccountDTO accountDTO = new AccountDTO();
+        accountDTO.setAccountNumber("12345678");
+        accountDTO.setAccountType("Savings");
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/accounts")
+                        .header("Authorization", "Bearer " + jwtToken)
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+                        .content(objectMapper.writeValueAsString(accountDTO)))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.error").value("User ID must not be null"))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+
+    }
 
     @Test
     public void testFindByUser_Username() {

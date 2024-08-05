@@ -19,11 +19,11 @@ import java.util.Date;
 
     @OneToOne
     @JoinColumn(name = &quot;accountID&quot;, nullable = false, unique = true)
-<span class="fc" id="L22">    private Account account;</span>
+    private Account account;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = &quot;date&quot;)
-<span class="fc" id="L26">    private Date date;</span>
+    private Date date;
 
     @Column(name = &quot;amount&quot;, nullable = false)
 <span class="fc" id="L29">    private BigDecimal amount;</span>
@@ -31,5 +31,22 @@ import java.util.Date;
     @Column(name = &quot;indicator&quot;, nullable = false)
 <span class="fc" id="L32">    private String indicator;</span>
 
+    // Defensive copy for mutable fields
+
+    public Account getAccount() {
+<span class="fc" id="L37">        return new Account(account); // Return a copy to avoid exposure</span>
+    }
+
+    public void setAccount(Account account) {
+<span class="fc" id="L41">        this.account = new Account(account); // Store a copy to avoid exposure</span>
+<span class="fc" id="L42">    }</span>
+
+    public Date getDate() {
+<span class="fc" id="L45">        return new Date(date.getTime()); // Return a copy to avoid exposure</span>
+    }
+
+    public void setDate(Date date) {
+<span class="fc" id="L49">        this.date = new Date(date.getTime()); // Store a copy to avoid exposure</span>
+<span class="fc" id="L50">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

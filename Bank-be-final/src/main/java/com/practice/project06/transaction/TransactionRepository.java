@@ -15,4 +15,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     @Modifying
     @Query("DELETE FROM transactions t WHERE t.fromAccount.accountID = :accountId")
     void deleteByFromAccountId(@Param("accountId") Long accountId);
+    @Modifying
+    @Query("DELETE FROM transactions t WHERE t.toAccount.accountID = :accountId")
+    void deleteByToAccountId(@Param("accountId") Long accountId);
 }

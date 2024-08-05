@@ -24,4 +24,22 @@ public class Account {
     @Column(name = "account_type", nullable = false)
     private String accountType;
 
+    public Account() {}
+
+    public Account(Account other) {
+        if (other != null) {
+            this.accountID = other.accountID;
+            this.accountNumber = other.accountNumber;
+            this.accountType = other.accountType;
+            this.user = (other.user != null) ? new User(other.user) : null;
+        }
+    }
+
+    public User getUser() {
+        return user != null ? new User(user) : null;
+    }
+
+    public void setUser(User user) {
+        this.user = user != null ? new User(user) : null;
+    }
 }

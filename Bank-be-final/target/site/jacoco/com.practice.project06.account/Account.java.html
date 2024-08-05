@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 <span class="fc" id="L9">@Setter</span>
 @Entity(name = &quot;accounts&quot;)
-<span class="fc" id="L11">public class Account {</span>
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = &quot;accountID&quot;)
@@ -16,7 +16,7 @@ import lombok.Setter;
 
     @OneToOne
     @JoinColumn(name = &quot;userID&quot;, nullable = false, unique = true)
-<span class="fc" id="L19">    private User user;</span>
+    private User user;
 
     @Column(name = &quot;account_number&quot;, nullable = false, unique = true)
 <span class="fc" id="L22">    private String accountNumber;</span>
@@ -24,5 +24,23 @@ import lombok.Setter;
     @Column(name = &quot;account_type&quot;, nullable = false)
 <span class="fc" id="L25">    private String accountType;</span>
 
+<span class="fc" id="L27">    public Account() {}</span>
+
+<span class="fc" id="L29">    public Account(Account other) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (other != null) {</span>
+<span class="fc" id="L31">            this.accountID = other.accountID;</span>
+<span class="fc" id="L32">            this.accountNumber = other.accountNumber;</span>
+<span class="fc" id="L33">            this.accountType = other.accountType;</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">            this.user = (other.user != null) ? new User(other.user) : null;</span>
+        }
+<span class="fc" id="L36">    }</span>
+
+    public User getUser() {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        return user != null ? new User(user) : null;</span>
+    }
+
+    public void setUser(User user) {
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        this.user = user != null ? new User(user) : null;</span>
+<span class="fc" id="L44">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

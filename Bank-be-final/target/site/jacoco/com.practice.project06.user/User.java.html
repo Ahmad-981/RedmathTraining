@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 <span class="fc" id="L8">@Setter</span>
 @Entity(name = &quot;users&quot;)
-<span class="fc" id="L10">public class User {</span>
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = &quot;userID&quot;)
@@ -27,5 +27,18 @@ import lombok.Setter;
 
     @Column(name = &quot;address&quot;)
 <span class="fc" id="L29">    private String address;</span>
+
+<span class="fc" id="L31">    public User() {}</span>
+
+<span class="fc" id="L33">    public User(User other) {</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (other != null) {</span>
+<span class="fc" id="L35">            this.userID = other.userID;</span>
+<span class="fc" id="L36">            this.username = other.username;</span>
+<span class="fc" id="L37">            this.password = other.password;</span>
+<span class="fc" id="L38">            this.role = other.role;</span>
+<span class="fc" id="L39">            this.email = other.email;</span>
+<span class="fc" id="L40">            this.address = other.address;</span>
+        }
+<span class="fc" id="L42">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

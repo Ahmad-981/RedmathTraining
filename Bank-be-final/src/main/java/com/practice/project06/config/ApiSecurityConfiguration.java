@@ -6,7 +6,6 @@ import com.practice.project06.user.CustomUserDetailsService;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,17 +28,12 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
 
-@EnableConfigurationProperties(value = { ApiProperties.class})
+@EnableConfigurationProperties
 @Configuration
 @EnableMethodSecurity
 
 public class ApiSecurityConfiguration {
 
-    @Value("${api.security.ignored}")
-    private String[] ignored;
-
-    @Autowired
-    private ApiProperties props;
 
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
@@ -76,15 +70,6 @@ public class ApiSecurityConfiguration {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-
-//    @PostConstruct
-//    public void init() {
-//        Dotenv dotenv = Dotenv.load();
-//        System.setProperty("MYSQL_USERNAME", dotenv.get("MYSQL_USERNAME"));
-//        System.setProperty("MYSQL_PASSWORD", dotenv.get("MYSQL_PASSWORD"));
-//        System.setProperty("JWT_KEY", dotenv.get("JWT_KEY"));
-//        System.setProperty("JWT_EXPIRY", dotenv.get("JWT_EXPIRY"));
-//    }
 
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

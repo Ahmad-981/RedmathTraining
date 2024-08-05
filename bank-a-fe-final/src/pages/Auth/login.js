@@ -1,11 +1,3 @@
-// import React from 'react';
-// import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-// import Cookies from 'js-cookie';
-// import Home from './pages/Auth/Home/Home';
-// import Login from './pages/Auth/login';
-// import SignUp from './pages/Auth/signup';
-// import Dashboard from './pages/dashboard/Dashboard';
-// import CreateAccounts from './pages/dashboard/accounts';
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Button, FormControl, FormLabel, Input, Stack, Text, Heading } from "@chakra-ui/react";
@@ -42,13 +34,11 @@ function Login() {
       const response = await axios.post("http://localhost:8080/api/v1/auth/login", credentials);
       const { accountId, role, userId, token, username } = response.data;
 
-      // Set cookies instead of localStorage
-      Cookies.set('token', token, { expires: 1 }); // expires in 1 day
+      Cookies.set('token', token, { expires: 1 }); 
       Cookies.set('userId', userId, { expires: 1 });
       Cookies.set('accountId', accountId, { expires: 1 });
       Cookies.set('username', username, { expires: 1 });
 
-      // Log cookies
       console.log("Cookie Token:", Cookies.get('token'));
       console.log("UserId:", Cookies.get('userId'));
       console.log("Username:", Cookies.get('username'));
@@ -105,15 +95,15 @@ function Login() {
                 name="password"
                 value={credentials.password}
                 onChange={handleInputChange}
-                placeholder="••••••••"
+                placeholder="•••••"
               />
             </FormControl>
             <Stack spacing={3}>
               <Button colorScheme="blue" type="submit" isLoading={loading}>
                 Login
               </Button>
-              <Text textAlign="center">
-                Not registered? <Link to="/home">Create an account</Link>
+              <Text textAlign="center" >
+                Not registered? <Link to="/home" >Create an account</Link>
               </Text>
             </Stack>
           </Stack>

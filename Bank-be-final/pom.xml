@@ -205,35 +205,34 @@
 
 
 
-<!--			<plugin>-->
-<!--				<groupId>com.github.spotbugs</groupId>-->
-<!--				<artifactId>spotbugs-maven-plugin</artifactId>-->
-<!--				<version>4.8.6.2</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>default-cli</id>-->
-<!--						<goals>-->
-<!--							<goal>check</goal>-->
-<!--						</goals>-->
-<!--						<phase>verify</phase>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--				<configuration>-->
-<!--					<effort>Low</effort>-->
-<!--					<threshold>Normal</threshold>-->
-<!--&lt;!&ndash;					<failOnError>true</failOnError>&ndash;&gt;-->
-<!--					<plugins>-->
-<!--						<plugin>-->
-<!--							<groupId>com.h3xstream.findsecbugs</groupId>-->
-<!--							<artifactId>findsecbugs-plugin</artifactId>-->
-<!--							<version>LATEST</version>-->
-<!--						</plugin>-->
-<!--					</plugins>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>4.8.6.2</version>
+				<executions>
+					<execution>
+						<id>default-cli</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<phase>verify</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<effort>Low</effort>
+					<threshold>Normal</threshold>
+
+					<plugins>
+						<plugin>
+							<groupId>com.h3xstream.findsecbugs</groupId>
+							<artifactId>findsecbugs-plugin</artifactId>
+							<version>LATEST</version>
+						</plugin>
+					</plugins>
+				</configuration>
+			</plugin>
 
 
-			<!-- JaCoCo Plugin -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
