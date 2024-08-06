@@ -25,9 +25,15 @@ public class AccountController {
         return accountRepository.findAll();
     }
 
+//    @GetMapping("/{id}")
+//    public Account getAccountById(@PathVariable Long id) {
+//        return accountRepository.findAllActiveAccounts().get();
+//    }
     @GetMapping("/{id}")
-    public Account getAccountById(@PathVariable Long id) {
-        return accountRepository.findById(id).get();
+    public ResponseEntity<Account> getAccountById(@PathVariable Long id) {
+        return accountRepository.findByAccountIDAndIsDeletedFalse(id)
+                .map(account -> ResponseEntity.ok().body(account))
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping

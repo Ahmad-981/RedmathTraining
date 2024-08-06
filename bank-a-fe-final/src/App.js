@@ -10,12 +10,10 @@ import ViewTransactions from './pages/dashboard/viewTransactions';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ViewAccounts from './pages/admin/viewAccounts/ViewAccounts';
 
-// Helper function to check if user is authenticated
 const isAuthenticated = () => {
-  return !!Cookies.get('token'); // Check for token in cookies
+  return !!Cookies.get('token'); 
 };
 
-// PrivateRoute component for handling protected routes
 const PrivateRoute = ({ element: Component, ...rest }) => {
   return isAuthenticated() ? (
     <Component {...rest} />

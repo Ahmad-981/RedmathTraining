@@ -336,6 +336,7 @@ function Dashboard() {
                   name="toAccountNumber"
                   value={transactionData.toAccountNumber}
                   onChange={handleTransactionChange}
+                  placeholder='12345678'
                   min="0"
                   step="0.01"
                 />
@@ -347,6 +348,7 @@ function Dashboard() {
                   name="amount"
                   value={transactionData.amount}
                   onChange={handleTransactionChange}
+                  placeholder='100'
                   min="0"
                   step="0.01"
                 />

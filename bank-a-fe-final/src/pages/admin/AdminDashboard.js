@@ -102,8 +102,8 @@ function Dashboard() {
       const userID = response.data.userID;
       console.log("user created with userID: ", userID)
       setUserID(userID);
-      setNewAccount(prev => ({ ...prev, fullname: newUser.username })); // Set fullname as username
-      setIsRegisteringUser(false); // Switch to account creation form
+      setNewAccount(prev => ({ ...prev, fullname: newUser.username })); 
+      setIsRegisteringUser(false); 
     } catch (error) {
       console.error('Error registering user:', error);
     }

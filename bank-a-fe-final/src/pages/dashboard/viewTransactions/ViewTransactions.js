@@ -87,7 +87,6 @@ function ViewTransactions() {
                     <Tbody>
                       {
                         transactions.map((transaction) => {
-                          // Convert accountId to string for comparison
                           const fromAccountId = transaction.fromAccount.accountID.toString();
                           const indicator = fromAccountId === currentAccountId ? "DB" : "CR";
                           //console.log(`Transaction ID: ${transaction.transactionID} - FromAccountID: ${fromAccountId}, CurrentAccountID: ${currentAccountId}, Indicator: ${indicator}`);

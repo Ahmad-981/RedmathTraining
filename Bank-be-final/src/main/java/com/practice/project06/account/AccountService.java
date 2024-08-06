@@ -95,12 +95,28 @@ public class AccountService {
     public boolean deleteAccount(Long id) {
         Account account = accountRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Account not found"));
-        balanceRepository.deleteByAccountId(id);
-        transactionRepository.deleteByFromAccountId(id);
-        transactionRepository.deleteByToAccountId(id);
-        accountRepository.delete(account);
-        return true;
 
+        // Soft delete the account
+        account.setIsDeleted(true);
+        accountRepository.save(account);
+
+        // Optionally, handle associated transactions (if needed)
+        // Transactions related to 'fromAccount' and 'toAccount' should be fetched
+        // and processed if you need to maintain historical data.
+
+        return true;
     }
+
+//    @Transactional
+//    public boolean deleteAccount(Long id) {
+//        Account account = accountRepository.findById(id)
+//                .orElseThrow(() -> new EntityNotFoundException("Account not found"));
+//        balanceRepository.deleteByAccountId(id);
+//        transactionRepository.deleteByFromAccountId(id);
+//        transactionRepository.deleteByToAccountId(id);
+//        accountRepository.delete(account);
+//        return true;
+//
+//    }
 
 }

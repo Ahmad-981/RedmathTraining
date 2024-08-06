@@ -9,9 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class TransactionService {
@@ -24,18 +23,41 @@ public class TransactionService {
     @Autowired
     private TransactionRepository transactionRepository;
 
-
     public List<Transaction> findTransactionsByAccountId(Long accountId) {
+        // Fetch transactions where the accountId is the sender
         List<Transaction> sentTransactions = transactionRepository.findByFromAccount_AccountID(accountId);
 
+        // Fetch transactions where the accountId is the receiver
         List<Transaction> receivedTransactions = transactionRepository.findByToAccount_AccountID(accountId);
 
-        List<Transaction> allTransactions = new ArrayList<>();
-        allTransactions.addAll(sentTransactions);
-        allTransactions.addAll(receivedTransactions);
+        // Combine all transactions into a Set to ensure uniqueness
+        Set<Transaction> uniqueTransactions = new HashSet<>();
+        uniqueTransactions.addAll(sentTransactions);
+        uniqueTransactions.addAll(receivedTransactions);
 
-        return allTransactions;
+        // Filter out transactions where the 'fromAccount' or 'toAccount' is soft-deleted
+        List<Transaction> validTransactions = uniqueTransactions.stream()
+                .filter(transaction -> {
+                    boolean fromAccountValid = transaction.getFromAccount() != null && !transaction.getFromAccount().getIsDeleted();
+                    boolean toAccountValid = transaction.getToAccount() != null && !transaction.getToAccount().getIsDeleted();
+                    return fromAccountValid || toAccountValid;
+                })
+                .collect(Collectors.toList());
+
+        return validTransactions;
     }
+
+//    public List<Transaction> findTransactionsByAccountId(Long accountId) {
+//        List<Transaction> sentTransactions = transactionRepository.findByFromAccount_AccountID(accountId);
+//
+//        List<Transaction> receivedTransactions = transactionRepository.findByToAccount_AccountID(accountId);
+//
+//        List<Transaction> allTransactions = new ArrayList<>();
+//        allTransactions.addAll(sentTransactions);
+//        allTransactions.addAll(receivedTransactions);
+//
+//        return allTransactions;
+//    }
 
     @Transactional
     public Transaction createTransaction(Long fromAccountId, String toAccountNumber, BigDecimal amount) {

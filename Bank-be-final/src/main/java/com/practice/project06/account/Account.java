@@ -24,6 +24,9 @@ public class Account {
     @Column(name = "account_type", nullable = false)
     private String accountType;
 
+    @Column(name = "is_deleted", nullable = false)
+    private Boolean isDeleted = false;
+
     public Account() {}
 
     public Account(Account other) {
@@ -32,6 +35,7 @@ public class Account {
             this.accountNumber = other.accountNumber;
             this.accountType = other.accountType;
             this.user = (other.user != null) ? new User(other.user) : null;
+            this.isDeleted = other.isDeleted;
         }
     }
 

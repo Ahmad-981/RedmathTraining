@@ -34,8 +34,8 @@ function ViewAccounts() {
     const userId = Cookies.get('userId');
     const token = Cookies.get('token');
 
-    console.log("user id in fetch accounts: ", userId)
-    console.log("token in fetch accounts: ", token)
+    // console.log("user id in fetch accounts: ", userId)
+    // console.log("token in fetch accounts: ", token)
 
     try {
       const response = await fetch('http://localhost:8080/api/v1/accounts', {
@@ -137,7 +137,7 @@ function ViewAccounts() {
         }
   
         Swal.fire('Deleted!', 'The account has been deleted.', 'success');
-        fetchAccounts(); // Refresh the list
+        fetchAccounts(); 
       }
     } catch (error) {
       console.error('Error deleting account:', error);
