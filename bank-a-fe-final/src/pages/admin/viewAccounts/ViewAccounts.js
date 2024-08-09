@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+import React, { useEffect, useState } from "react";
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import { Rings } from "react-loader-spinner";
-import Swal from 'sweetalert2';
-import './customTableStyles.css';
-import Cookies from 'js-cookie';
+import Swal from "sweetalert2";
+import "./customTableStyles.css";
+import Cookies from "js-cookie";
 import {
   Box,
   Button,
@@ -22,7 +22,7 @@ import {
   FormLabel,
   Input,
   useDisclosure,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 function ViewAccounts() {
   const [accounts, setAccounts] = useState([]);
@@ -31,19 +31,15 @@ function ViewAccounts() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const fetchAccounts = async () => {
-    const userId = Cookies.get('userId');
-    const token = Cookies.get('token');
-
-    // console.log("user id in fetch accounts: ", userId)
-    // console.log("token in fetch accounts: ", token)
+    const token = Cookies.get("token");
 
     try {
-      const response = await fetch('http://localhost:8080/api/v1/accounts', {
-        method: 'GET',
+      const response = await fetch("http://localhost:8080/api/v1/accounts", {
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        }
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
       });
 
       if (!response.ok) {
@@ -53,14 +49,19 @@ function ViewAccounts() {
       const data = await response.json();
       setAccounts(data);
     } catch (error) {
-      console.error('Error fetching accounts:', error);
-      Swal.fire('Error!', 'There was a problem fetching the accounts.', 'error');
+      console.error("Error fetching accounts:", error);
+      Swal.fire(
+        "Error!",
+        "There was a problem fetching the accounts.",
+        "error"
+      );
     } finally {
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
+    console.log("Fetching accounts");
     fetchAccounts();
   }, []);
 
@@ -80,92 +81,107 @@ function ViewAccounts() {
     }));
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = Cookies.get('token');
+    const token = Cookies.get("token");
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/accounts/${selectedAccount.accountID}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          ...selectedAccount,
-        })
-      });
+      const response = await fetch(
+        `http://localhost:8080/api/v1/accounts/${selectedAccount.accountID}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            ...selectedAccount,
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      Swal.fire('Success!', 'The account has been updated.', 'success');
+      Swal.fire("Success!", "The account has been updated.", "success");
       fetchAccounts();
-      onClose(); 
+      onClose();
     } catch (error) {
-      console.error('Error updating account:', error);
-      Swal.fire('Error!', 'There was a problem updating the account.', 'error');
+      console.error("Error updating account:", error);
+      Swal.fire("Error!", "There was a problem updating the account.", "error");
     }
   };
 
-  
   const handleDeleteClick = async (accountID) => {
     try {
       const result = await Swal.fire({
-        title: 'Are you sure?',
+        title: "Are you sure?",
         text: "You won't be able to revert this!",
-        icon: 'warning',
+        icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!',
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
       });
-  
+
       if (result.isConfirmed) {
-        const token = Cookies.get('token');
-        const response = await fetch(`http://localhost:8080/api/v1/accounts/${accountID}`, {
-          method: 'DELETE',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+        const token = Cookies.get("token");
+        const response = await fetch(
+          `http://localhost:8080/api/v1/accounts/${accountID}`,
+          {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
           }
-        });
-  
+        );
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-  
-        Swal.fire('Deleted!', 'The account has been deleted.', 'success');
-        fetchAccounts(); 
+
+        Swal.fire("Deleted!", "The account has been deleted.", "success");
+        fetchAccounts();
       }
     } catch (error) {
-      console.error('Error deleting account:', error);
-      Swal.fire('Error!', 'There was a problem deleting the account.', 'error');
+      console.error("Error deleting account:", error);
+      Swal.fire("Error!", "There was a problem deleting the account.", "error");
     }
   };
 
   return (
-    <Container maxW="container.xl" py={8} p={4} borderWidth="1px" borderRadius="md" boxShadow="md">
-
-        <Button colorScheme="red" leftIcon={<i className="fa-solid fa-arrow-left"></i>}>
-          Dashboard
-        </Button>
+    <Container
+      maxW="container.xl"
+      py={8}
+      p={4}
+      borderWidth="1px"
+      borderRadius="md"
+      boxShadow="md"
+    >
+      <Button
+        colorScheme="red"
+        leftIcon={<i className="fa-solid fa-arrow-left"></i>}
+      >
+        Dashboard
+      </Button>
       <VStack spacing={4} mt={4} align="start">
         <Text fontSize="2xl" fontWeight="bold">
           <i className="fa-solid fa-user me-1"></i> Accounts
         </Text>
         <Divider />
         {isLoading ? (
-          <Box d="flex" justifyContent="center" alignItems="center" height="100px">
+          <Box
+            d="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="100px"
+          >
             <Rings />
           </Box>
         ) : accounts.length < 1 ? (
           <VStack spacing={4} align="center">
             <Text>No accounts available!</Text>
-            {/* <Link to="/dashboard/createAccounts">
-              <Button colorScheme="teal">Create Account</Button>
-            </Link> */}
           </VStack>
         ) : (
           <>
@@ -192,8 +208,19 @@ function ViewAccounts() {
                       <Td>{account.user.email}</Td>
                       <Td>{account.user.address}</Td>
                       <Td>
-                        <Button colorScheme="blue" onClick={() => handleEditClick(account)}>Edit</Button>
-                        <Button colorScheme="red" ml={2} onClick={() => handleDeleteClick(account.accountID)}>Delete</Button>
+                        <Button
+                          colorScheme="blue"
+                          onClick={() => handleEditClick(account)}
+                        >
+                          Edit
+                        </Button>
+                        <Button
+                          colorScheme="red"
+                          ml={2}
+                          onClick={() => handleDeleteClick(account.accountID)}
+                        >
+                          Delete
+                        </Button>
                       </Td>
                     </Tr>
                   ))}
@@ -214,29 +241,60 @@ function ViewAccounts() {
               <form onSubmit={handleSubmit}>
                 <FormControl mb={4}>
                   <FormLabel>Account ID</FormLabel>
-                  <Input type="text" value={selectedAccount.accountID} isReadOnly />
+                  <Input
+                    type="text"
+                    value={selectedAccount.accountID}
+                    isReadOnly
+                  />
                 </FormControl>
                 <FormControl mb={4}>
                   <FormLabel>Account Number</FormLabel>
-                  <Input type="text" name="accountNumber" value={selectedAccount.accountNumber} onChange={handleInputChange} />
+                  <Input
+                    type="text"
+                    name="accountNumber"
+                    value={selectedAccount.accountNumber}
+                    onChange={handleInputChange}
+                  />
                 </FormControl>
                 <FormControl mb={4}>
                   <FormLabel>Account Type</FormLabel>
-                  <Input type="text" name="accountType" value={selectedAccount.accountType} onChange={handleInputChange} />
+                  <Input
+                    type="text"
+                    name="accountType"
+                    value={selectedAccount.accountType}
+                    onChange={handleInputChange}
+                  />
                 </FormControl>
                 <FormControl mb={4}>
                   <FormLabel>Username</FormLabel>
-                  <Input type="text" name="username" value={selectedAccount.user.username} onChange={handleInputChange} />
+                  <Input
+                    type="text"
+                    name="username"
+                    value={selectedAccount.user.username}
+                    onChange={handleInputChange}
+                  />
                 </FormControl>
                 <FormControl mb={4}>
                   <FormLabel>Email</FormLabel>
-                  <Input type="email" name="email" value={selectedAccount.user.email} onChange={handleInputChange} />
+                  <Input
+                    type="email"
+                    name="email"
+                    value={selectedAccount.user.email}
+                    onChange={handleInputChange}
+                  />
                 </FormControl>
                 <FormControl mb={4}>
                   <FormLabel>Address</FormLabel>
-                  <Input type="text" name="address" value={selectedAccount.user.address} onChange={handleInputChange} />
+                  <Input
+                    type="text"
+                    name="address"
+                    value={selectedAccount.user.address}
+                    onChange={handleInputChange}
+                  />
                 </FormControl>
-                <Button colorScheme="teal" type="submit">Save Changes</Button>
+                <Button colorScheme="teal" type="submit">
+                  Save Changes
+                </Button>
               </form>
             </ModalBody>
           </ModalContent>

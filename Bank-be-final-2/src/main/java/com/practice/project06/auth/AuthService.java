@@ -58,17 +58,4 @@ public class AuthService {
 
         return response;
     }
-
-    public User registerUser(String username, String password, String role) {
-        if (userRepository.findByUsername(username) != null) {
-            throw new RuntimeException("User already exists");
-        }
-
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(passwordEncoder.encode(password));
-        user.setRole(role);
-
-        return userRepository.save(user);
-    }
 }

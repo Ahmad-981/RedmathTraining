@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="" />
+    <list default="true" id="2be9fdca-e6d6-41b6-bf6f-89e4f021d354" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/Balance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/Balance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/balance/BalanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/transaction/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/project06/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/BalanceApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/TransactionApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/project06/UserApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/account/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/account/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/balance/BalanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/balance/BalanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/config/ApiSecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/config/ApiSecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/filter/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/filter/JwtFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/transaction/TransactionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/user/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/user/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/practice/project06/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/practice/project06/user/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/error-2024-08-07.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/BalanceApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/TransactionApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/practice/project06/UserApiControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/practice/project06/UserApiControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bank-be-final/target/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Bank-be-final/target/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/deposit/InitialDeposit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/deposit/InitialDeposit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/ViewTransactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-a-fe-final/src/pages/dashboard/viewTransactions/ViewTransactions.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +47,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -49,6 +83,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;Application.Assignment.executor&quot;: &quot;Run&quot;,
     &quot;Application.Project03Application.executor&quot;: &quot;Run&quot;,
     &quot;Application.Project05Application.executor&quot;: &quot;Run&quot;,
@@ -126,9 +161,9 @@
     &quot;Maven.project06 [spotbugs:gui].executor&quot;: &quot;Run&quot;,
     &quot;Maven.project06 [verify].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;revised&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmad.irtza/Downloads/lecture-be-04&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmad.irtza/Desktop/RedmathTraining/Bank-be-final-2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
@@ -164,7 +199,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Assignment">
+  <component name="RunManager" selected="JUnit.BalanceApiControllerTest">
     <configuration name="Assignment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.project06.Assignment" />
       <module name="project06" />
@@ -193,7 +228,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountApiControllerTest.testCreateAccount_UserNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BalanceApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -202,14 +237,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AccountApiControllerTest" />
-      <option name="METHOD_NAME" value="testCreateAccount_UserNotFound" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BalanceApiControllerTest.testCreateBalance_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project06" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.project06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.practice.project06" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
+      <option name="METHOD_NAME" value="testCreateBalance_Success" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BalanceApiControllerTest.testGetBalanceByAccountId_Success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project06" />
       <extension name="coverage">
         <pattern>
@@ -218,34 +268,20 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.AuthApiControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransactionApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project06" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.project06.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.practice.project06" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.project06.TransactionApiControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.practice.project06.BalanceApiControllerTest" />
+      <option name="METHOD_NAME" value="testGetBalanceByAccountId_Success" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Assignment" />
+        <item itemvalue="JUnit.BalanceApiControllerTest" />
+        <item itemvalue="JUnit.BalanceApiControllerTest.testCreateBalance_Success" />
+        <item itemvalue="JUnit.BalanceApiControllerTest.testGetBalanceByAccountId_Success" />
         <item itemvalue="JUnit.AccountApiControllerTest" />
-        <item itemvalue="JUnit.AuthApiControllerTest" />
-        <item itemvalue="JUnit.AccountApiControllerTest.testCreateAccount_UserNotFound" />
-        <item itemvalue="JUnit.TransactionApiControllerTest" />
+        <item itemvalue="Application.Assignment" />
       </list>
     </recent_temporary>
   </component>

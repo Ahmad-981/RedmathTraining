@@ -78,7 +78,7 @@ public class UserApiControllerTest {
     @Order(1)
     @Test
     public void testGetAllUsers() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/user/all")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/all")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andDo(MockMvcResultHandlers.print())
@@ -94,7 +94,7 @@ public class UserApiControllerTest {
         user.setUsername("abc");
 
         when(userRepository.findById(1L)).thenReturn(Optional.of(user));
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/user/1")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/users/1")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andDo(MockMvcResultHandlers.print())

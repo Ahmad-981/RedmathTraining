@@ -29,8 +29,6 @@ function CreateAccounts({ onClose }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve and set username from localStorage
-    //const username = localStorage.getItem('username');
 
     const username = Cookies.get('username');
     console.log(username)
@@ -55,9 +53,6 @@ function CreateAccounts({ onClose }) {
       Swal.fire('Error', 'Full Name is required.', 'error');
       return;
     }
-
-    // const token = localStorage.getItem('token');
-    // const userId = localStorage.getItem('userId');
     const userId = Cookies.get('userId');
     const token = Cookies.get('token');
 
@@ -101,7 +96,6 @@ function CreateAccounts({ onClose }) {
       setIsLoading(false);
       if (onClose) onClose();
     }
-
     // Reset form state
     setState(initialState);
   }

@@ -1,5 +1,4 @@
 <configuration>
-    <!-- File Appender for INFO level logs -->
     <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>target/info.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -16,7 +15,6 @@
         </filter>
     </appender>
 
-    <!-- File Appender for DEBUG level logs -->
     <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>target/debug.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -33,7 +31,6 @@
         </filter>
     </appender>
 
-    <!-- File Appender for TRACE level logs -->
     <appender name="TRACE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>target/trace.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -50,7 +47,6 @@
         </filter>
     </appender>
 
-    <!-- File Appender for ERROR level logs -->
     <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>target/error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -67,7 +63,22 @@
         </filter>
     </appender>
 
-    <!-- Define root logger to include all levels -->
+
+    <appender name="HIBERNATE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>target/hibernate.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>target/hibernate-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.hibernate" level="TRACE">
+        <appender-ref ref="HIBERNATE_FILE" />
+    </logger>
+
     <root level="TRACE">
         <appender-ref ref="INFO_FILE" />
         <appender-ref ref="DEBUG_FILE" />

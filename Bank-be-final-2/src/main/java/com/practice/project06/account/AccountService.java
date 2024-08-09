@@ -1,5 +1,6 @@
 package com.practice.project06.account;
 
+import com.practice.project06.balance.BalanceController;
 import com.practice.project06.balance.BalanceRepository;
 import com.practice.project06.transaction.TransactionRepository;
 import com.practice.project06.user.User;
@@ -23,6 +24,9 @@ public class AccountService {
 
     @Autowired
     private BalanceRepository balanceRepository;
+
+    @Autowired
+    private BalanceController balanceController;
 
     @Autowired
     private TransactionRepository transactionRepository;
@@ -63,6 +67,8 @@ public class AccountService {
         response.put("accountId", savedAccount.getAccountID());
         response.put("accountNum", savedAccount.getAccountNumber());
 
+        //setting balance
+        balanceController.createBalance(savedAccount.getAccountID());
         return response;
     }
 

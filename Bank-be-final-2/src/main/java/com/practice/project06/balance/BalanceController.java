@@ -8,12 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/balance")
+@RequestMapping("/api/v1/balances")
 public class BalanceController {
 
     @Autowired
@@ -26,8 +27,7 @@ public class BalanceController {
     private AccountRepository accountRepository;
 
     @PostMapping
-    public ResponseEntity<?> createBalance(@RequestBody BalanceDTO balanceDTO) {
-        Long accountId = balanceDTO.getAccountID();
+    public ResponseEntity<?> createBalance(@RequestBody Long accountId) {
 
         Account account = accountRepository.findById(accountId).orElse(null);
         if (account == null) {
@@ -41,8 +41,8 @@ public class BalanceController {
         }
 
         Balance balance = new Balance();
-        balance.setAmount(balanceDTO.getAmount());
-        balance.setIndicator(balanceDTO.getIndicator());
+        balance.setAmount(BigDecimal.valueOf(100));
+        balance.setIndicator("CR");
         balance.setAccount(account);
         balance.setDate(new Date());
 
@@ -50,9 +50,9 @@ public class BalanceController {
         return ResponseEntity.ok(savedBalance);
     }
 
-    @GetMapping("/{id}")
-    public Balance getBalanceById(@PathVariable Long id) {
-        return balanceRepository.findBalanceByAccountId(id);
+    @GetMapping("/{balanceId}")
+    public Balance getBalanceById(@PathVariable Long balanceId) {
+        return balanceRepository.findBalanceByAccountId(balanceId);
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
