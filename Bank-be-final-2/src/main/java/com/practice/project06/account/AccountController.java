@@ -44,12 +44,12 @@ public class AccountController {
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @PutMapping("/{id}")
+    @PutMapping("/{accountId}")
     public ResponseEntity<?> updateAccount(
-            @PathVariable Long id,
+            @PathVariable Long accountId,
             @Valid @RequestBody Account updatedAccount) {
         try {
-            Optional<Account> updated = accountService.updateAccount(id, updatedAccount);
+            Optional<Account> updated = accountService.updateAccount(accountId, updatedAccount);
             return updated.map(ResponseEntity::ok)
                     .orElse(ResponseEntity.notFound().build());
         } catch (IllegalArgumentException e){
@@ -58,9 +58,9 @@ public class AccountController {
     }
 
     @PreAuthorize("hasAnyAuthority('ADMIN')")
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteAccount(@PathVariable Long id) {
-        boolean deleted = accountService.deleteAccount(id);
+    @DeleteMapping("/{accountId}")
+    public ResponseEntity<Void> deleteAccount(@PathVariable Long accountId) {
+        boolean deleted = accountService.deleteAccount(accountId);
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
     }
 }

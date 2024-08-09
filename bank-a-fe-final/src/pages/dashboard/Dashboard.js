@@ -29,7 +29,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import ViewTransactions from "./viewTransactions/ViewTransactions";
 import CreateAccounts from "./accounts/CreateAccounts";
-import InitialDeposit from "./deposit/InitialDeposit";
+// import InitialDeposit from "./deposit/InitialDeposit";
 
 function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,11 +50,11 @@ function Dashboard() {
     onOpen: onOpenCreateAccount,
     onClose: onCloseCreateAccount,
   } = useDisclosure();
-  const {
-    isOpen: isDepositOpen,
-    onOpen: onOpenDeposit,
-    onClose: onCloseDeposit,
-  } = useDisclosure();
+  // const {
+  //   isOpen: isDepositOpen,
+  //   onOpen: onOpenDeposit,
+  //   onClose: onCloseDeposit,
+  // } = useDisclosure();
   const {
     isOpen: isTransactionOpen,
     onOpen: onOpenTransaction,
@@ -84,7 +84,7 @@ function Dashboard() {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/balance/${accountId}`,
+        `http://localhost:8080/api/v1/balances/${accountId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -131,7 +131,7 @@ function Dashboard() {
       });
 
       const response = await axios.post(
-        "http://localhost:8080/api/transaction",
+        "http://localhost:8080/api/v1/transactions",
         {
           fromAccountID,
           toAccountNumber: transactionData.toAccountNumber,
@@ -214,9 +214,9 @@ function Dashboard() {
           <Button w="full" colorScheme="green" onClick={onOpenCreateAccount}>
             Create Account
           </Button>
-          <Button w="full" colorScheme="teal" onClick={onOpenDeposit}>
+          {/* <Button w="full" colorScheme="teal" onClick={onOpenDeposit}>
             Initial Deposit
-          </Button>
+          </Button> */}
           <Button w="full" colorScheme="blue" onClick={onOpenTransaction}>
             Send Money
           </Button>
@@ -387,7 +387,7 @@ function Dashboard() {
         </ModalContent>
       </Modal>
 
-      <Modal isOpen={isDepositOpen} onClose={onCloseDeposit} size="xl">
+      {/* <Modal isOpen={isDepositOpen} onClose={onCloseDeposit} size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Initial Deposit</ModalHeader>
@@ -396,7 +396,7 @@ function Dashboard() {
             <InitialDeposit />
           </ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal> */}
 
       <Modal isOpen={isTransactionOpen} onClose={onCloseTransaction} size="lg">
         <ModalOverlay />

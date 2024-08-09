@@ -69,7 +69,7 @@ const InitialDeposit = ({ onClose, onDepositSuccess }) => {
     try {
       setIsLoading(true);
       
-      await axios.post('http://localhost:8080/api/balance', {
+      await axios.post('http://localhost:8080/api/v1/balances', {
         amount: parsedAmount,
         indicator: 'credit',
         accountID: accountID,

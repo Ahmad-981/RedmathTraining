@@ -6,11 +6,8 @@ import com.practice.project06.account.Account;
 import com.practice.project06.account.AccountRepository;
 import com.practice.project06.balance.*;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +20,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import java.math.BigDecimal;
-import java.util.Date;
 import java.util.Optional;
 
 import static org.mockito.Mockito.when;
@@ -70,20 +65,17 @@ public class BalanceApiControllerTest {
     public void testCreateBalance_Success() throws Exception {
         Account account = new Account();
         account.setAccountID(3L);
-        BalanceDTO balanceDTO = new BalanceDTO();
-        balanceDTO.setAccountID(3L);
-        balanceDTO.setAmount(BigDecimal.valueOf(1000.00));
-        balanceDTO.setIndicator("credit");
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/balance")
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/balances")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE)
-                        .content(objectMapper.writeValueAsString(balanceDTO)))
+                        .content(objectMapper.writeValueAsString(account.getAccountID())))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON_VALUE))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.amount").value(1000.00))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.indicator").value("credit"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.amount").value(100.00))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.indicator").value("CR"));
     }
 
     @Test
@@ -93,7 +85,7 @@ public class BalanceApiControllerTest {
         balance.setBalanceID(1L);
         balance.setAccount(accountRepository.getById(accountId));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/balance/" + accountId)
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/balances/" + accountId)
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(MockMvcResultHandlers.print())
@@ -114,7 +106,7 @@ public class BalanceApiControllerTest {
 
         when(balanceRepository.findById(1L)).thenReturn(Optional.of(balance));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/balance/1")
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/balances/1")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andDo(MockMvcResultHandlers.print())

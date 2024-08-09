@@ -26,7 +26,7 @@ public class Balance {
     private Date date;
 
     @Column(name = "amount", nullable = false)
-    private BigDecimal amount;
+    private BigDecimal amount = BigDecimal.valueOf(100);
 
     @Column(name = "indicator", nullable = false)
     private String indicator;
